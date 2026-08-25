@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home-page">
+<body>
 
 <header class="site-header">
 
@@ -36,21 +36,47 @@
                 class="brand-logo"
             >
 
-            <div class="brand-text">
-                <strong>SALAVATI</strong>
-                <small>FLUGHAFENTRANSFER</small>
+            <div class="brand-wordmark">
+
+                <strong>
+                    FLUGHAFENTRANSFER
+                </strong>
+
+                <small>
+                    SALAVATI · SEIT ÜBER 30 JAHREN
+                </small>
+
             </div>
 
         </a>
 
 
-        <nav class="main-nav">
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            type="button"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+
+        <nav
+            class="main-nav"
+            id="mainNav"
+        >
 
             <a href="#ueber-uns">Über uns</a>
+
             <a href="#flughafen">Flughäfen</a>
+
             <a href="#warum">Warum Salavati?</a>
+
             <a href="#vorbestellung">Vorbestellung</a>
+
             <a href="#bewertungen">Bewertungen</a>
+
             <a href="impressum.html">Impressum</a>
 
         </nav>
@@ -70,17 +96,22 @@
 
 <main>
 
+
     <!-- HERO -->
 
-    <section class="hero">
+    <section class="hero" id="start">
 
         <div class="hero-container">
+
 
             <div class="hero-content">
 
                 <div class="eyebrow">
+
                     <span></span>
+
                     FLUGHAFENTRANSFERSERVICE AUS WETZLAR &amp; UMGEBUNG
+
                 </div>
 
 
@@ -163,9 +194,11 @@
 
             </div>
 
+
         </div>
 
     </section>
+
 
 
     <!-- ÜBER UNS -->
@@ -177,6 +210,7 @@
 
         <div class="container about-grid">
 
+
             <div class="about-photo">
 
                 <img
@@ -185,9 +219,19 @@
                 >
 
                 <div class="about-photo-overlay">
-                    <span>SEIT ÜBER</span>
-                    <strong>30</strong>
-                    <span>JAHREN</span>
+
+                    <span>
+                        SEIT ÜBER
+                    </span>
+
+                    <strong>
+                        30
+                    </strong>
+
+                    <span>
+                        JAHREN
+                    </span>
+
                 </div>
 
             </div>
@@ -220,7 +264,8 @@
                     Ein entspannter Urlaub beginnt nicht erst am Flughafen.
                     Er beginnt in dem Moment, in dem Sie wissen:
                     <strong>
-                        Wir holen Sie zuverlässig ab und bringen Sie direkt zum Terminal.
+                        Wir holen Sie zuverlässig ab und bringen Sie direkt
+                        zum Terminal.
                     </strong>
 
                 </p>
@@ -252,6 +297,7 @@
     </section>
 
 
+
     <!-- FLUGHÄFEN -->
 
     <section
@@ -261,7 +307,9 @@
 
         <div class="container">
 
+
             <div class="airports-head">
+
 
                 <div>
 
@@ -301,7 +349,11 @@
 
             <div class="airport-grid">
 
-                <article class="airport-card airport-dark">
+
+                <a
+                    href="#vorbestellung"
+                    class="airport-card airport-dark"
+                >
 
                     <div class="airport-top">
                         <span>01</span>
@@ -324,10 +376,13 @@
                         Häufig angefahrenes Ziel →
                     </strong>
 
-                </article>
+                </a>
 
 
-                <article class="airport-card">
+                <a
+                    href="#vorbestellung"
+                    class="airport-card"
+                >
 
                     <div class="airport-top">
                         <span>02</span>
@@ -350,10 +405,13 @@
                         Transfer anfragen →
                     </strong>
 
-                </article>
+                </a>
 
 
-                <article class="airport-card">
+                <a
+                    href="#vorbestellung"
+                    class="airport-card"
+                >
 
                     <div class="airport-top">
                         <span>03</span>
@@ -376,10 +434,13 @@
                         Transfer anfragen →
                     </strong>
 
-                </article>
+                </a>
 
 
-                <article class="airport-card">
+                <a
+                    href="#vorbestellung"
+                    class="airport-card"
+                >
 
                     <div class="airport-top">
                         <span>04</span>
@@ -402,10 +463,13 @@
                         Transfer anfragen →
                     </strong>
 
-                </article>
+                </a>
 
 
-                <article class="airport-card airport-highlight">
+                <a
+                    href="#vorbestellung"
+                    class="airport-card airport-highlight"
+                >
 
                     <div class="airport-top">
                         <span>05</span>
@@ -428,10 +492,13 @@
                         Transfer anfragen →
                     </strong>
 
-                </article>
+                </a>
 
 
-                <article class="airport-card airport-soft">
+                <a
+                    href="#vorbestellung"
+                    class="airport-card airport-soft"
+                >
 
                     <div class="airport-top">
                         <span>06</span>
@@ -454,16 +521,19 @@
                         Route anfragen →
                     </strong>
 
-                </article>
+                </a>
+
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- WARUM SALAVATI -->
+
+    <!-- WARUM -->
 
     <section
         class="why"
@@ -493,6 +563,7 @@
 
 
             <div class="why-grid">
+
 
                 <article>
 
@@ -549,11 +620,13 @@
 
                 </article>
 
+
             </div>
 
         </div>
 
     </section>
+
 
 
     <!-- BEWERTUNGEN -->
@@ -565,7 +638,9 @@
 
         <div class="container">
 
+
             <div class="reviews-head">
+
 
                 <div>
 
@@ -616,288 +691,315 @@
             </div>
 
 
+
             <div class="review-slider">
 
+
                 <button
-                    class="review-arrow prev"
+                    class="review-arrow"
+                    id="reviewPrev"
                     type="button"
+                    aria-label="Vorherige Bewertungen"
                 >
                     ←
                 </button>
 
 
-                <div class="review-track">
+                <div
+                    class="review-window"
+                    id="reviewWindow"
+                >
+
+                    <div
+                        class="review-track"
+                        id="reviewTrack"
+                    >
 
 
-                    <article class="review-card">
+                        <article class="review-card">
 
-                        <div class="review-head">
+                            <div class="review-head">
 
-                            <div class="avatar avatar-orange">
-                                H
-                            </div>
+                                <div class="avatar avatar-orange">
+                                    H
+                                </div>
 
-                            <div>
+                                <div>
 
-                                <a href="#">
-                                    Hermann Erb ↗
-                                </a>
+                                    <a href="#">
+                                        Hermann Erb ↗
+                                    </a>
 
-                                <small>
-                                    1 Rezension · 0 Fotos
-                                </small>
+                                    <small>
+                                        1 Rezension · 0 Fotos
+                                    </small>
 
-                            </div>
-
-                        </div>
-
-
-                        <div class="stars">
-
-                            ★★★★★
-
-                            <em>
-                                Vor 8 Wochen
-                            </em>
-
-                        </div>
-
-
-                        <p>
-
-                            Spitzenverlässlicher und sicherer Service zu
-                            einem vernünftigen Preis. Ohne lange Wartezeiten,
-                            selbst bei Abholung vom Flughafen. Immer wieder
-                            ein Vergnügen!
-
-                        </p>
-
-
-                        <small class="review-answer">
-                            ↩ Antworten
-                        </small>
-
-                    </article>
-
-
-                    <article class="review-card">
-
-                        <div class="review-head">
-
-                            <div class="avatar avatar-blue">
-                                A
-                            </div>
-
-                            <div>
-
-                                <a href="#">
-                                    Andrea Gerlach ↗
-                                </a>
-
-                                <small>
-                                    3 Rezensionen · 0 Fotos
-                                </small>
+                                </div>
 
                             </div>
 
-                        </div>
 
+                            <div class="stars">
 
-                        <div class="stars">
+                                ★★★★★
 
-                            ★★★★★
-
-                            <em>
-                                Vor 9 Wochen
-                            </em>
-
-                        </div>
-
-
-                        <p>
-
-                            Exzellenter, zuverlässiger &amp; freundlicher
-                            Service. Immer pünktlich &amp; souverän.
-                            Sofort jemand erreichbar &amp; schnellstens
-                            steht uns Minicar zur Verfügung.
-                            So macht es Spass! Immer wieder gerne!
-
-                        </p>
-
-
-                        <small class="review-answer">
-                            ↩ Antworten
-                        </small>
-
-                    </article>
-
-
-                    <article class="review-card">
-
-                        <div class="review-head">
-
-                            <div class="avatar avatar-purple">
-                                F
-                            </div>
-
-                            <div>
-
-                                <a href="#">
-                                    Fin-Niko Körfer ↗
-                                </a>
-
-                                <small>
-                                    1 Rezension · 0 Fotos
-                                </small>
+                                <em>
+                                    Vor 8 Wochen
+                                </em>
 
                             </div>
 
-                        </div>
+
+                            <p>
+
+                                Spitzenverlässlicher und sicherer Service
+                                zu einem vernünftigen Preis. Ohne lange
+                                Wartezeiten, selbst bei Abholung vom
+                                Flughafen. Immer wieder ein Vergnügen!
+
+                            </p>
 
 
-                        <div class="stars">
+                            <small class="review-answer">
+                                ↩ Antworten
+                            </small>
 
-                            ★★★★★
-
-                            <em>
-                                Vor 9 Wochen
-                            </em>
-
-                        </div>
+                        </article>
 
 
-                        <p>
-                            Sehr verlässlich und kompetent
-                        </p>
 
+                        <article class="review-card">
 
-                        <small class="review-answer">
-                            ↩ Antworten
-                        </small>
+                            <div class="review-head">
 
-                    </article>
+                                <div class="avatar avatar-blue">
+                                    A
+                                </div>
 
+                                <div>
 
-                    <article class="review-card">
+                                    <a href="#">
+                                        Andrea Gerlach ↗
+                                    </a>
 
-                        <div class="review-head">
+                                    <small>
+                                        3 Rezensionen · 0 Fotos
+                                    </small>
 
-                            <div class="avatar avatar-violet">
-                                O
-                            </div>
-
-                            <div>
-
-                                <a href="#">
-                                    Ottmar Kohler ↗
-                                </a>
-
-                                <small>
-                                    Local Guide · 7 Rezensionen · 0 Fotos
-                                </small>
+                                </div>
 
                             </div>
 
-                        </div>
 
+                            <div class="stars">
 
-                        <div class="stars">
+                                ★★★★★
 
-                            ★★★★★
-
-                            <em>
-                                Vor 9 Wochen
-                            </em>
-
-                        </div>
-
-
-                        <p>
-
-                            Sehr freundliche Fahrer.
-                            Immer pünktlich und zuverlässig.
-                            Kann man mit gutem Gewissen
-                            weiterempfehlen.
-
-                        </p>
-
-
-                        <small class="review-answer">
-                            ↩ Antworten
-                        </small>
-
-                    </article>
-
-
-                    <article class="review-card">
-
-                        <div class="review-head">
-
-                            <div class="avatar avatar-slate">
-                                H
-                            </div>
-
-                            <div>
-
-                                <a href="#">
-                                    Hans-Martin Jung ↗
-                                </a>
-
-                                <small>
-                                    13 Rezensionen · 0 Fotos
-                                </small>
+                                <em>
+                                    Vor 9 Wochen
+                                </em>
 
                             </div>
 
-                        </div>
+
+                            <p>
+
+                                Exzellenter, zuverlässiger &amp;
+                                freundlicher Service. Immer pünktlich
+                                &amp; souverän. Sofort jemand erreichbar
+                                &amp; schnellstens steht uns Minicar
+                                zur Verfügung. So macht es Spass!
+                                Immer wieder gerne!
+
+                            </p>
 
 
-                        <div class="stars">
+                            <small class="review-answer">
+                                ↩ Antworten
+                            </small>
 
-                            ★★★★★
-
-                            <em>
-                                Vor 11 Wochen
-                            </em>
-
-                        </div>
+                        </article>
 
 
-                        <p>
-                            Hervorragender Service,
-                            freundliche und kompetente Fahrer!
-                        </p>
+
+                        <article class="review-card">
+
+                            <div class="review-head">
+
+                                <div class="avatar avatar-purple">
+                                    F
+                                </div>
+
+                                <div>
+
+                                    <a href="#">
+                                        Fin-Niko Körfer ↗
+                                    </a>
+
+                                    <small>
+                                        1 Rezension · 0 Fotos
+                                    </small>
+
+                                </div>
+
+                            </div>
 
 
-                        <small class="review-answer">
-                            ↩ Antworten
-                        </small>
+                            <div class="stars">
 
-                    </article>
+                                ★★★★★
 
+                                <em>
+                                    Vor 9 Wochen
+                                </em>
+
+                            </div>
+
+
+                            <p>
+                                Sehr verlässlich und kompetent
+                            </p>
+
+
+                            <small class="review-answer">
+                                ↩ Antworten
+                            </small>
+
+                        </article>
+
+
+
+                        <article class="review-card">
+
+                            <div class="review-head">
+
+                                <div class="avatar avatar-violet">
+                                    O
+                                </div>
+
+                                <div>
+
+                                    <a href="#">
+                                        Ottmar Kohler ↗
+                                    </a>
+
+                                    <small>
+                                        Local Guide · 7 Rezensionen · 0 Fotos
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="stars">
+
+                                ★★★★★
+
+                                <em>
+                                    Vor 9 Wochen
+                                </em>
+
+                            </div>
+
+
+                            <p>
+
+                                Sehr freundliche Fahrer.
+                                Immer pünktlich und zuverlässig.
+                                Kann man mit gutem Gewissen
+                                weiterempfehlen.
+
+                            </p>
+
+
+                            <small class="review-answer">
+                                ↩ Antworten
+                            </small>
+
+                        </article>
+
+
+
+                        <article class="review-card">
+
+                            <div class="review-head">
+
+                                <div class="avatar avatar-slate">
+                                    H
+                                </div>
+
+                                <div>
+
+                                    <a href="#">
+                                        Hans-Martin Jung ↗
+                                    </a>
+
+                                    <small>
+                                        13 Rezensionen · 0 Fotos
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="stars">
+
+                                ★★★★★
+
+                                <em>
+                                    Vor 11 Wochen
+                                </em>
+
+                            </div>
+
+
+                            <p>
+                                Hervorragender Service,
+                                freundliche und kompetente Fahrer!
+                            </p>
+
+
+                            <small class="review-answer">
+                                ↩ Antworten
+                            </small>
+
+                        </article>
+
+
+                    </div>
 
                 </div>
 
 
                 <button
-                    class="review-arrow next"
+                    class="review-arrow"
+                    id="reviewNext"
                     type="button"
+                    aria-label="Nächste Bewertungen"
                 >
                     →
                 </button>
 
+
             </div>
 
 
-            <div class="review-dots">
+            <div
+                class="review-dots"
+                id="reviewDots"
+            >
                 <span class="active"></span>
                 <span></span>
                 <span></span>
             </div>
 
+
         </div>
 
     </section>
+
 
 
     <!-- VORBESTELLUNG -->
@@ -970,9 +1072,9 @@
 
                 <p class="form-intro">
 
-                    Buchen Sie Ihren Flughafentransfer online
-                    mit Salavati – zuverlässig, persönlich
-                    und entspannt.
+                    Buchen Sie Ihren Flughafentransfer online mit
+                    Salavati – zuverlässig, persönlich und entspannt.
+                    Unverbindliche Reservierungsanfrage.
 
                 </p>
 
@@ -982,65 +1084,44 @@
 
                     <div class="form-grid">
 
-
                         <div class="field">
-
-                            <label>
-                                Name *
-                            </label>
-
+                            <label>Name *</label>
                             <input
                                 name="name"
                                 placeholder="Ihr Name"
                                 required
                             >
-
                         </div>
 
 
                         <div class="field">
-
-                            <label>
-                                Vorname *
-                            </label>
-
+                            <label>Vorname *</label>
                             <input
                                 name="first"
                                 placeholder="Ihr Vorname"
                                 required
                             >
-
                         </div>
 
 
                         <div class="field">
-
-                            <label>
-                                Telefon *
-                            </label>
-
+                            <label>Telefon *</label>
                             <input
                                 name="phone"
                                 type="tel"
                                 placeholder="Ihre Telefonnummer"
                                 required
                             >
-
                         </div>
 
 
                         <div class="field">
-
-                            <label>
-                                E-Mail
-                            </label>
-
+                            <label>E-Mail</label>
                             <input
                                 name="email"
                                 type="email"
                                 placeholder="Ihre E-Mail-Adresse"
                             >
-
                         </div>
 
                     </div>
@@ -1051,19 +1132,13 @@
 
                     <div class="form-grid">
 
-
                         <div class="field">
-
-                            <label>
-                                Von *
-                            </label>
-
+                            <label>Von *</label>
                             <input
                                 name="from"
                                 placeholder="Straße, Hausnummer, Ort"
                                 required
                             >
-
                         </div>
 
 
@@ -1110,7 +1185,6 @@
 
                         </div>
 
-
                     </div>
 
 
@@ -1118,54 +1192,36 @@
 
 
                         <div class="field">
-
-                            <label>
-                                Flugnummer
-                            </label>
-
+                            <label>Flugnummer</label>
                             <input
                                 name="flight"
                                 placeholder="z. B. LH123"
                             >
-
                         </div>
 
 
                         <div class="field">
-
-                            <label>
-                                Hinfahrt Datum *
-                            </label>
-
+                            <label>Hinfahrt Datum *</label>
                             <input
                                 name="date"
                                 type="date"
                                 required
                             >
-
                         </div>
 
 
                         <div class="field">
-
-                            <label>
-                                Hinfahrt Uhrzeit *
-                            </label>
-
+                            <label>Hinfahrt Uhrzeit *</label>
                             <input
                                 name="time"
                                 type="time"
                                 required
                             >
-
                         </div>
 
 
                         <div class="field">
-
-                            <label>
-                                Personen *
-                            </label>
+                            <label>Personen *</label>
 
                             <select
                                 name="people"
@@ -1201,7 +1257,6 @@
 
                         </label>
 
-
                     </div>
 
 
@@ -1210,48 +1265,31 @@
                         id="returns"
                     >
 
-
                         <div class="field">
-
-                            <label>
-                                Rückflugnummer
-                            </label>
-
+                            <label>Rückflugnummer</label>
                             <input
                                 name="rflight"
                                 placeholder="z. B. LH456"
                             >
-
                         </div>
 
 
                         <div class="field">
-
-                            <label>
-                                Rückfahrt Datum
-                            </label>
-
+                            <label>Rückfahrt Datum</label>
                             <input
                                 name="rdate"
                                 type="date"
                             >
-
                         </div>
 
 
                         <div class="field">
-
-                            <label>
-                                Rückfahrt Uhrzeit
-                            </label>
-
+                            <label>Rückfahrt Uhrzeit</label>
                             <input
                                 name="rtime"
                                 type="time"
                             >
-
                         </div>
-
 
                     </div>
 
@@ -1288,12 +1326,11 @@
                                 Datenschutzerklärung
                             </a>
                             zur Kenntnis genommen und bin damit
-                            einverstanden, dass die von mir
-                            angegebenen Daten elektronisch erhoben
-                            und gespeichert werden. Meine Daten
-                            werden dabei nur streng zweckgebunden
-                            zur Bearbeitung und Beantwortung meiner
-                            Anfrage genutzt.
+                            einverstanden, dass die von mir angegebenen
+                            Daten elektronisch erhoben und gespeichert
+                            werden. Meine Daten werden dabei nur
+                            streng zweckgebunden zur Bearbeitung und
+                            Beantwortung meiner Anfrage genutzt.
 
                         </span>
 
@@ -1328,9 +1365,13 @@
 </main>
 
 
+
+<!-- FOOTER -->
+
 <footer class="footer">
 
     <div class="container footer-grid">
+
 
         <div>
 
@@ -1389,6 +1430,34 @@
 
         </div>
 
+
+        <div>
+
+            <h3>
+                Rechtliches
+            </h3>
+
+            <p>
+                <a href="impressum.html">
+                    Impressum
+                </a>
+            </p>
+
+            <p>
+                <a href="datenschutz.html">
+                    Datenschutzerklärung
+                </a>
+            </p>
+
+            <p>
+                <a href="agb.html">
+                    AGB
+                </a>
+            </p>
+
+        </div>
+
+
     </div>
 
 
@@ -1399,23 +1468,7 @@
         </span>
 
         <span>
-
-            <a href="datenschutz.html">
-                Datenschutzerklärung
-            </a>
-
-            ·
-
-            <a href="agb.html">
-                AGB
-            </a>
-
-            ·
-
-            <a href="impressum.html">
-                Impressum
-            </a>
-
+            Wetzlar &amp; Umgebung
         </span>
 
     </div>
