@@ -1,728 +1,1359 @@
-/* =====================================================
+/* =========================================
    GRUNDEINSTELLUNGEN
-===================================================== */
+========================================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 
 body {
-  font-family: "DM Sans", Arial, sans-serif;
-  background: #f5f4f1;
-  color: #171a1f;
-  overflow-x: hidden;
+    font-family: "DM Sans", Arial, sans-serif;
+    background: #f5f4f1;
+    color: #171a1f;
+    overflow-x: hidden;
 }
 
 
-/* =====================================================
+a {
+    color: inherit;
+}
+
+
+/* =========================================
    HEADER
-===================================================== */
+========================================= */
 
 .header {
-  width: 100%;
-  height: 96px;
-  border-bottom: 1px solid #dfddd7;
-  background: rgba(245, 244, 241, 0.97);
+    width: 100%;
+    height: 100px;
+    background: rgba(245, 244, 241, 0.97);
+    border-bottom: 1px solid #dedbd4;
 }
 
 
 .header-inner {
-  width: min(1400px, calc(100% - 80px));
-  height: 100%;
-  margin: 0 auto;
+    width: min(1400px, calc(100% - 80px));
+    height: 100%;
+    margin: 0 auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  gap: 40px;
+    gap: 40px;
 }
 
 
-/* LOGO */
+/* =========================================
+   LOGO / BRAND
+========================================= */
 
-.logo {
-  text-decoration: none;
-  color: #171a1f;
-  min-width: 220px;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    text-decoration: none;
+
+    min-width: 300px;
 }
 
 
-.logo-title {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: 0.8px;
+.brand-logo {
+    width: 68px;
+    height: 68px;
+
+    object-fit: contain;
+
+    display: block;
 }
 
 
-.logo-subtitle {
-  margin-top: 8px;
-
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 7px;
-  font-weight: 700;
-  letter-spacing: 2px;
-
-  color: #73767a;
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
-/* NAVIGATION */
+.brand-name {
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 27px;
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: 1.5px;
+
+    color: #171a1f;
+}
+
+
+.brand-subtitle {
+    margin-top: 5px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #7c8187;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  flex: 1;
+    flex: 1;
+
+    gap: 34px;
 }
 
 
 .nav a {
-  text-decoration: none;
+    text-decoration: none;
 
-  color: #171a1f;
+    color: #171a1f;
 
-  font-size: 14px;
-  font-weight: 700;
+    font-size: 14px;
+    font-weight: 700;
 
-  white-space: nowrap;
+    white-space: nowrap;
 
-  transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 
 .nav a:hover {
-  opacity: 0.55;
+    opacity: 0.55;
 }
 
 
-/* HEADER TELEFON */
+/* =========================================
+   HEADER TELEFON
+========================================= */
 
 .header-phone {
-  text-decoration: none;
+    min-height: 52px;
 
-  color: #171a1f;
+    padding: 0 24px;
 
-  font-size: 14px;
-  font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  white-space: nowrap;
+    border: 1.5px solid #171a1f;
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    color: #171a1f;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 
-/* =====================================================
+.header-phone:hover {
+    background: #171a1f;
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
    HERO
-===================================================== */
+========================================= */
 
 .hero {
-  min-height: 720px;
+    min-height: 720px;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  padding: 70px 0 90px;
+    padding: 70px 0 90px;
 
-  background:
-    radial-gradient(
-      circle at 75% 30%,
-      rgba(189, 143, 50, 0.13),
-      transparent 32%
-    ),
-    #f5f4f1;
+    background:
+        radial-gradient(
+            circle at 77% 35%,
+            rgba(182, 138, 53, 0.12),
+            transparent 30%
+        ),
+        #f5f4f1;
 }
 
 
 .hero-container {
-  width: min(1400px, calc(100% - 80px));
-  margin: 0 auto;
+    width: min(1400px, calc(100% - 80px));
+    margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
 
-  align-items: center;
+    align-items: center;
 
-  gap: 70px;
+    gap: 75px;
 }
 
 
-/* =====================================================
-   LINKER HERO-BEREICH
-===================================================== */
+/* =========================================
+   HERO TEXT
+========================================= */
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 
 .eyebrow {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  gap: 12px;
+    gap: 12px;
 
-  margin-bottom: 28px;
-
-  font-family: "Montserrat", Arial, sans-serif;
-
-  font-size: 10px;
-  font-weight: 800;
-
-  letter-spacing: 3px;
-
-  color: #5d6670;
+    margin-bottom: 26px;
 }
 
 
 .eyebrow span {
-  display: block;
+    width: 32px;
+    height: 2px;
 
-  width: 32px;
-  height: 2px;
+    flex-shrink: 0;
 
-  background: #b68a35;
+    background: #b68a35;
 }
 
 
-/* =====================================================
-   ÜBERSCHRIFT
-===================================================== */
+.eyebrow p {
+    font-family: "Montserrat", Arial, sans-serif;
 
-h1 {
-  display: flex;
-  flex-direction: column;
+    font-size: 10px;
+    font-weight: 800;
 
-  margin-bottom: 26px;
+    letter-spacing: 3px;
 
-  font-family: "Montserrat", Arial, sans-serif;
-
-  font-size: clamp(58px, 6vw, 92px);
-  line-height: 0.95;
-
-  letter-spacing: -4px;
+    color: #59626c;
 }
 
 
-h1 span {
-  display: block;
+/* =========================================
+   HERO HEADLINE
+========================================= */
 
-  color: #171a1f;
+.hero h1 {
+    display: flex;
+    flex-direction: column;
 
-  font-weight: 900;
+    margin-bottom: 28px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: clamp(60px, 6vw, 92px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
 }
 
 
-h1 strong {
-  display: block;
+.headline-black {
+    display: block;
 
-  color: #b68a35;
+    color: #171a1f;
 
-  font-weight: 900;
+    font-weight: 900;
 }
 
 
-/* TEXT */
+.headline-gold {
+    display: block;
+
+    color: #b68a35;
+
+    font-weight: 900;
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
 
 .hero-text {
-  max-width: 590px;
+    max-width: 590px;
 
-  font-size: 18px;
-  line-height: 1.65;
+    margin-bottom: 32px;
 
-  color: #4f5964;
+    font-size: 18px;
+    line-height: 1.65;
 
-  margin-bottom: 32px;
+    color: #505a64;
 }
 
 
-/* =====================================================
-   BUTTONS
-===================================================== */
+/* =========================================
+   HERO BUTTONS
+========================================= */
 
 .hero-buttons {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  gap: 14px;
+    gap: 14px;
 
-  margin-bottom: 34px;
+    margin-bottom: 34px;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 
 .primary-button {
-  min-height: 56px;
+    min-height: 56px;
 
-  padding: 0 24px;
+    padding: 0 24px;
 
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+    display: inline-flex;
+    align-items: center;
 
-  border-radius: 12px;
+    gap: 12px;
 
-  text-decoration: none;
+    border-radius: 12px;
 
-  background: #171a1f;
-  color: white;
+    background: #171a1f;
 
-  font-size: 15px;
-  font-weight: 800;
+    color: white;
 
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
 }
 
 
 .primary-button:hover {
-  background: #2a2f35;
-  transform: translateY(-2px);
+    background: #292e34;
+
+    transform: translateY(-2px);
 }
 
 
 .primary-button span {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 
 .phone-button {
-  min-height: 56px;
+    min-height: 56px;
 
-  padding: 0 24px;
+    padding: 0 24px;
 
-  display: inline-flex;
-  align-items: center;
+    display: inline-flex;
+    align-items: center;
 
-  border: 1px solid #d4d0c8;
-  border-radius: 12px;
+    border: 1px solid #d4d0c8;
+    border-radius: 12px;
 
-  text-decoration: none;
+    background: rgba(255, 255, 255, 0.3);
 
-  color: #171a1f;
+    color: #171a1f;
 
-  font-size: 15px;
-  font-weight: 800;
+    text-decoration: none;
 
-  background: rgba(255, 255, 255, 0.35);
+    font-size: 15px;
+    font-weight: 800;
 
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 
 .phone-button:hover {
-  background: white;
-  transform: translateY(-2px);
+    background: white;
+
+    transform: translateY(-2px);
 }
 
 
-/* =====================================================
-   STATS
-===================================================== */
+/* =========================================
+   HERO STATISTIKEN
+========================================= */
 
 .hero-stats {
-  display: flex;
-
-  width: 100%;
+    display: flex;
 }
 
 
 .stat {
-  min-width: 150px;
+    min-width: 150px;
 
-  padding-right: 28px;
-  margin-right: 28px;
+    padding-right: 28px;
+    margin-right: 28px;
 
-  border-right: 1px solid #d7d3cb;
+    display: flex;
+    flex-direction: column;
 
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    gap: 5px;
+
+    border-right: 1px solid #d7d3cb;
 }
 
 
 .stat:last-child {
-  border-right: none;
-  margin-right: 0;
+    border-right: none;
+
+    padding-right: 0;
+    margin-right: 0;
 }
 
 
 .stat strong {
-  font-size: 24px;
-  font-weight: 800;
+    color: #171a1f;
 
-  color: #171a1f;
+    font-size: 24px;
+    font-weight: 800;
 }
 
 
 .stat span {
-  font-size: 13px;
+    color: #69727b;
 
-  color: #68717a;
+    font-size: 13px;
 }
 
 
-/* =====================================================
-   BILD RECHTS
-===================================================== */
+/* =========================================
+   HERO BILD
+========================================= */
 
 .hero-image-wrapper {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 
 .hero-image-wrapper::before {
-  content: "";
+    content: "";
 
-  position: absolute;
+    position: absolute;
 
-  width: 85%;
-  height: 85%;
+    width: 90%;
+    height: 90%;
 
-  right: -40px;
-  top: 50%;
+    right: -30px;
+    top: 50%;
 
-  transform: translateY(-50%);
+    transform: translateY(-50%);
 
-  background: radial-gradient(
-    circle,
-    rgba(182, 138, 53, 0.17),
-    transparent 65%
-  );
+    background:
+        radial-gradient(
+            circle,
+            rgba(182, 138, 53, 0.17),
+            transparent 65%
+        );
 
-  filter: blur(35px);
+    filter: blur(35px);
 
-  pointer-events: none;
+    pointer-events: none;
 }
 
 
 .hero-image {
-  position: relative;
+    position: relative;
 
-  width: 100%;
-  max-width: 760px;
+    width: 100%;
+    max-width: 760px;
 
-  height: 500px;
+    height: 500px;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  border-radius: 28px;
+    border-radius: 28px;
 
-  box-shadow:
-    0 25px 70px rgba(20, 24, 30, 0.12);
+    box-shadow:
+        0 25px 70px rgba(20, 24, 30, 0.12);
 }
 
-
-/* BILD */
 
 .hero-image img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 
-  display: block;
+    display: block;
 
-  object-fit: cover;
-  object-position: center;
+    object-fit: cover;
+    object-position: center;
 }
 
 
-/* WEICHER ÜBERGANG ZUR LINKEN SEITE */
+/* WEICHER ÜBERGANG LINKS */
 
 .hero-image::after {
-  content: "";
+    content: "";
 
-  position: absolute;
+    position: absolute;
 
-  inset: 0;
+    inset: 0;
 
-  background:
-    linear-gradient(
-      to right,
-      #f5f4f1 0%,
-      rgba(245, 244, 241, 0.88) 7%,
-      rgba(245, 244, 241, 0.35) 18%,
-      transparent 35%
-    ),
-    linear-gradient(
-      to top,
-      rgba(245, 244, 241, 0.25),
-      transparent 40%
-    );
+    pointer-events: none;
 
-  pointer-events: none;
+    background:
+        linear-gradient(
+            to right,
+            #f5f4f1 0%,
+            rgba(245, 244, 241, 0.92) 7%,
+            rgba(245, 244, 241, 0.45) 18%,
+            transparent 36%
+        ),
+        linear-gradient(
+            to top,
+            rgba(245, 244, 241, 0.12),
+            transparent 35%
+        );
 }
 
 
-/* =====================================================
-   UNTERE SEKTIONEN
-===================================================== */
+/* =========================================
+   ALLGEMEINE SEKTIONEN
+========================================= */
 
-.placeholder-section {
-  min-height: 400px;
-
-  padding: 120px 40px;
-
-  text-align: center;
-
-  background: #171a1f;
-
-  color: white;
+.section-container {
+    width: min(1400px, calc(100% - 80px));
+    margin: 0 auto;
 }
 
 
-.placeholder-section.light {
-  background: #ebe9e4;
-  color: #171a1f;
+.section-label {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #66707a;
 }
 
 
-.placeholder-section h2 {
-  font-family: "Montserrat", Arial, sans-serif;
+.section-label span {
+    width: 32px;
+    height: 2px;
 
-  font-size: 52px;
-
-  margin-bottom: 20px;
+    background: #b68a35;
 }
 
 
-.placeholder-section p {
-  max-width: 600px;
+.section-title {
+    max-width: 850px;
 
-  margin: 0 auto;
+    font-family: "Montserrat", Arial, sans-serif;
 
-  font-size: 18px;
-  line-height: 1.7;
+    font-size: clamp(44px, 5vw, 72px);
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    color: #171a1f;
 }
 
 
-footer {
-  padding: 30px;
+.section-title span {
+    display: block;
 
-  text-align: center;
-
-  background: #101216;
-
-  color: #a9a9a9;
-
-  font-size: 13px;
+    color: #b68a35;
 }
 
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* =========================================
+   ÜBER UNS
+========================================= */
 
-@media (max-width: 1150px) {
+.about-section {
+    padding: 140px 0;
 
-  .header-inner {
-    width: min(100% - 50px, 1400px);
-  }
+    background: #171a1f;
+
+    color: white;
+}
 
 
-  .hero-container {
-    width: min(100% - 50px, 1400px);
+.about-section .section-label {
+    color: #a9b0b8;
+}
+
+
+.about-content {
+    display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 40px;
-  }
+    gap: 100px;
 
-
-  .nav {
-    gap: 20px;
-  }
-
-
-  .nav a {
-    font-size: 13px;
-  }
-
-
-  .hero-image {
-    height: 450px;
-  }
-
-
-  .header-phone {
-    display: none;
-  }
-
+    align-items: start;
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+.about-content h2 {
+    font-family: "Montserrat", Arial, sans-serif;
 
-@media (max-width: 850px) {
+    font-size: clamp(45px, 5vw, 75px);
+    font-weight: 900;
 
-  .header {
-    height: auto;
-  }
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+}
 
 
-  .header-inner {
-    width: calc(100% - 40px);
+.about-content h2 span {
+    display: block;
 
-    padding: 20px 0;
+    color: #b68a35;
+}
 
-    flex-wrap: wrap;
+
+.about-text {
+    padding-top: 12px;
+}
+
+
+.about-text p {
+    margin-bottom: 22px;
+
+    color: #c3c7cb;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FLUGHÄFEN
+========================================= */
+
+.airports-section {
+    padding: 140px 0;
+
+    background: #eceae5;
+}
+
+
+.airport-grid {
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
-  }
+}
 
 
-  .nav {
-    width: 100%;
+.airport-card {
+    min-height: 260px;
 
-    justify-content: flex-start;
+    padding: 32px;
 
-    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
 
-    padding-bottom: 5px;
+    background: #f5f4f1;
 
-    gap: 24px;
-  }
+    border: 1px solid #ddd9d1;
 
-
-  .nav::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  .hero {
-    padding: 70px 0 70px;
-  }
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
 
 
-  .hero-container {
-    width: calc(100% - 40px);
+.airport-card:hover {
+    transform: translateY(-7px);
 
-    grid-template-columns: 1fr;
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+.airport-number {
+    margin-bottom: auto;
+
+    color: #b68a35;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: 900;
+}
+
+
+.airport-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+.airport-card p {
+    color: #68717a;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   WARUM SALAVATI
+========================================= */
+
+.why-section {
+    padding: 140px 0;
+
+    background: #f5f4f1;
+}
+
+
+.why-intro {
+    max-width: 850px;
+}
+
+
+.why-intro h2 {
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: clamp(45px, 5vw, 75px);
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+}
+
+
+.why-intro h2 span {
+    display: block;
+
+    color: #b68a35;
+}
+
+
+.why-grid {
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 50px;
-  }
+}
 
 
-  .hero-image-wrapper {
-    justify-content: center;
-  }
+.why-item {
+    padding-top: 30px;
+
+    border-top: 1px solid #d8d4cc;
+}
 
 
-  .hero-image {
-    height: 400px;
+.why-icon {
+    margin-bottom: 30px;
 
-    border-radius: 22px;
-  }
+    color: #b68a35;
 
+    font-family: "Montserrat", Arial, sans-serif;
 
-  .hero-image::after {
-    background:
-      linear-gradient(
-        to top,
-        rgba(245, 244, 241, 0.15),
-        transparent 40%
-      );
-  }
-
-
-  h1 {
-    font-size: clamp(52px, 15vw, 78px);
-  }
-
-
-  .hero-text {
     font-size: 16px;
-  }
+    font-weight: 900;
+}
 
 
-  .eyebrow {
-    font-size: 9px;
+.why-item h3 {
+    margin-bottom: 15px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 26px;
+    font-weight: 800;
+}
+
+
+.why-item p {
+    max-width: 360px;
+
+    color: #66707a;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   VORBESTELLUNG
+========================================= */
+
+.booking-section {
+    padding: 110px 0;
+
+    background: #b68a35;
+
+    color: white;
+}
+
+
+.booking-container {
+    width: min(1400px, calc(100% - 80px));
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.booking-section .section-label {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+.booking-section .section-label span {
+    background: white;
+}
+
+
+.booking-text h2 {
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+}
+
+
+.booking-text h2 span {
+    display: block;
+}
+
+
+.booking-text p {
+    margin-top: 25px;
+
+    max-width: 600px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.booking-action {
+    text-align: right;
+}
+
+
+.booking-phone {
+    min-height: 65px;
+
+    padding: 0 30px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid white;
+    border-radius: 12px;
+
+    background: white;
+
+    color: #171a1f;
+
+    text-decoration: none;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+
+.booking-action p {
+    margin-top: 15px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BEWERTUNGEN
+========================================= */
+
+.reviews-section {
+    padding: 140px 0;
+
+    background: #f5f4f1;
+}
+
+
+.review-grid {
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.review-card {
+    min-height: 280px;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #ddd9d1;
+
+    background: white;
+}
+
+
+.stars {
+    margin-bottom: 25px;
+
+    color: #b68a35;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+}
+
+
+.review-card p {
+    color: #4f5963;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-bottom: auto;
+}
+
+
+.review-card strong {
+    margin-top: 30px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 70px 0 35px;
+
+    background: #111317;
+
+    color: white;
+}
+
+
+.footer-container {
+    width: min(1400px, calc(100% - 80px));
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: end;
+}
+
+
+.footer-brand h3 {
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 28px;
+    font-weight: 900;
+
     letter-spacing: 2px;
-  }
+}
+
+
+.footer-brand p {
+    color: #858b92;
+
+    font-size: 14px;
+}
+
+
+.footer-contact p {
+    margin-bottom: 8px;
+
+    color: #858b92;
+
+    font-size: 13px;
+}
+
+
+.footer-contact a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+.footer-copy {
+    text-align: right;
+
+    color: #858b92;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .header-inner,
+    .hero-container,
+    .section-container,
+    .booking-container,
+    .footer-container {
+        width: min(100% - 50px, 1400px);
+    }
+
+
+    .brand {
+        min-width: 240px;
+    }
+
+
+    .nav {
+        gap: 20px;
+    }
+
+
+    .nav a {
+        font-size: 13px;
+    }
+
+
+    .header-phone {
+        display: none;
+    }
+
+
+    .hero-container {
+        gap: 45px;
+    }
+
+
+    .hero-image {
+        height: 450px;
+    }
+
+
+    .airport-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 
 
-/* =====================================================
-   KLEINE HANDYS
-===================================================== */
+/* =========================================
+   MOBILE / TABLET
+========================================= */
 
-@media (max-width: 550px) {
+@media (max-width: 900px) {
 
-  .header-inner {
-    width: calc(100% - 30px);
-  }
-
-
-  .hero-container {
-    width: calc(100% - 30px);
-  }
+    .header {
+        height: auto;
+    }
 
 
-  .logo-title {
-    font-size: 19px;
-  }
+    .header-inner {
+        padding: 18px 0;
+
+        flex-wrap: wrap;
+    }
 
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
+    .nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
 
 
-  .primary-button,
-  .phone-button {
-    justify-content: center;
-  }
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
 
 
-  .hero-stats {
-    gap: 0;
-  }
+    .hero {
+        padding: 70px 0;
+    }
 
 
-  .stat {
-    min-width: 0;
+    .hero-container {
+        grid-template-columns: 1fr;
 
-    flex: 1;
-
-    margin-right: 12px;
-    padding-right: 12px;
-  }
+        gap: 55px;
+    }
 
 
-  .stat strong {
-    font-size: 20px;
-  }
+    .hero-image-wrapper {
+        justify-content: center;
+    }
 
 
-  .stat span {
-    font-size: 11px;
-  }
+    .hero-image {
+        max-width: 100%;
+    }
 
 
-  .hero-image {
-    height: 300px;
-  }
+    .hero-image::after {
+        background:
+            linear-gradient(
+                to top,
+                rgba(245, 244, 241, 0.1),
+                transparent 35%
+            );
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .why-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .booking-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .booking-action {
+        text-align: left;
+    }
+
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .footer-copy {
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================
+   HANDY
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header-inner,
+    .hero-container,
+    .section-container,
+    .booking-container,
+    .footer-container {
+        width: calc(100% - 30px);
+    }
+
+
+    .brand {
+        min-width: auto;
+    }
+
+
+    .brand-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    .brand-name {
+        font-size: 23px;
+    }
+
+
+    .brand-subtitle {
+        font-size: 6px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .hero h1 {
+        font-size: 56px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .eyebrow p {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .primary-button,
+    .phone-button {
+        justify-content: center;
+    }
+
+
+    .hero-stats {
+        width: 100%;
+    }
+
+
+    .stat {
+        min-width: 0;
+
+        flex: 1;
+
+        padding-right: 12px;
+        margin-right: 12px;
+    }
+
+
+    .stat strong {
+        font-size: 20px;
+    }
+
+
+    .stat span {
+        font-size: 11px;
+    }
+
+
+    .hero-image {
+        height: 310px;
+
+        border-radius: 20px;
+    }
+
+
+    .airport-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .booking-phone {
+        width: 100%;
+    }
+
+
+    .section-title,
+    .about-content h2,
+    .why-intro h2,
+    .booking-text h2 {
+        letter-spacing: -2px;
+    }
 
 }
