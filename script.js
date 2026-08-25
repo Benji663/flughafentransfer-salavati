@@ -1,4 +1,69 @@
-const menu=document.querySelector('.menu'),links=document.querySelector('.links');if(menu)menu.onclick=()=>links.classList.toggle('open');
-const rev=document.querySelector('.reviews');document.querySelector('.prev')?.addEventListener('click',()=>rev.scrollBy({left:-rev.clientWidth*.85,behavior:'smooth'}));document.querySelector('.next')?.addEventListener('click',()=>rev.scrollBy({left:rev.clientWidth*.85,behavior:'smooth'}));
-const rc=document.querySelector('#returnTrip'),rf=document.querySelector('.returns');if(rc)rc.onchange=()=>rf.classList.toggle('show',rc.checked);
-const form=document.querySelector('#bookingForm');if(form)form.onsubmit=e=>{e.preventDefault();const d=new FormData(form);let body=[`Name: ${d.get('name')}`,`Vorname: ${d.get('first')}`,`Telefon: ${d.get('phone')}`,`E-Mail: ${d.get('email')}`,`Von: ${d.get('from')}`,`Flughafen: ${d.get('airport')}`,`Flugnummer: ${d.get('flight')}`,`Hinfahrt: ${d.get('date')} ${d.get('time')}`,`Personen: ${d.get('people')}`,`Rückfahrt: ${rc?.checked?'Ja':'Nein'}`,`Rückflug: ${d.get('rflight')||''} ${d.get('rdate')||''} ${d.get('rtime')||''}`,`Nachricht: ${d.get('message')}`].join('\n');location.href='mailto:info@flughafen-transfer-salavati.de?subject='+encodeURIComponent('Reservierungsanfrage Flughafentransfer')+'&body='+encodeURIComponent(body)};
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* Rückfahrt */
+
+    const returnTrip = document.getElementById("returnTrip");
+    const returns = document.getElementById("returns");
+
+    if (returnTrip && returns) {
+
+        returnTrip.addEventListener("change", function () {
+
+            returns.classList.toggle(
+                "show",
+                returnTrip.checked
+            );
+
+        });
+
+    }
+
+
+    /* Bewertungs-Slider */
+
+    const track =
+        document.querySelector(".review-track");
+
+    const previous =
+        document.querySelector(".review-arrow.prev");
+
+    const next =
+        document.querySelector(".review-arrow.next");
+
+
+    function moveReviews(direction) {
+
+        if (!track) {
+            return;
+        }
+
+        const distance =
+            Math.max(
+                320,
+                track.clientWidth * 0.9
+            );
+
+        track.scrollBy({
+            left: direction * distance,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    previous?.addEventListener(
+        "click",
+        function () {
+            moveReviews(-1);
+        }
+    );
+
+
+    next?.addEventListener(
+        "click",
+        function () {
+            moveReviews(1);
+        }
+    );
+
+});
