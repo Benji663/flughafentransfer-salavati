@@ -1,22 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================================
+    /* =====================================================
        MOBILE NAVIGATION
-    ========================================= */
+    ===================================================== */
 
-    const mobileMenu = document.getElementById("mobileMenu");
-    const mainNav = document.getElementById("mainNav");
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
 
     if (mobileMenu && mainNav) {
 
         mobileMenu.addEventListener("click", function () {
 
-            const isOpen =
+            const open =
                 mainNav.classList.toggle("open");
 
             mobileMenu.setAttribute(
                 "aria-expanded",
-                isOpen ? "true" : "false"
+                open ? "true" : "false"
             );
 
         });
@@ -41,15 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    /* =========================================
+    /* =====================================================
        RÜCKFAHRT
-    ========================================= */
+    ===================================================== */
 
     const returnTrip =
         document.getElementById("returnTrip");
 
     const returns =
         document.getElementById("returns");
+
 
     if (returnTrip && returns) {
 
@@ -69,17 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    /* =========================================
-       BEWERTUNGSSLIDER
-    ========================================= */
+    /* =====================================================
+       BEWERTUNGEN
+    ===================================================== */
 
     const track =
         document.getElementById("reviewTrack");
 
-    const windowElement =
-        document.getElementById("reviewWindow");
-
-    const previous =
+    const prev =
         document.getElementById("reviewPrev");
 
     const next =
@@ -91,14 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-    let currentIndex = 0;
+    let current =
+        0;
 
 
-    function cardsPerView() {
-
-        if (window.innerWidth <= 620) {
-            return 1;
-        }
+    function cardsVisible() {
 
         if (window.innerWidth <= 850) {
             return 1;
@@ -109,46 +108,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         return 3;
+
     }
 
 
-    function maxIndex() {
+    function maximum() {
 
-        const totalCards =
-            track
-                ? track.children.length
-                : 0;
+        if (!track) {
+            return 0;
+        }
 
         return Math.max(
             0,
-            totalCards - cardsPerView()
+            track.children.length -
+            cardsVisible()
         );
 
     }
 
 
-    function updateSlider() {
+    function updateReviews() {
 
-        if (!track || !windowElement) {
+        if (!track || !track.children.length) {
             return;
         }
 
 
-        const cards =
-            track.children;
+        const card =
+            track.children[0];
 
 
-        if (!cards.length) {
-            return;
-        }
-
-
-        const firstCard =
-            cards[0];
-
-
-        const cardWidth =
-            firstCard.getBoundingClientRect().width;
+        const width =
+            card.getBoundingClientRect().width;
 
 
         const gap =
@@ -158,18 +149,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         const distance =
-            currentIndex * (cardWidth + gap);
+            current * (width + gap);
 
 
         track.style.transform =
-            "translateX(-" + distance + "px)";
+            "translateX(-" +
+            distance +
+            "px)";
 
 
         dots.forEach(function (dot, index) {
 
             dot.classList.toggle(
                 "active",
-                index === currentIndex
+                index === current
             );
 
         });
@@ -177,36 +170,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    function moveSlider(direction) {
+    function moveReviews(direction) {
 
-        const maximum =
-            maxIndex();
-
-
-        currentIndex += direction;
+        current += direction;
 
 
-        if (currentIndex < 0) {
-            currentIndex = 0;
+        const max =
+            maximum();
+
+
+        if (current < 0) {
+            current = 0;
         }
 
 
-        if (currentIndex > maximum) {
-            currentIndex = maximum;
+        if (current > max) {
+            current = max;
         }
 
 
-        updateSlider();
+        updateReviews();
 
     }
 
 
-    if (previous) {
+    if (prev) {
 
-        previous.addEventListener(
+        prev.addEventListener(
             "click",
             function () {
-                moveSlider(-1);
+                moveReviews(-1);
             }
         );
 
@@ -218,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
         next.addEventListener(
             "click",
             function () {
-                moveSlider(1);
+                moveReviews(1);
             }
         );
 
@@ -231,13 +224,13 @@ document.addEventListener("DOMContentLoaded", function () {
             "click",
             function () {
 
-                currentIndex =
+                current =
                     Math.min(
                         index,
-                        maxIndex()
+                        maximum()
                     );
 
-                updateSlider();
+                updateReviews();
 
             }
         );
@@ -249,18 +242,18 @@ document.addEventListener("DOMContentLoaded", function () {
         "resize",
         function () {
 
-            currentIndex =
+            current =
                 Math.min(
-                    currentIndex,
-                    maxIndex()
+                    current,
+                    maximum()
                 );
 
-            updateSlider();
+            updateReviews();
 
         }
     );
 
 
-    updateSlider();
+    updateReviews();
 
 });
