@@ -1,1359 +1,1532 @@
-/* =========================================
-   GRUNDEINSTELLUNGEN
-========================================= */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-
 
 body {
-    font-family: "DM Sans", Arial, sans-serif;
-    background: #f5f4f1;
-    color: #171a1f;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  background: #f5f4f1;
+  color: #171a1f;
+  overflow-x: hidden;
 }
-
 
 a {
-    color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:root {
+  --ink: #171a1f;
+  --gold: #be8f3b;
+  --muted: #66707a;
+  --bg: #f5f4f1;
+  --cream: #eceae4;
+  --line: #ddd9d1;
+  --white: #fff;
+  --max: 1400px;
+}
+
+.container {
+  width: min(var(--max), calc(100% - 80px));
+  margin: 0 auto;
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+/* HEADER */
 
-.header {
-    width: 100%;
-    height: 100px;
-    background: rgba(245, 244, 241, 0.97);
-    border-bottom: 1px solid #dedbd4;
+.site-header {
+  height: 100px;
+  background: rgba(245, 244, 241, 0.97);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
-
 
 .header-inner {
-    width: min(1400px, calc(100% - 80px));
-    height: 100%;
-    margin: 0 auto;
+  width: min(var(--max), calc(100% - 80px));
+  height: 100%;
+  margin: auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
-
-
-/* =========================================
-   LOGO / BRAND
-========================================= */
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-
-    text-decoration: none;
-
-    min-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 300px;
 }
-
 
 .brand-logo {
-    width: 68px;
-    height: 68px;
-
-    object-fit: contain;
-
-    display: block;
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
 }
-
 
 .brand-text {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text strong {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.brand-text small {
+  margin-top: 5px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #7c8187;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.main-nav a {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.main-nav a:hover {
+  color: var(--gold);
+}
+
+.header-phone {
+  min-height: 52px;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1.5px solid var(--ink);
+  border-radius: 11px;
+
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+
+/* EYEBROW */
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 26px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #66707a;
+}
+
+.eyebrow span {
+  width: 32px;
+  height: 2px;
+  background: var(--gold);
+  flex: 0 0 auto;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 720px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 70px 0 90px;
+
+  background:
+    radial-gradient(
+      circle at 77% 35%,
+      rgba(182,138,53,.12),
+      transparent 30%
+    ),
+    var(--bg);
+}
+
+.hero-container {
+  width: min(var(--max), calc(100% - 80px));
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: .92fr 1.08fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 0 28px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(60px, 6vw, 92px);
+
+  line-height: .95;
+  letter-spacing: -4px;
+}
+
+.hero h1 span {
+  font-weight: 900;
+}
+
+.hero h1 strong {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.hero-lead {
+  max-width: 590px;
+  margin: 0 0 32px;
+
+  font-size: 18px;
+  line-height: 1.65;
+  color: #505a64;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.btn {
+  min-height: 56px;
+  padding: 0 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  border: 1px solid #d4d0c8;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.btn-dark {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.btn b {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.hero-stats {
+  display: flex;
+}
+
+.hero-stats > div {
+  min-width: 150px;
+
+  padding-right: 28px;
+  margin-right: 28px;
+
+  border-right: 1px solid #d7d3cb;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero-stats > div:last-child {
+  border: 0;
+  margin: 0;
+}
+
+.hero-stats strong {
+  font-size: 24px;
+}
+
+.hero-stats span {
+  font-size: 13px;
+  color: #69727b;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image-wrap {
+  position: relative;
+}
+
+.hero-image-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  width: 90%;
+  height: 90%;
+
+  right: -30px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(182,138,53,.17),
+      transparent 65%
+    );
+
+  filter: blur(35px);
+}
+
+.hero-image {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 70px rgba(20,24,30,.12);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      var(--bg) 0%,
+      rgba(245,244,241,.92) 7%,
+      rgba(245,244,241,.45) 18%,
+      transparent 36%
+    );
+
+  pointer-events: none;
+}
+
+
+/* ÜBER UNS */
+
+.about {
+  padding: 130px 0;
+  background: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.about-visual {
+  height: 520px;
+
+  border: 1px solid #e1ddd5;
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      #fff,
+      #f4f1e9 74%
+    );
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.06);
+}
+
+.years {
+  position: absolute;
+  left: 34px;
+  top: 34px;
+
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.years small {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.years b {
+  font-size: 54px;
+  color: var(--gold);
+}
+
+.watermark {
+  position: absolute;
+  left: -12px;
+  top: 170px;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 90px;
+  font-weight: 900;
+
+  color: rgba(190,143,59,.08);
+
+  transform: rotate(-7deg);
+}
+
+.about-badge {
+  position: absolute;
+
+  left: 50%;
+  top: 51%;
+
+  transform: translate(-50%, -50%);
+
+  width: 220px;
+  height: 180px;
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,.92);
+
+  border: 1px solid #e4ded4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 22px 50px rgba(0,0,0,.08);
+}
+
+.about-badge span {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--gold);
+
+  margin-bottom: 18px;
+}
+
+.about-badge b {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 20px;
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+.about-meta {
+  position: absolute;
+  left: 34px;
+  bottom: 34px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #656e77;
+}
+
+.about-copy h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: clamp(48px,5vw,75px);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  margin: 0 0 30px;
+}
+
+.about-copy h2 span {
+  color: var(--gold);
+}
+
+.about-copy p {
+  font-size: 18px;
+  line-height: 1.75;
+
+  color: #55606b;
+
+  margin: 0 0 24px;
+}
+
+
+/* FLUGHÄFEN */
+
+.airports {
+  padding: 120px 0;
+  background: var(--bg);
+}
+
+.airports-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: end;
+
+  margin-bottom: 55px;
+}
+
+.airports-head h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: clamp(50px,5vw,72px);
+
+  line-height: .98;
+
+  letter-spacing: -3px;
+
+  margin: 0;
+}
+
+.airports-head h2 span {
+  display: block;
+  color: var(--gold);
+}
+
+.airports-head > p {
+  margin: 0;
+
+  color: #64707a;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.airport-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 18px;
+}
+
+.airport-card {
+  min-height: 252px;
+
+  padding: 30px;
+
+  border: 1px solid #ddd9d1;
+  border-radius: 22px;
+
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.airport-card::after {
+  content: "";
+
+  width: 74px;
+  height: 74px;
+
+  border: 1px solid rgba(190,143,59,.3);
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  right: -22px;
+  bottom: -25px;
+}
+
+.airport-card.dark {
+  background: #090a0b;
+  color: white;
+  border-color: #090a0b;
+}
+
+.airport-card.highlight {
+  border-color: #c9a45f;
+
+  box-shadow:
+    0 12px 35px rgba(190,143,59,.12);
+}
+
+.airport-card.soft {
+  background: #f3f0e9;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: var(--gold);
+}
+
+.plane {
+  margin-top: 28px;
+
+  color: var(--gold);
+
+  font-size: 24px;
+}
+
+.airport-card h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 24px;
+
+  margin: 18px 0 7px;
+}
+
+.airport-card p {
+  margin: 0;
+
+  color: #747d86;
+
+  font-size: 13px;
+}
+
+.airport-card.dark p {
+  color: #aeb4bb;
+}
+
+.airport-card strong {
+  margin-top: auto;
+
+  font-size: 12px;
+}
+
+
+/* WARUM */
+
+.why {
+  padding: 130px 0;
+  background: #fff;
+}
+
+.why h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: clamp(48px,5vw,75px);
+
+  line-height: 1.02;
+  letter-spacing: -3px;
+
+  margin: 0 0 58px;
+}
+
+.why h2 span {
+  display: block;
+  color: var(--gold);
+}
+
+.why-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 22px;
+}
+
+.why-grid article {
+  min-height: 220px;
+
+  padding: 34px;
+
+  border: 1px solid #e0dbd2;
+
+  border-radius: 20px;
+
+  background: #fff;
+}
+
+.why-grid article > span {
+  display: inline-flex;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f4ecdb;
+
+  color: #9f752d;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  margin-bottom: 22px;
+}
+
+.why-grid h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 20px;
+
+  margin: 0 0 12px;
+}
+
+.why-grid p {
+  margin: 0;
+
+  color: #66707a;
+
+  line-height: 1.65;
+}
+
+
+/* BEWERTUNGEN */
+
+.reviews {
+  padding: 130px 0;
+  background: #f3f1ec;
+}
+
+.reviews-head {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: end;
+
+  gap: 30px;
+
+  margin-bottom: 50px;
+}
+
+.reviews-head h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: clamp(48px,5vw,72px);
+
+  line-height: .99;
+
+  letter-spacing: -3px;
+
+  margin: 0;
+}
+
+.reviews-head h2 span {
+  display: block;
+  color: var(--gold);
+}
+
+.reviews-head p {
+  margin: 24px 0 0;
+  color: #66707a;
+}
+
+.score {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.score strong {
+  font-size: 50px;
+}
+
+.score strong span {
+  color: var(--gold);
+}
+
+.score small {
+  font-size: 18px;
+  color: #8a8d90;
+}
+
+.score label {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 12px;
+
+  color: #6e747a;
+}
+
+.slider {
+  display: grid;
+
+  grid-template-columns: 48px minmax(0,1fr) 48px;
+
+  gap: 14px;
+
+  align-items: center;
+}
+
+.review-track {
+  display: grid;
+
+  grid-auto-flow: column;
+
+  grid-auto-columns:
+    calc((100% - 40px) / 3);
+
+  gap: 20px;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+}
+
+.review-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
+  min-height: 285px;
+
+  padding: 28px;
+
+  border: 1px solid #dfdbd4;
+
+  border-radius: 18px;
+
+  background: #fff;
+
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.review-head {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  color: #fff;
+
+  font-weight: 800;
+}
+
+.a1 {
+  background: #ee7d00;
+}
+
+.a2 {
+  background: #0a64a8;
+}
+
+.a3 {
+  background: #5630ab;
+}
+
+.a4 {
+  background: #a44cc3;
+}
+
+.a5 {
+  background: #566976;
+}
+
+.review-head a {
+  color: #1967d2;
+
+  text-decoration: underline;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.review-head small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #8b9096;
+
+  font-size: 11px;
+}
+
+.stars {
+  margin: 22px 0 14px;
+
+  color: #ffb000;
+
+  letter-spacing: 2px;
+}
+
+.stars em {
+  margin-left: 10px;
+
+  color: #71777d;
+
+  letter-spacing: 0;
+
+  font-style: normal;
+
+  font-size: 12px;
+}
+
+.review-card p {
+  margin: 0;
+
+  color: #424950;
+
+  line-height: 1.65;
+
+  font-size: 14px;
+}
+
+.answer {
+  margin-top: auto;
+
+  padding-top: 20px;
+
+  color: #1967d2;
+
+  font-weight: 700;
+}
+
+.arrow {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1px solid #d6d1c8;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  font-size: 20px;
+}
+
+.dots {
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.dots i {
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #d3cec4;
+
+  margin: 0 4px;
+}
+
+.dots i.active {
+  background: var(--gold);
+}
+
+
+/* FORMULAR */
+
+.booking {
+  padding: 120px 0;
+  background: #fff;
+}
+
+.booking-grid {
+  display: grid;
+
+  grid-template-columns: .7fr 1.3fr;
+
+  gap: 80px;
+
+  align-items: start;
+}
+
+.booking-copy {
+  padding-top: 40px;
+}
+
+.booking-copy h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: clamp(50px,5vw,72px);
+
+  line-height: .99;
+
+  letter-spacing: -3px;
+
+  margin: 0 0 28px;
+}
+
+.booking-copy h2 span {
+  display: block;
+  color: var(--gold);
+}
+
+.booking-copy > p {
+  max-width: 530px;
+
+  color: #65707b;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.large-phone {
+  display: inline-block;
+
+  margin-top: 28px;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.form-card {
+  padding: 38px 42px;
+
+  border: 1px solid #e0dbd2;
+
+  border-radius: 22px;
+
+  background: #fff;
+
+  box-shadow:
+    0 18px 60px rgba(0,0,0,.05);
+}
+
+.form-card h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 29px;
+
+  margin: 0 0 8px;
+}
+
+.intro {
+  margin: 0 0 28px;
+
+  color: #737b84;
+
+  font-size: 14px;
+}
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+}
+
+.form-card hr {
+  border: 0;
+
+  border-top: 1px solid #e5e0d8;
+
+  margin: 20px 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.field input,
+.field select,
+.message textarea {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #d8d2c9;
+
+  border-radius: 9px;
+
+  background: #fff;
+
+  outline: none;
+}
+
+.field input,
+.field select {
+  min-height: 49px;
+}
+
+.trip-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.25fr
+    1.25fr
+    .7fr
+    auto;
+
+  gap: 14px;
+
+  align-items: end;
+}
+
+.return-toggle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 49px;
+
+  white-space: nowrap;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.return-toggle input {
+  width: 18px;
+  height: 18px;
+}
+
+.returns {
+  display: none;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: 17px;
+}
+
+.returns.show {
+  display: grid;
+}
+
+.message {
+  margin-top: 18px;
+}
+
+.message textarea {
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+.consent {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: #626b74;
+}
+
+.consent input {
+  width: 18px;
+  height: 18px;
+
+  margin-top: 2px;
+}
+
+.consent a {
+  color: #1769d1;
+
+  text-decoration: underline;
+}
+
+.note {
+  margin: 14px 0;
+
+  color: #888e94;
+
+  font-size: 11px;
+}
+
+.submit {
+  width: 100%;
+
+  height: 52px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: #090a0b;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background: #0b0c0d;
+
+  color: #fff;
+
+  padding: 70px 0 25px;
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+}
+
+.footer h3 {
+  font-size: 20px;
+
+  margin: 0 0 18px;
+}
+
+.footer p {
+  margin: 8px 0;
+
+  color: #adb1b6;
+}
+
+.footer-bottom {
+  margin-top: 45px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #25272a;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #777d83;
+
+  font-size: 12px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+  .container,
+  .header-inner,
+  .hero-container {
+    width: min(100% - 50px, var(--max));
+  }
+
+  .main-nav {
+    gap: 18px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+
+  .header-phone {
+    display: none;
+  }
+
+  .hero-container {
+    gap: 45px;
+  }
+
+  .airport-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .review-track {
+    grid-auto-columns: calc((100% - 20px)/2);
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .site-header {
+    height: auto;
+  }
+
+  .header-inner {
+    width: calc(100% - 32px);
+
+    padding: 18px 0;
+
+    flex-wrap: wrap;
+  }
+
+  .main-nav {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    padding-bottom: 4px;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-container {
+    width: calc(100% - 32px);
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .hero-image {
+    height: 410px;
+  }
+
+  .about-grid,
+  .airports-head {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .about-visual {
+    height: 430px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slider {
+    grid-template-columns: 1fr;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .review-track {
+    grid-auto-columns: 86%;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .trip-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .returns.show {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 620px) {
+
+  .container,
+  .hero-container,
+  .header-inner {
+    width: calc(100% - 24px);
+  }
+
+  .brand-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .brand-text strong {
+    font-size: 23px;
+  }
+
+  .brand-text small {
+    font-size: 6px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+
+    letter-spacing: -3px;
+  }
+
+  .hero-lead {
+    font-size: 16px;
+  }
+
+  .hero-actions {
     flex-direction: column;
-    justify-content: center;
-}
+  }
 
+  .hero-actions .btn {
+    width: 100%;
+  }
 
-.brand-name {
-    font-family: "Montserrat", Arial, sans-serif;
+  .hero-stats {
+    gap: 0;
+  }
 
-    font-size: 27px;
-    font-weight: 900;
-
-    line-height: 1;
-
-    letter-spacing: 1.5px;
-
-    color: #171a1f;
-}
-
-
-.brand-subtitle {
-    margin-top: 5px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: 8px;
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    color: #7c8187;
-}
-
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .hero-stats > div {
+    min-width: 0;
 
     flex: 1;
 
-    gap: 34px;
-}
+    padding-right: 10px;
 
+    margin-right: 10px;
+  }
 
-.nav a {
-    text-decoration: none;
-
-    color: #171a1f;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    white-space: nowrap;
-
-    transition: opacity 0.2s ease;
-}
-
-
-.nav a:hover {
-    opacity: 0.55;
-}
-
-
-/* =========================================
-   HEADER TELEFON
-========================================= */
-
-.header-phone {
-    min-height: 52px;
-
-    padding: 0 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1.5px solid #171a1f;
-    border-radius: 11px;
-
-    text-decoration: none;
-
-    color: #171a1f;
-
-    font-size: 14px;
-    font-weight: 800;
-
-    white-space: nowrap;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease;
-}
-
-
-.header-phone:hover {
-    background: #171a1f;
-    color: white;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.hero {
-    min-height: 720px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 70px 0 90px;
-
-    background:
-        radial-gradient(
-            circle at 77% 35%,
-            rgba(182, 138, 53, 0.12),
-            transparent 30%
-        ),
-        #f5f4f1;
-}
-
-
-.hero-container {
-    width: min(1400px, calc(100% - 80px));
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 0.92fr 1.08fr;
-
-    align-items: center;
-
-    gap: 75px;
-}
-
-
-/* =========================================
-   HERO TEXT
-========================================= */
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-
-.eyebrow {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 26px;
-}
-
-
-.eyebrow span {
-    width: 32px;
-    height: 2px;
-
-    flex-shrink: 0;
-
-    background: #b68a35;
-}
-
-
-.eyebrow p {
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
-    color: #59626c;
-}
-
-
-/* =========================================
-   HERO HEADLINE
-========================================= */
-
-.hero h1 {
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 28px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: clamp(60px, 6vw, 92px);
-
-    line-height: 0.95;
-
-    letter-spacing: -4px;
-}
-
-
-.headline-black {
-    display: block;
-
-    color: #171a1f;
-
-    font-weight: 900;
-}
-
-
-.headline-gold {
-    display: block;
-
-    color: #b68a35;
-
-    font-weight: 900;
-}
-
-
-/* =========================================
-   HERO TEXT
-========================================= */
-
-.hero-text {
-    max-width: 590px;
-
-    margin-bottom: 32px;
-
-    font-size: 18px;
-    line-height: 1.65;
-
-    color: #505a64;
-}
-
-
-/* =========================================
-   HERO BUTTONS
-========================================= */
-
-.hero-buttons {
-    display: flex;
-    align-items: center;
-
-    gap: 14px;
-
-    margin-bottom: 34px;
-
-    flex-wrap: wrap;
-}
-
-
-.primary-button {
-    min-height: 56px;
-
-    padding: 0 24px;
-
-    display: inline-flex;
-    align-items: center;
-
-    gap: 12px;
-
-    border-radius: 12px;
-
-    background: #171a1f;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 800;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-}
-
-
-.primary-button:hover {
-    background: #292e34;
-
-    transform: translateY(-2px);
-}
-
-
-.primary-button span {
-    font-size: 20px;
-}
-
-
-.phone-button {
-    min-height: 56px;
-
-    padding: 0 24px;
-
-    display: inline-flex;
-    align-items: center;
-
-    border: 1px solid #d4d0c8;
-    border-radius: 12px;
-
-    background: rgba(255, 255, 255, 0.3);
-
-    color: #171a1f;
-
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 800;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-}
-
-
-.phone-button:hover {
-    background: white;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   HERO STATISTIKEN
-========================================= */
-
-.hero-stats {
-    display: flex;
-}
-
-
-.stat {
-    min-width: 150px;
-
-    padding-right: 28px;
-    margin-right: 28px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 5px;
-
-    border-right: 1px solid #d7d3cb;
-}
-
-
-.stat:last-child {
-    border-right: none;
-
-    padding-right: 0;
-    margin-right: 0;
-}
-
-
-.stat strong {
-    color: #171a1f;
-
-    font-size: 24px;
-    font-weight: 800;
-}
-
-
-.stat span {
-    color: #69727b;
-
-    font-size: 13px;
-}
-
-
-/* =========================================
-   HERO BILD
-========================================= */
-
-.hero-image-wrapper {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-
-.hero-image-wrapper::before {
-    content: "";
-
-    position: absolute;
-
-    width: 90%;
-    height: 90%;
-
-    right: -30px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(182, 138, 53, 0.17),
-            transparent 65%
-        );
-
-    filter: blur(35px);
-
-    pointer-events: none;
-}
-
-
-.hero-image {
-    position: relative;
-
-    width: 100%;
-    max-width: 760px;
-
-    height: 500px;
-
-    overflow: hidden;
-
-    border-radius: 28px;
-
-    box-shadow:
-        0 25px 70px rgba(20, 24, 30, 0.12);
-}
-
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-
-/* WEICHER ÜBERGANG LINKS */
-
-.hero-image::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-        linear-gradient(
-            to right,
-            #f5f4f1 0%,
-            rgba(245, 244, 241, 0.92) 7%,
-            rgba(245, 244, 241, 0.45) 18%,
-            transparent 36%
-        ),
-        linear-gradient(
-            to top,
-            rgba(245, 244, 241, 0.12),
-            transparent 35%
-        );
-}
-
-
-/* =========================================
-   ALLGEMEINE SEKTIONEN
-========================================= */
-
-.section-container {
-    width: min(1400px, calc(100% - 80px));
-    margin: 0 auto;
-}
-
-
-.section-label {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 25px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
-    color: #66707a;
-}
-
-
-.section-label span {
-    width: 32px;
-    height: 2px;
-
-    background: #b68a35;
-}
-
-
-.section-title {
-    max-width: 850px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: clamp(44px, 5vw, 72px);
-    font-weight: 900;
-
-    line-height: 1.05;
-
-    letter-spacing: -3px;
-
-    color: #171a1f;
-}
-
-
-.section-title span {
-    display: block;
-
-    color: #b68a35;
-}
-
-
-/* =========================================
-   ÜBER UNS
-========================================= */
-
-.about-section {
-    padding: 140px 0;
-
-    background: #171a1f;
-
-    color: white;
-}
-
-
-.about-section .section-label {
-    color: #a9b0b8;
-}
-
-
-.about-content {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 100px;
-
-    align-items: start;
-}
-
-
-.about-content h2 {
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: clamp(45px, 5vw, 75px);
-    font-weight: 900;
-
-    line-height: 1.05;
-
-    letter-spacing: -3px;
-}
-
-
-.about-content h2 span {
-    display: block;
-
-    color: #b68a35;
-}
-
-
-.about-text {
-    padding-top: 12px;
-}
-
-
-.about-text p {
-    margin-bottom: 22px;
-
-    color: #c3c7cb;
-
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   FLUGHÄFEN
-========================================= */
-
-.airports-section {
-    padding: 140px 0;
-
-    background: #eceae5;
-}
-
-
-.airport-grid {
-    margin-top: 70px;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-
-.airport-card {
-    min-height: 260px;
-
-    padding: 32px;
-
-    display: flex;
-    flex-direction: column;
-
-    background: #f5f4f1;
-
-    border: 1px solid #ddd9d1;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-
-.airport-card:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 20px 45px rgba(0, 0, 0, 0.08);
-}
-
-
-.airport-number {
-    margin-bottom: auto;
-
-    color: #b68a35;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: 14px;
-    font-weight: 900;
-}
-
-
-.airport-card h3 {
-    margin-bottom: 10px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: 25px;
-    font-weight: 800;
-}
-
-
-.airport-card p {
-    color: #68717a;
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   WARUM SALAVATI
-========================================= */
-
-.why-section {
-    padding: 140px 0;
-
-    background: #f5f4f1;
-}
-
-
-.why-intro {
-    max-width: 850px;
-}
-
-
-.why-intro h2 {
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: clamp(45px, 5vw, 75px);
-    font-weight: 900;
-
-    line-height: 1.05;
-
-    letter-spacing: -3px;
-}
-
-
-.why-intro h2 span {
-    display: block;
-
-    color: #b68a35;
-}
-
-
-.why-grid {
-    margin-top: 80px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 50px;
-}
-
-
-.why-item {
-    padding-top: 30px;
-
-    border-top: 1px solid #d8d4cc;
-}
-
-
-.why-icon {
-    margin-bottom: 30px;
-
-    color: #b68a35;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: 16px;
-    font-weight: 900;
-}
-
-
-.why-item h3 {
-    margin-bottom: 15px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: 26px;
-    font-weight: 800;
-}
-
-
-.why-item p {
-    max-width: 360px;
-
-    color: #66707a;
-
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   VORBESTELLUNG
-========================================= */
-
-.booking-section {
-    padding: 110px 0;
-
-    background: #b68a35;
-
-    color: white;
-}
-
-
-.booking-container {
-    width: min(1400px, calc(100% - 80px));
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr auto;
-
-    gap: 80px;
-
-    align-items: center;
-}
-
-
-.booking-section .section-label {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-
-.booking-section .section-label span {
-    background: white;
-}
-
-
-.booking-text h2 {
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: clamp(45px, 5vw, 70px);
-    font-weight: 900;
-
-    line-height: 1.05;
-
-    letter-spacing: -3px;
-}
-
-
-.booking-text h2 span {
-    display: block;
-}
-
-
-.booking-text p {
-    margin-top: 25px;
-
-    max-width: 600px;
-
-    color: rgba(255, 255, 255, 0.8);
-
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-
-.booking-action {
-    text-align: right;
-}
-
-
-.booking-phone {
-    min-height: 65px;
-
-    padding: 0 30px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1.5px solid white;
-    border-radius: 12px;
-
-    background: white;
-
-    color: #171a1f;
-
-    text-decoration: none;
-
+  .hero-stats strong {
     font-size: 19px;
-    font-weight: 800;
-}
+  }
 
+  .hero-stats span {
+    font-size: 10px;
+  }
 
-.booking-action p {
-    margin-top: 15px;
+  .hero-image {
+    height: 300px;
+  }
 
-    color: rgba(255, 255, 255, 0.75);
+  .airport-grid {
+    grid-template-columns: 1fr;
+  }
 
-    font-size: 13px;
-}
+  .about-visual {
+    height: 330px;
+  }
 
+  .watermark {
+    font-size: 58px;
+  }
 
-/* =========================================
-   BEWERTUNGEN
-========================================= */
+  .about-badge {
+    width: 180px;
+    height: 150px;
+  }
 
-.reviews-section {
-    padding: 140px 0;
+  .booking-grid {
+    gap: 30px;
+  }
 
-    background: #f5f4f1;
-}
+  .form-card {
+    padding: 25px 18px;
+  }
 
+  .form-grid,
+  .trip-grid,
+  .returns.show {
+    grid-template-columns: 1fr;
+  }
 
-.review-grid {
-    margin-top: 70px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-
-.review-card {
-    min-height: 280px;
-
-    padding: 35px;
-
-    display: flex;
+  .footer-bottom {
     flex-direction: column;
-
-    border: 1px solid #ddd9d1;
-
-    background: white;
-}
-
-
-.stars {
-    margin-bottom: 25px;
-
-    color: #b68a35;
-
-    font-size: 18px;
-
-    letter-spacing: 3px;
-}
-
-
-.review-card p {
-    color: #4f5963;
-
-    font-size: 17px;
-    line-height: 1.7;
-
-    margin-bottom: auto;
-}
-
-
-.review-card strong {
-    margin-top: 30px;
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.footer {
-    padding: 70px 0 35px;
-
-    background: #111317;
-
-    color: white;
-}
-
-
-.footer-container {
-    width: min(1400px, calc(100% - 80px));
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-
-    gap: 50px;
-
-    align-items: end;
-}
-
-
-.footer-brand h3 {
-    margin-bottom: 10px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-
-    font-size: 28px;
-    font-weight: 900;
-
-    letter-spacing: 2px;
-}
-
-
-.footer-brand p {
-    color: #858b92;
-
-    font-size: 14px;
-}
-
-
-.footer-contact p {
-    margin-bottom: 8px;
-
-    color: #858b92;
-
-    font-size: 13px;
-}
-
-
-.footer-contact a {
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 17px;
-    font-weight: 700;
-}
-
-
-.footer-copy {
-    text-align: right;
-
-    color: #858b92;
-
-    font-size: 13px;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 1200px) {
-
-    .header-inner,
-    .hero-container,
-    .section-container,
-    .booking-container,
-    .footer-container {
-        width: min(100% - 50px, 1400px);
-    }
-
-
-    .brand {
-        min-width: 240px;
-    }
-
-
-    .nav {
-        gap: 20px;
-    }
-
-
-    .nav a {
-        font-size: 13px;
-    }
-
-
-    .header-phone {
-        display: none;
-    }
-
-
-    .hero-container {
-        gap: 45px;
-    }
-
-
-    .hero-image {
-        height: 450px;
-    }
-
-
-    .airport-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================
-   MOBILE / TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-    .header {
-        height: auto;
-    }
-
-
-    .header-inner {
-        padding: 18px 0;
-
-        flex-wrap: wrap;
-    }
-
-
-    .nav {
-        order: 3;
-
-        width: 100%;
-
-        justify-content: flex-start;
-
-        overflow-x: auto;
-
-        padding-bottom: 5px;
-    }
-
-
-    .nav::-webkit-scrollbar {
-        display: none;
-    }
-
-
-    .hero {
-        padding: 70px 0;
-    }
-
-
-    .hero-container {
-        grid-template-columns: 1fr;
-
-        gap: 55px;
-    }
-
-
-    .hero-image-wrapper {
-        justify-content: center;
-    }
-
-
-    .hero-image {
-        max-width: 100%;
-    }
-
-
-    .hero-image::after {
-        background:
-            linear-gradient(
-                to top,
-                rgba(245, 244, 241, 0.1),
-                transparent 35%
-            );
-    }
-
-
-    .about-content {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-
-    .why-grid {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-
-    .booking-container {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-
-    .booking-action {
-        text-align: left;
-    }
-
-
-    .review-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .footer-container {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-
-    .footer-copy {
-        text-align: left;
-    }
-
-}
-
-
-/* =========================================
-   HANDY
-========================================= */
-
-@media (max-width: 600px) {
-
-    .header-inner,
-    .hero-container,
-    .section-container,
-    .booking-container,
-    .footer-container {
-        width: calc(100% - 30px);
-    }
-
-
-    .brand {
-        min-width: auto;
-    }
-
-
-    .brand-logo {
-        width: 55px;
-        height: 55px;
-    }
-
-
-    .brand-name {
-        font-size: 23px;
-    }
-
-
-    .brand-subtitle {
-        font-size: 6px;
-
-        letter-spacing: 1.5px;
-    }
-
-
-    .hero h1 {
-        font-size: 56px;
-
-        letter-spacing: -3px;
-    }
-
-
-    .eyebrow p {
-        font-size: 8px;
-
-        letter-spacing: 2px;
-    }
-
-
-    .hero-text {
-        font-size: 16px;
-    }
-
-
-    .hero-buttons {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-
-    .primary-button,
-    .phone-button {
-        justify-content: center;
-    }
-
-
-    .hero-stats {
-        width: 100%;
-    }
-
-
-    .stat {
-        min-width: 0;
-
-        flex: 1;
-
-        padding-right: 12px;
-        margin-right: 12px;
-    }
-
-
-    .stat strong {
-        font-size: 20px;
-    }
-
-
-    .stat span {
-        font-size: 11px;
-    }
-
-
-    .hero-image {
-        height: 310px;
-
-        border-radius: 20px;
-    }
-
-
-    .airport-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .booking-phone {
-        width: 100%;
-    }
-
-
-    .section-title,
-    .about-content h2,
-    .why-intro h2,
-    .booking-text h2 {
-        letter-spacing: -2px;
-    }
+  }
 
 }
