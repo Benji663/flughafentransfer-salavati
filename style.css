@@ -4,13 +4,22 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
     font-family: "DM Sans", Arial, sans-serif;
+
     background: #f5f4f1;
     color: #171a1f;
+
     overflow-x: hidden;
 }
 
@@ -41,63 +50,93 @@ textarea {
     --max: 1400px;
 }
 
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
 .container {
     width: min(var(--max), calc(100% - 80px));
     margin: 0 auto;
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 .site-header {
+    width: 100%;
     height: 100px;
+
     background: rgba(245, 244, 241, .97);
+
     border-bottom: 1px solid var(--line);
+
     position: sticky;
     top: 0;
+
     z-index: 100;
+
     backdrop-filter: blur(10px);
 }
 
 .header-inner {
     width: min(var(--max), calc(100% - 80px));
     height: 100%;
-    margin: auto;
+
+    margin: 0 auto;
 
     display: flex;
     align-items: center;
+
     gap: 28px;
+
+    min-width: 0;
 }
+
+
+/* MARKENBEREICH */
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 14px;
 
-    min-width: 330px;
+    gap: 12px;
+
+    min-width: 315px;
+    flex-shrink: 0;
 }
 
 .brand-logo {
     width: 62px;
     height: 62px;
+
     object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 .brand-wordmark {
     display: flex;
     flex-direction: column;
+
+    min-width: 0;
 }
 
 .brand-wordmark strong {
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: 24px;
+    font-size: 20px;
+    line-height: .95;
+
     font-weight: 900;
 
-    letter-spacing: 1px;
-    line-height: 1;
+    letter-spacing: .6px;
+
+    color: var(--ink);
+
+    white-space: nowrap;
 }
 
 .brand-wordmark small {
@@ -106,37 +145,48 @@ textarea {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 7px;
+
     font-weight: 800;
 
-    letter-spacing: 2.2px;
+    letter-spacing: 2px;
 
     color: #7b8086;
 }
 
+
+/* DESKTOP NAV */
+
 .main-nav {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    gap: 28px;
+    gap: 26px;
 
     flex: 1;
+
+    min-width: 0;
 
     white-space: nowrap;
 }
 
 .main-nav a {
     font-size: 14px;
+
     font-weight: 700;
 
     transition:
         color .2s ease,
-        transform .2s ease;
+        opacity .2s ease;
 }
 
 .main-nav a:hover {
     color: var(--gold);
 }
+
+
+/* TELEFON */
 
 .header-phone {
     min-height: 52px;
@@ -147,10 +197,14 @@ textarea {
     align-items: center;
     justify-content: center;
 
+    flex-shrink: 0;
+
     border: 1.5px solid var(--ink);
+
     border-radius: 11px;
 
     font-size: 14px;
+
     font-weight: 700;
 
     white-space: nowrap;
@@ -166,10 +220,14 @@ textarea {
     font-weight: 900;
 
     background: var(--ink);
-    color: #fff;
+
+    color: white;
 
     transform: translateY(-2px);
 }
+
+
+/* MOBILE MENU */
 
 .mobile-menu {
     display: none;
@@ -178,9 +236,10 @@ textarea {
     height: 45px;
 
     border: 1px solid var(--line);
+
     border-radius: 10px;
 
-    background: #fff;
+    background: white;
 
     cursor: pointer;
 
@@ -188,13 +247,14 @@ textarea {
 }
 
 
-/* =========================
+/* =====================================================
    EYEBROW
-========================= */
+===================================================== */
 
 .eyebrow {
     display: flex;
     align-items: center;
+
     gap: 12px;
 
     margin-bottom: 26px;
@@ -202,6 +262,7 @@ textarea {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 3px;
@@ -215,15 +276,17 @@ textarea {
 
     background: var(--gold);
 
-    flex: 0 0 auto;
+    flex-shrink: 0;
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
+    width: 100%;
+
     min-height: 720px;
 
     display: flex;
@@ -234,7 +297,7 @@ textarea {
     background:
         radial-gradient(
             circle at 77% 35%,
-            rgba(182, 138, 53, .12),
+            rgba(182,138,53,.12),
             transparent 30%
         ),
         var(--bg);
@@ -242,19 +305,22 @@ textarea {
 
 .hero-container {
     width: min(var(--max), calc(100% - 80px));
-    margin: auto;
+
+    margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: .92fr 1.08fr;
 
     align-items: center;
 
     gap: 75px;
+
+    min-width: 0;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+    min-width: 0;
 }
 
 .hero h1 {
@@ -268,6 +334,7 @@ textarea {
     font-size: clamp(60px, 6vw, 92px);
 
     line-height: .95;
+
     letter-spacing: -4px;
 }
 
@@ -277,6 +344,7 @@ textarea {
 
 .hero h1 strong {
     color: var(--gold);
+
     font-weight: 900;
 }
 
@@ -326,22 +394,26 @@ textarea {
 
     border-color: var(--ink);
 
-    color: #fff;
+    color: white;
 }
 
 .btn b {
     margin-left: 10px;
+
     font-size: 20px;
 }
 
 .hero-stats {
     display: flex;
+
+    min-width: 0;
 }
 
 .hero-stats > div {
     min-width: 150px;
 
     padding-right: 28px;
+
     margin-right: 28px;
 
     border-right: 1px solid #d7d3cb;
@@ -353,8 +425,9 @@ textarea {
 }
 
 .hero-stats > div:last-child {
-    border: 0;
-    margin: 0;
+    border: none;
+
+    margin-right: 0;
 }
 
 .hero-stats strong {
@@ -363,14 +436,17 @@ textarea {
 
 .hero-stats span {
     font-size: 13px;
+
     color: #69727b;
 }
 
 
-/* HERO BILD */
+/* HERO IMAGE */
 
 .hero-image-wrap {
     position: relative;
+
+    min-width: 0;
 }
 
 .hero-image-wrap::before {
@@ -400,6 +476,7 @@ textarea {
     position: relative;
 
     width: 100%;
+
     height: 500px;
 
     overflow: hidden;
@@ -437,13 +514,14 @@ textarea {
 }
 
 
-/* =========================
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about {
     padding: 130px 0;
-    background: #fff;
+
+    background: white;
 }
 
 .about-grid {
@@ -501,7 +579,7 @@ textarea {
 }
 
 .about-photo-overlay span {
-    color: #fff;
+    color: white;
 
     font-size: 10px;
 
@@ -520,7 +598,13 @@ textarea {
     line-height: .9;
 }
 
+.about-copy {
+    min-width: 0;
+}
+
 .about-copy h2 {
+    margin: 0 0 30px;
+
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: clamp(48px,5vw,75px);
@@ -528,8 +612,6 @@ textarea {
     line-height: 1.02;
 
     letter-spacing: -3px;
-
-    margin: 0 0 30px;
 }
 
 .about-copy h2 span {
@@ -537,13 +619,13 @@ textarea {
 }
 
 .about-copy p {
+    margin: 0 0 24px;
+
     font-size: 18px;
 
     line-height: 1.75;
 
     color: #55606b;
-
-    margin: 0 0 24px;
 }
 
 .about-callout {
@@ -564,9 +646,9 @@ textarea {
 }
 
 
-/* =========================
-   FLUGHÄFEN
-========================= */
+/* =====================================================
+   AIRPORTS
+===================================================== */
 
 .airports {
     padding: 120px 0;
@@ -643,8 +725,7 @@ textarea {
 
     transition:
         transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
+        box-shadow .25s ease;
 }
 
 .airport-card:hover {
@@ -737,14 +818,14 @@ textarea {
 }
 
 
-/* =========================
-   WARUM
-========================= */
+/* =====================================================
+   WHY
+===================================================== */
 
 .why {
     padding: 130px 0;
 
-    background: #fff;
+    background: white;
 }
 
 .why h2 {
@@ -782,7 +863,7 @@ textarea {
 
     border-radius: 20px;
 
-    background: #fff;
+    background: white;
 }
 
 .why-number {
@@ -824,9 +905,9 @@ textarea {
 }
 
 
-/* =========================
-   BEWERTUNGEN
-========================= */
+/* =====================================================
+   REVIEWS
+===================================================== */
 
 .reviews {
     padding: 130px 0;
@@ -838,6 +919,7 @@ textarea {
     display: flex;
 
     justify-content: space-between;
+
     align-items: end;
 
     gap: 30px;
@@ -937,7 +1019,7 @@ textarea {
 
     border-radius: 18px;
 
-    background: #fff;
+    background: white;
 
     display: flex;
 
@@ -962,7 +1044,7 @@ textarea {
 
     place-items: center;
 
-    color: #fff;
+    color: white;
 
     font-weight: 800;
 }
@@ -1060,16 +1142,6 @@ textarea {
     cursor: pointer;
 
     font-size: 20px;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
-
-.review-arrow:hover {
-    transform: scale(1.05);
-
-    background: #faf9f6;
 }
 
 .review-dots {
@@ -1082,34 +1154,28 @@ textarea {
     width: 8px;
     height: 8px;
 
-    border-radius: 50%;
-
     display: inline-block;
+
+    border-radius: 50%;
 
     background: #d3cec4;
 
     margin: 0 4px;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
 }
 
 .review-dots span.active {
     background: var(--gold);
-
-    transform: scale(1.2);
 }
 
 
-/* =========================
+/* =====================================================
    BOOKING
-========================= */
+===================================================== */
 
 .booking {
     padding: 120px 0;
 
-    background: #fff;
+    background: white;
 }
 
 .booking-grid {
@@ -1221,6 +1287,7 @@ textarea {
 
 .field {
     display: flex;
+
     flex-direction: column;
 
     gap: 7px;
@@ -1257,11 +1324,7 @@ textarea {
     display: grid;
 
     grid-template-columns:
-        1fr
-        1.25fr
-        1.25fr
-        .7fr
-        auto;
+        1fr 1.25fr 1.25fr .7fr auto;
 
     gap: 14px;
 
@@ -1333,6 +1396,8 @@ textarea {
     height: 18px;
 
     margin-top: 2px;
+
+    flex-shrink: 0;
 }
 
 .consent a {
@@ -1370,14 +1435,14 @@ textarea {
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 .footer {
     background: #0b0c0d;
 
-    color: #fff;
+    color: white;
 
     padding: 70px 0 25px;
 }
@@ -1386,9 +1451,7 @@ textarea {
     display: grid;
 
     grid-template-columns:
-        1.2fr
-        1fr
-        1fr;
+        1.2fr 1fr 1fr;
 
     gap: 70px;
 }
@@ -1436,16 +1499,18 @@ textarea {
 }
 
 
-/* =========================
-   LEGAL PAGES
-========================= */
+/* =====================================================
+   RECHTLICHE SEITEN
+===================================================== */
 
 .legal-page {
     background: var(--bg);
+
+    overflow-x: hidden;
 }
 
 .legal-hero {
-    padding: 90px 0 65px;
+    padding: 70px 0 58px;
 
     background: #eceae4;
 
@@ -1455,13 +1520,17 @@ textarea {
 .legal-hero h1 {
     margin: 0;
 
+    max-width: 900px;
+
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: clamp(50px,6vw,82px);
+    font-size: clamp(48px,5vw,76px);
 
-    line-height: .95;
+    line-height: .98;
 
-    letter-spacing: -4px;
+    letter-spacing: -3px;
+
+    color: var(--ink);
 }
 
 .legal-hero h1 span {
@@ -1469,23 +1538,23 @@ textarea {
 }
 
 .legal-content {
-    padding: 80px 0 110px;
+    padding: 70px 0 100px;
 }
 
 .legal-inner {
-    max-width: 950px;
+    max-width: 900px;
 }
 
 .legal-section {
-    margin-bottom: 48px;
+    margin-bottom: 42px;
 }
 
 .legal-section h2 {
-    margin: 0 0 16px;
+    margin: 0 0 13px;
 
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: 28px;
+    font-size: 26px;
 
     line-height: 1.15;
 }
@@ -1495,26 +1564,37 @@ textarea {
 
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .legal-section p,
 .legal-section li {
-    color: #555f69;
+    color: #59636d;
 
     font-size: 16px;
 
     line-height: 1.75;
 }
 
+.legal-section p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
 .legal-section ul {
     padding-left: 22px;
 }
 
-.legal-note {
-    margin-top: 50px;
+.legal-section a {
+    color: var(--gold);
 
-    padding: 20px;
+    font-weight: 700;
+}
+
+.legal-note {
+    margin-top: 45px;
+
+    padding: 18px 20px;
 
     border-left: 3px solid var(--gold);
 
@@ -1528,9 +1608,9 @@ textarea {
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 1150px) {
 
@@ -1541,7 +1621,11 @@ textarea {
     }
 
     .brand {
-        min-width: 250px;
+        min-width: 245px;
+    }
+
+    .brand-wordmark strong {
+        font-size: 17px;
     }
 
     .main-nav {
@@ -1571,44 +1655,71 @@ textarea {
 }
 
 
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media (max-width: 850px) {
+
+    .container,
+    .header-inner {
+        width: calc(100% - 28px);
+    }
+
 
     .site-header {
         height: auto;
+
+        position: relative;
     }
+
 
     .header-inner {
-        width: calc(100% - 32px);
+        min-height: 74px;
 
-        min-height: 78px;
-
-        padding: 16px 0;
+        padding: 10px 0 12px;
 
         flex-wrap: wrap;
+
+        gap: 10px;
     }
+
 
     .brand {
+        min-width: 0;
+
         flex: 1;
 
-        min-width: 0;
+        gap: 8px;
     }
+
 
     .brand-logo {
-        width: 54px;
-        height: 54px;
+        width: 49px;
+        height: 49px;
     }
+
 
     .brand-wordmark strong {
-        font-size: 19px;
+        font-size: 16px;
+
+        letter-spacing: .3px;
     }
 
+
     .brand-wordmark small {
-        font-size: 6px;
+        margin-top: 4px;
+
+        font-size: 5px;
+
+        letter-spacing: 1.5px;
     }
+
 
     .mobile-menu {
         display: block;
     }
+
 
     .main-nav {
         display: none;
@@ -1617,175 +1728,350 @@ textarea {
 
         width: 100%;
 
+        flex: 0 0 100%;
+
         flex-direction: column;
 
         align-items: stretch;
 
         gap: 0;
 
-        padding: 8px 0 4px;
+        padding: 6px 0 0;
     }
+
 
     .main-nav.open {
         display: flex;
     }
 
+
     .main-nav a {
-        padding: 13px 4px;
+        width: 100%;
+
+        padding: 11px 4px;
 
         border-top: 1px solid var(--line);
 
         font-size: 14px;
     }
 
+
+    /* wichtig: KEIN großer leerer Abstand */
+
     .hero {
-        padding: 60px 0;
+        min-height: auto;
+
+        padding: 45px 0 55px;
     }
+
 
     .hero-container {
-        width: calc(100% - 32px);
+        width: calc(100% - 28px);
 
         grid-template-columns: 1fr;
 
-        gap: 45px;
+        gap: 40px;
     }
 
-    .hero-image {
-        height: 410px;
+
+    .eyebrow {
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+        max-width: 100%;
     }
 
-    .about-grid,
-    .airports-head {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .about-photo {
-        height: 430px;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .review-slider {
-        grid-template-columns: 1fr;
-    }
-
-    .review-arrow {
-        display: none;
-    }
-
-    .review-card {
-        flex-basis: 85%;
-    }
-
-    .booking-grid {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .trip-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .returns.show {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 45px;
-    }
-
-}
-
-
-@media (max-width: 620px) {
-
-    .container,
-    .hero-container {
-        width: calc(100% - 24px);
-    }
-
-    .brand-wordmark strong {
-        font-size: 17px;
-    }
-
-    .brand-wordmark small {
-        font-size: 5.5px;
-        letter-spacing: 1.7px;
-    }
 
     .hero h1 {
-        font-size: 54px;
+        font-size: clamp(48px, 15vw, 66px);
 
         letter-spacing: -3px;
     }
+
 
     .hero-lead {
         font-size: 16px;
     }
 
+
     .hero-actions {
         flex-direction: column;
+
+        align-items: stretch;
     }
+
 
     .hero-actions .btn {
         width: 100%;
     }
 
+
     .hero-stats {
+        width: 100%;
+
         gap: 0;
     }
+
 
     .hero-stats > div {
         min-width: 0;
 
         flex: 1;
 
-        padding-right: 10px;
+        padding-right: 9px;
 
-        margin-right: 10px;
+        margin-right: 9px;
     }
+
 
     .hero-stats strong {
-        font-size: 19px;
+        font-size: 18px;
     }
+
 
     .hero-stats span {
         font-size: 10px;
     }
 
+
     .hero-image {
-        height: 300px;
+        height: 330px;
+
+        border-radius: 20px;
     }
+
+
+    .about,
+    .airports,
+    .why,
+    .reviews,
+    .booking {
+        padding: 85px 0;
+    }
+
+
+    .about-grid,
+    .airports-head,
+    .booking-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .about-photo {
+        height: 360px;
+    }
+
+
+    .about-copy h2,
+    .airports-head h2,
+    .why h2,
+    .reviews-head h2,
+    .booking-copy h2 {
+        font-size: clamp(42px, 11vw, 64px);
+
+        letter-spacing: -2.5px;
+    }
+
 
     .airport-grid {
         grid-template-columns: 1fr;
     }
 
-    .about-photo {
-        height: 330px;
+
+    .why-grid {
+        grid-template-columns: 1fr;
     }
 
-    .about-photo-overlay strong {
-        font-size: 56px;
+
+    .reviews-head {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
     }
+
+
+    .score {
+        text-align: left;
+    }
+
+
+    .review-slider {
+        grid-template-columns: 1fr;
+    }
+
+
+    .review-arrow {
+        display: none;
+    }
+
 
     .review-card {
         flex-basis: 100%;
+
+        min-width: 0;
     }
 
-    .booking-grid {
-        gap: 30px;
-    }
 
     .form-card {
-        padding: 25px 18px;
+        padding: 28px 20px;
     }
+
+
+    .trip-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .returns.show {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer {
+        padding: 55px 0 22px;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+
+    /* LEGAL */
+
+    .legal-hero {
+        padding: 48px 0 40px;
+    }
+
+
+    .legal-content {
+        padding: 50px 0 75px;
+    }
+
+
+    .legal-section h2 {
+        font-size: 23px;
+    }
+
+
+    .legal-section p,
+    .legal-section li {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 520px) {
+
+    .container,
+    .header-inner,
+    .hero-container {
+        width: calc(100% - 22px);
+    }
+
+
+    .header-inner {
+        min-height: 68px;
+
+        padding: 8px 0 10px;
+    }
+
+
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .brand-wordmark strong {
+        font-size: 14px;
+    }
+
+
+    .brand-wordmark small {
+        font-size: 4.5px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .mobile-menu {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .hero {
+        padding: 32px 0 45px;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .hero-image {
+        height: 275px;
+    }
+
+
+    .about,
+    .airports,
+    .why,
+    .reviews,
+    .booking {
+        padding: 70px 0;
+    }
+
+
+    .about-photo {
+        height: 290px;
+    }
+
+
+    .about-photo-overlay {
+        left: 20px;
+        bottom: 20px;
+    }
+
+
+    .about-photo-overlay strong {
+        font-size: 50px;
+    }
+
+
+    .airport-card {
+        min-height: 235px;
+
+        padding: 25px;
+    }
+
 
     .form-grid,
     .trip-grid,
@@ -1793,12 +2079,21 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
+
+    .form-card {
+        padding: 23px 16px;
     }
 
-    .footer-bottom {
-        flex-direction: column;
+
+    .legal-hero h1 {
+        font-size: 44px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .legal-content {
+        padding: 42px 0 65px;
     }
 
 }
