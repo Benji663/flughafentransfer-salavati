@@ -5,18 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Datenschutzerklärung – Flughafentransfer Salavati</title>
+    <title>Datenschutzerklärung – Flughafentransferservice Salavati</title>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
@@ -28,8 +20,8 @@
         :root {
             --ink: #171a1f;
             --gold: #be8f3b;
-            --bg: #f5f4f1;
             --muted: #66707a;
+            --bg: #f5f4f1;
             --line: #ddd9d1;
         }
 
@@ -61,12 +53,10 @@
             text-decoration: none;
         }
 
-
-        /* ================= HEADER ================= */
+        /* HEADER */
 
         .site-header {
             width: 100%;
-
             height: 100px;
 
             background: rgba(245,244,241,.98);
@@ -75,10 +65,7 @@
         }
 
         .header-inner {
-            width: min(
-                1400px,
-                calc(100% - 80px)
-            );
+            width: min(1400px, calc(100% - 80px));
 
             height: 100%;
 
@@ -108,17 +95,15 @@
             height: 62px;
 
             object-fit: contain;
-
-            flex-shrink: 0;
         }
 
-        .brand-text {
+        .brand-copy {
             display: flex;
 
             flex-direction: column;
         }
 
-        .brand-text strong {
+        .brand-copy strong {
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 19px;
@@ -127,12 +112,10 @@
 
             font-weight: 900;
 
-            letter-spacing: .3px;
-
             white-space: nowrap;
         }
 
-        .brand-text small {
+        .brand-copy span {
             margin-top: 6px;
 
             font-family: "Montserrat", Arial, sans-serif;
@@ -144,8 +127,6 @@
             letter-spacing: 2px;
 
             color: #7b8086;
-
-            white-space: nowrap;
         }
 
         .main-nav {
@@ -153,9 +134,9 @@
 
             display: flex;
 
-            align-items: center;
-
             justify-content: center;
+
+            align-items: center;
 
             gap: 26px;
 
@@ -166,8 +147,6 @@
             font-size: 14px;
 
             font-weight: 700;
-
-            transition: color .2s ease;
         }
 
         .main-nav a:hover {
@@ -208,8 +187,7 @@
             display: none;
         }
 
-
-        /* ================= HERO ================= */
+        /* HERO */
 
         .legal-hero {
             background: #eceae4;
@@ -218,16 +196,13 @@
         }
 
         .legal-container {
-            width: min(
-                1100px,
-                calc(100% - 80px)
-            );
+            width: min(1100px, calc(100% - 80px));
 
             margin: 0 auto;
         }
 
         .legal-hero-inner {
-            padding: 63px 0 57px;
+            padding: 62px 0 58px;
         }
 
         .eyebrow {
@@ -254,6 +229,7 @@
             content: "";
 
             width: 32px;
+
             height: 2px;
 
             background: var(--gold);
@@ -262,39 +238,29 @@
         .legal-title {
             margin: 0;
 
-            max-width: 100%;
-
             font-family: "Montserrat", Arial, sans-serif;
 
-            font-size: clamp(
-                48px,
-                5.2vw,
-                72px
-            );
+            font-size: clamp(48px, 5.7vw, 74px);
 
             line-height: .96;
 
-            letter-spacing: -3px;
+            letter-spacing: -3.5px;
 
             font-weight: 900;
 
             color: var(--gold);
         }
 
-
-        /* ================= CONTENT ================= */
+        /* CONTENT */
 
         .legal-main {
             background: #fff;
 
-            padding: 70px 0 105px;
+            padding: 72px 0 110px;
         }
 
         .legal-card {
-            width: min(
-                1100px,
-                calc(100% - 80px)
-            );
+            width: min(1100px, calc(100% - 80px));
 
             margin: 0 auto;
 
@@ -306,19 +272,20 @@
 
             border-radius: 22px;
 
-            box-shadow:
-                0 18px 55px rgba(0,0,0,.045);
+            box-shadow: 0 18px 55px rgba(0,0,0,.045);
         }
 
         .legal-section {
+
             margin-top: 43px;
 
-            padding-top: 35px;
+            padding-top: 34px;
 
-            border-top: 1px solid #e7e2da;
+            border-top: 1px solid #e6e1d9;
         }
 
         .legal-section:first-child {
+
             margin-top: 0;
 
             padding-top: 0;
@@ -327,6 +294,7 @@
         }
 
         .legal-section h2 {
+
             margin: 0 0 14px;
 
             font-family: "Montserrat", Arial, sans-serif;
@@ -336,8 +304,10 @@
             line-height: 1.2;
         }
 
-        .legal-section p,
-        .legal-section li {
+        .legal-section p {
+
+            margin: 0 0 16px;
+
             color: #59636d;
 
             font-size: 16px;
@@ -345,27 +315,33 @@
             line-height: 1.8;
         }
 
-        .legal-section p {
-            margin: 0 0 16px;
-        }
-
         .legal-section ul {
-            margin: 12px 0 18px;
+
+            margin: 12px 0 20px;
 
             padding-left: 26px;
         }
 
         .legal-section li {
-            margin-bottom: 9px;
+
+            margin-bottom: 10px;
+
+            color: #59636d;
+
+            font-size: 16px;
+
+            line-height: 1.8;
         }
 
         .legal-section a {
+
             color: var(--gold);
 
             font-weight: 700;
         }
 
         .legal-note {
+
             margin-top: 40px;
 
             padding: 20px 22px;
@@ -381,36 +357,32 @@
             line-height: 1.7;
         }
 
-
-        /* ================= FOOTER ================= */
+        /* FOOTER */
 
         .footer {
+
             background: #0b0c0d;
 
             color: #fff;
 
-            padding: 66px 0 25px;
+            padding: 65px 0 25px;
         }
 
         .footer-grid {
-            width: min(
-                1400px,
-                calc(100% - 80px)
-            );
+
+            width: min(1400px, calc(100% - 80px));
 
             margin: 0 auto;
 
             display: grid;
 
-            grid-template-columns:
-                1.2fr
-                1fr
-                1fr;
+            grid-template-columns: 1.2fr 1fr 1fr;
 
             gap: 70px;
         }
 
         .footer h3 {
+
             margin: 0 0 17px;
 
             font-family: "Montserrat", Arial, sans-serif;
@@ -419,6 +391,7 @@
         }
 
         .footer p {
+
             margin: 8px 0;
 
             color: #adb1b6;
@@ -427,18 +400,18 @@
         }
 
         .footer a {
+
             color: #adb1b6;
         }
 
         .footer a:hover {
+
             color: var(--gold);
         }
 
         .footer-bottom {
-            width: min(
-                1400px,
-                calc(100% - 80px)
-            );
+
+            width: min(1400px, calc(100% - 80px));
 
             margin: 44px auto 0;
 
@@ -457,16 +430,17 @@
             font-size: 12px;
         }
 
+        /* MOBILE */
 
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 850px) {
+        @media (max-width:850px) {
 
             .site-header {
+
                 height: auto;
             }
 
             .header-inner {
+
                 width: calc(100% - 28px);
 
                 min-height: 70px;
@@ -477,30 +451,37 @@
             }
 
             .brand {
+
                 min-width: 0;
 
                 flex: 1;
             }
 
             .brand-logo {
+
                 width: 46px;
+
                 height: 46px;
             }
 
-            .brand-text strong {
+            .brand-copy strong {
+
                 font-size: 13px;
             }
 
-            .brand-text small {
+            .brand-copy span {
+
                 font-size: 5px;
 
                 letter-spacing: 1.2px;
             }
 
             .mobile-menu {
+
                 display: flex;
 
                 width: 42px;
+
                 height: 42px;
 
                 align-items: center;
@@ -514,77 +495,98 @@
                 background: #fff;
 
                 font-size: 20px;
+
+                cursor: pointer;
             }
 
             .main-nav {
+
                 display: none;
+
+                order: 5;
 
                 flex: 0 0 100%;
 
+                width: 100%;
+
                 flex-direction: column;
 
-                align-items: stretch;
-
                 gap: 0;
+
+                align-items: stretch;
             }
 
             .main-nav.open {
+
                 display: flex;
             }
 
             .main-nav a {
+
                 padding: 12px 4px;
 
                 border-top: 1px solid var(--line);
+
+                font-size: 14px;
             }
 
             .header-phone {
+
                 display: none;
             }
 
             .legal-container,
             .legal-card {
+
                 width: calc(100% - 28px);
             }
 
             .legal-hero-inner {
-                padding: 44px 0 40px;
+
+                padding: 43px 0 40px;
             }
 
             .legal-title {
-                font-size: 43px;
 
-                letter-spacing: -2.4px;
+                font-size: 42px;
+
+                letter-spacing: -2.5px;
             }
 
             .legal-main {
-                padding: 43px 0 68px;
+
+                padding: 43px 0 70px;
             }
 
             .legal-card {
-                padding: 28px 20px;
+
+                padding: 27px 20px;
 
                 border-radius: 18px;
             }
 
             .legal-section {
+
                 margin-top: 36px;
 
                 padding-top: 28px;
             }
 
             .legal-section h2 {
+
                 font-size: 21px;
             }
 
             .legal-section p,
             .legal-section li {
+
                 font-size: 15px;
 
                 line-height: 1.75;
             }
 
             .footer-grid {
+
                 width: calc(100% - 28px);
 
                 grid-template-columns: 1fr;
@@ -593,30 +595,40 @@
             }
 
             .footer-bottom {
+
                 width: calc(100% - 28px);
 
                 flex-direction: column;
-
-                gap: 7px;
             }
+
         }
 
-        @media (max-width: 520px) {
+        @media (max-width:520px) {
 
             .brand-logo {
+
                 width: 42px;
+
                 height: 42px;
             }
 
-            .brand-text strong {
+            .brand-copy strong {
+
                 font-size: 11.5px;
             }
 
+            .brand-copy span {
+
+                font-size: 4.2px;
+            }
+
             .legal-title {
-                font-size: 38px;
+
+                font-size: 36px;
             }
 
             .legal-card {
+
                 padding: 22px 16px;
             }
 
@@ -637,24 +649,20 @@
         <a href="index.html" class="brand">
 
             <img
+                class="brand-logo"
                 src="./Logo Flughafentransfer.png"
                 alt="Flughafentransfer Salavati"
-                class="brand-logo"
             >
 
-            <div class="brand-text">
+            <div class="brand-copy">
 
                 <strong>
-                    FLUGHAFENTRANSFER
+                    FLUGHAFENTRANSFERSERVICE
                 </strong>
 
-                <strong>
-                    SALAVATI
-                </strong>
-
-                <small>
-                    SEIT ÜBER 30 JAHREN
-                </small>
+                <span>
+                    SALAVATI · SEIT ÜBER 30 JAHREN
+                </span>
 
             </div>
 
@@ -671,10 +679,7 @@
         </button>
 
 
-        <nav
-            class="main-nav"
-            id="mainNav"
-        >
+        <nav class="main-nav" id="mainNav">
 
             <a href="index.html#ueber-uns">
                 Über uns
@@ -755,7 +760,9 @@
                 </strong><br>
 
                 Bahnhof Nordseite 10<br>
+
                 35576 Wetzlar<br>
+
                 Deutschland
             </p>
 
@@ -767,8 +774,8 @@
                 <br>
 
                 E-Mail:
-                <a href="mailto:medicar.prinz@gmail.com">
-                    medicar.prinz@gmail.com
+                <a href="mailto:info@flughafen-transfer-salavati.de">
+                    info@flughafen-transfer-salavati.de
                 </a>
             </p>
 
@@ -778,23 +785,16 @@
         <section class="legal-section">
 
             <h2>
-                2. Allgemeine Hinweise zur Datenverarbeitung
+                2. Datenschutz auf einen Blick
             </h2>
 
             <p>
                 Wir nehmen den Schutz Ihrer persönlichen Daten ernst.
-                Personenbezogene Daten werden nur verarbeitet, soweit
-                dies für die Bereitstellung unserer Website, die
-                Bearbeitung von Anfragen, die Vorbereitung einer
-                gewünschten Fahrt oder aufgrund gesetzlicher
-                Verpflichtungen erforderlich ist.
-            </p>
-
-            <p>
-                Welche Daten konkret verarbeitet werden, richtet sich
-                danach, welche Funktionen Sie auf unserer Website
-                nutzen und auf welchem Weg Sie mit uns Kontakt
-                aufnehmen.
+                Personenbezogene Daten werden von uns nur verarbeitet,
+                soweit dies für die Bereitstellung unserer Website,
+                die Bearbeitung Ihrer Anfrage, die Vorbereitung einer
+                Fahrt oder aufgrund gesetzlicher Verpflichtungen
+                erforderlich ist.
             </p>
 
         </section>
@@ -803,21 +803,58 @@
         <section class="legal-section">
 
             <h2>
-                3. Besuch unserer Website
+                3. Welche Daten werden verarbeitet?
             </h2>
 
             <p>
-                Beim Aufruf unserer Website können durch den
-                technischen Betrieb des Webservers Informationen
-                verarbeitet werden, die für die Bereitstellung und
-                Sicherheit der Website erforderlich sind.
+                Wenn Sie unsere Website besuchen oder unser
+                Reservierungsformular verwenden, können insbesondere
+                folgende Daten verarbeitet werden:
             </p>
 
-            <p>
-                Hierzu können insbesondere IP-Adresse, Datum und
-                Uhrzeit des Zugriffs, angeforderte Seite,
-                Browsertyp, Betriebssystem und Referrer-URL gehören.
-            </p>
+            <ul>
+
+                <li>
+                    Name und Vorname
+                </li>
+
+                <li>
+                    Telefonnummer
+                </li>
+
+                <li>
+                    E-Mail-Adresse
+                </li>
+
+                <li>
+                    Abholadresse
+                </li>
+
+                <li>
+                    gewünschter Flughafen
+                </li>
+
+                <li>
+                    Flugnummer
+                </li>
+
+                <li>
+                    Datum und Uhrzeit der Fahrt
+                </li>
+
+                <li>
+                    Anzahl der Personen
+                </li>
+
+                <li>
+                    Rückfahrtdaten
+                </li>
+
+                <li>
+                    sonstige Angaben aus Ihrer Nachricht
+                </li>
+
+            </ul>
 
         </section>
 
@@ -830,38 +867,14 @@
 
             <p>
                 Wenn Sie unser Reservierungsformular verwenden,
-                verarbeiten wir die von Ihnen eingegebenen Angaben.
-                Dazu können insbesondere gehören:
+                werden die von Ihnen eingegebenen Daten elektronisch
+                erhoben und gespeichert.
             </p>
 
-            <ul>
-
-                <li>Name und Vorname</li>
-
-                <li>Telefonnummer</li>
-
-                <li>E-Mail-Adresse</li>
-
-                <li>Abholadresse</li>
-
-                <li>gewünschter Flughafen</li>
-
-                <li>Flugnummer</li>
-
-                <li>Datum und Uhrzeit der Fahrt</li>
-
-                <li>Personenzahl</li>
-
-                <li>Rückfahrtdaten</li>
-
-                <li>sonstige Angaben in Ihrer Nachricht</li>
-
-            </ul>
-
             <p>
-                Die Verarbeitung erfolgt zur Bearbeitung Ihrer
-                Anfrage, zur Abstimmung der gewünschten Fahrt und
-                zur persönlichen Bestätigung.
+                Die Verarbeitung erfolgt zweckgebunden zur Bearbeitung
+                und Beantwortung Ihrer Anfrage sowie zur anschließenden
+                persönlichen Bestätigung Ihrer Fahrt.
             </p>
 
         </section>
@@ -875,9 +888,9 @@
 
             <p>
                 Wenn Sie uns telefonisch oder per E-Mail kontaktieren,
-                verarbeiten wir die von Ihnen mitgeteilten Informationen,
-                soweit dies zur Bearbeitung Ihres Anliegens erforderlich
-                ist.
+                verarbeiten wir die von Ihnen mitgeteilten Informationen
+                nur insoweit, wie dies zur Bearbeitung Ihres Anliegens
+                erforderlich ist.
             </p>
 
         </section>
@@ -886,53 +899,14 @@
         <section class="legal-section">
 
             <h2>
-                6. Zwecke der Verarbeitung
+                6. Rechtsgrundlagen
             </h2>
 
             <p>
-                Personenbezogene Daten können insbesondere für folgende
-                Zwecke verarbeitet werden:
-            </p>
-
-            <ul>
-
-                <li>
-                    Bearbeitung von Reservierungsanfragen
-                </li>
-
-                <li>
-                    Kommunikation mit Interessenten und Kunden
-                </li>
-
-                <li>
-                    Vorbereitung und Durchführung vereinbarter Fahrten
-                </li>
-
-                <li>
-                    Erfüllung gesetzlicher Verpflichtungen
-                </li>
-
-                <li>
-                    Gewährleistung von Sicherheit und technischem Betrieb
-                    der Website
-                </li>
-
-            </ul>
-
-        </section>
-
-
-        <section class="legal-section">
-
-            <h2>
-                7. Rechtsgrundlagen
-            </h2>
-
-            <p>
-                Die Verarbeitung personenbezogener Daten erfolgt
-                abhängig vom jeweiligen Zweck auf Grundlage der
-                jeweils einschlägigen gesetzlichen Vorschriften,
-                insbesondere der Datenschutz-Grundverordnung.
+                Die Verarbeitung personenbezogener Daten erfolgt auf
+                Grundlage der jeweils einschlägigen gesetzlichen
+                Bestimmungen, insbesondere der Datenschutz-
+                Grundverordnung (DSGVO).
             </p>
 
             <p>
@@ -953,6 +927,21 @@
         <section class="legal-section">
 
             <h2>
+                7. Speicherdauer
+            </h2>
+
+            <p>
+                Personenbezogene Daten werden nur so lange gespeichert,
+                wie dies für den jeweiligen Zweck erforderlich ist
+                oder gesetzliche Aufbewahrungspflichten bestehen.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
                 8. Empfänger personenbezogener Daten
             </h2>
 
@@ -963,10 +952,10 @@
             </p>
 
             <p>
-                Soweit externe Dienstleister für Hosting, technische
-                Infrastruktur oder die Bearbeitung von Anfragen
-                eingesetzt werden, können diese Daten im erforderlichen
-                Umfang verarbeitet werden.
+                Soweit für Hosting, technische Infrastruktur oder
+                die Bearbeitung von Anfragen externe Dienstleister
+                eingesetzt werden, können diese Daten im hierfür
+                erforderlichen Umfang verarbeitet werden.
             </p>
 
         </section>
@@ -975,33 +964,18 @@
         <section class="legal-section">
 
             <h2>
-                9. Speicherdauer
+                9. Ihre Rechte
             </h2>
 
             <p>
-                Personenbezogene Daten werden nur so lange gespeichert,
-                wie dies für den jeweiligen Zweck erforderlich ist oder
-                gesetzliche Aufbewahrungspflichten bestehen.
-            </p>
-
-        </section>
-
-
-        <section class="legal-section">
-
-            <h2>
-                10. Ihre Rechte
-            </h2>
-
-            <p>
-                Sie haben im Rahmen der gesetzlichen Voraussetzungen
+                Sie haben nach Maßgabe der gesetzlichen Bestimmungen
                 insbesondere das Recht auf:
             </p>
 
             <ul>
 
                 <li>
-                    Auskunft über Ihre gespeicherten personenbezogenen Daten
+                    Auskunft über Ihre personenbezogenen Daten
                 </li>
 
                 <li>
@@ -1009,7 +983,7 @@
                 </li>
 
                 <li>
-                    Löschung personenbezogener Daten
+                    Löschung Ihrer Daten
                 </li>
 
                 <li>
@@ -1036,7 +1010,7 @@
         <section class="legal-section">
 
             <h2>
-                11. Beschwerderecht
+                10. Beschwerderecht
             </h2>
 
             <p>
@@ -1053,7 +1027,7 @@
         <section class="legal-section">
 
             <h2>
-                12. Datensicherheit
+                11. Datensicherheit
             </h2>
 
             <p>
@@ -1069,18 +1043,18 @@
         <section class="legal-section">
 
             <h2>
-                13. Änderungen dieser Datenschutzerklärung
+                12. Änderungen dieser Datenschutzerklärung
             </h2>
 
             <p>
-                Wir können diese Datenschutzerklärung anpassen,
-                wenn sich die rechtlichen Anforderungen oder die
-                von uns eingesetzten technischen Dienste ändern.
+                Diese Datenschutzerklärung kann angepasst werden,
+                wenn sich gesetzliche Anforderungen, technische
+                Verfahren oder die von uns eingesetzten Dienste ändern.
             </p>
 
             <p>
-                Es gilt jeweils die auf dieser Website veröffentlichte
-                aktuelle Fassung.
+                Maßgeblich ist jeweils die auf dieser Website
+                veröffentlichte aktuelle Fassung.
             </p>
 
         </section>
@@ -1088,11 +1062,10 @@
 
         <div class="legal-note">
 
-            Diese Datenschutzerklärung muss vor dem endgültigen
-            Livegang noch mit der tatsächlich verwendeten Technik,
-            insbesondere Hosting, Formularversand, Cookies,
-            Analysewerkzeugen und sonstigen Drittanbietern,
-            abgeglichen werden.
+            Hinweis: Die Datenschutzerklärung sollte vor dem
+            endgültigen Livegang noch mit der tatsächlich eingesetzten
+            Hosting-, Formular-, Analyse-, Cookie- und
+            Drittanbieter-Technik abgeglichen werden.
 
         </div>
 
@@ -1132,8 +1105,8 @@
             </p>
 
             <p>
-                <a href="mailto:medicar.prinz@gmail.com">
-                    medicar.prinz@gmail.com
+                <a href="mailto:info@flughafen-transfer-salavati.de">
+                    info@flughafen-transfer-salavati.de
                 </a>
             </p>
 
@@ -1212,37 +1185,15 @@
 
 <script>
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+document
+    .getElementById("mobileMenu")
+    .addEventListener("click", function () {
 
-        const menu =
-            document.getElementById(
-                "mobileMenu"
-            );
+        document
+            .getElementById("mainNav")
+            .classList.toggle("open");
 
-        const nav =
-            document.getElementById(
-                "mainNav"
-            );
-
-        if (menu && nav) {
-
-            menu.addEventListener(
-                "click",
-                function () {
-
-                    nav.classList.toggle(
-                        "open"
-                    );
-
-                }
-            );
-
-        }
-
-    }
-);
+    });
 
 </script>
 
