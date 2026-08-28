@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AGB – Flughafentransfer Salavati</title>
+    <title>AGB – Flughafentransferservice Salavati</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +20,8 @@
         :root {
             --ink: #171a1f;
             --gold: #be8f3b;
-            --bg: #f5f4f1;
             --muted: #66707a;
+            --bg: #f5f4f1;
             --line: #ddd9d1;
         }
 
@@ -39,8 +40,11 @@
 
         body {
             font-family: "DM Sans", Arial, sans-serif;
+
             background: var(--bg);
+
             color: var(--ink);
+
             line-height: 1.7;
         }
 
@@ -49,7 +53,7 @@
             text-decoration: none;
         }
 
-        /* ================= HEADER ================= */
+        /* HEADER */
 
         .site-header {
             width: 100%;
@@ -62,11 +66,13 @@
 
         .header-inner {
             width: min(1400px, calc(100% - 80px));
+
             height: 100%;
 
             margin: 0 auto;
 
             display: flex;
+
             align-items: center;
 
             gap: 28px;
@@ -74,10 +80,13 @@
 
         .brand {
             display: flex;
+
             align-items: center;
+
             gap: 12px;
 
             min-width: 315px;
+
             flex-shrink: 0;
         }
 
@@ -86,33 +95,32 @@
             height: 62px;
 
             object-fit: contain;
-            flex-shrink: 0;
         }
 
-        .brand-text {
+        .brand-copy {
             display: flex;
             flex-direction: column;
         }
 
-        .brand-text strong {
+        .brand-copy strong {
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 19px;
+
             line-height: .94;
 
             font-weight: 900;
 
-            letter-spacing: .3px;
-
             white-space: nowrap;
         }
 
-        .brand-text small {
+        .brand-copy span {
             margin-top: 6px;
 
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 7px;
+
             font-weight: 800;
 
             letter-spacing: 2px;
@@ -124,8 +132,10 @@
             flex: 1;
 
             display: flex;
-            align-items: center;
+
             justify-content: center;
+
+            align-items: center;
 
             gap: 26px;
 
@@ -134,9 +144,8 @@
 
         .main-nav a {
             font-size: 14px;
-            font-weight: 700;
 
-            transition: color .2s ease;
+            font-weight: 700;
         }
 
         .main-nav a:hover {
@@ -145,16 +154,21 @@
 
         .header-phone {
             min-height: 52px;
+
             padding: 0 22px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             border: 1.5px solid var(--ink);
+
             border-radius: 11px;
 
             font-size: 14px;
+
             font-weight: 700;
 
             white-space: nowrap;
@@ -162,7 +176,9 @@
 
         .header-phone:hover {
             background: var(--ink);
+
             color: #fff;
+
             font-weight: 900;
         }
 
@@ -170,7 +186,7 @@
             display: none;
         }
 
-        /* ================= HERO ================= */
+        /* HERO */
 
         .legal-hero {
             background: #eceae4;
@@ -180,15 +196,17 @@
 
         .legal-container {
             width: min(1100px, calc(100% - 80px));
+
             margin: 0 auto;
         }
 
         .legal-hero-inner {
-            padding: 63px 0 57px;
+            padding: 62px 0 58px;
         }
 
         .eyebrow {
             display: flex;
+
             align-items: center;
 
             gap: 12px;
@@ -198,6 +216,7 @@
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 10px;
+
             font-weight: 800;
 
             letter-spacing: 3px;
@@ -209,6 +228,7 @@
             content: "";
 
             width: 32px;
+
             height: 2px;
 
             background: var(--gold);
@@ -219,9 +239,9 @@
 
             font-family: "Montserrat", Arial, sans-serif;
 
-            font-size: clamp(56px, 6vw, 78px);
+            font-size: clamp(55px, 6vw, 78px);
 
-            line-height: .96;
+            line-height: .95;
 
             letter-spacing: -4px;
 
@@ -230,12 +250,12 @@
             color: var(--gold);
         }
 
-        /* ================= CONTENT ================= */
+        /* CONTENT */
 
         .legal-main {
             background: #fff;
 
-            padding: 70px 0 105px;
+            padding: 72px 0 110px;
         }
 
         .legal-card {
@@ -245,25 +265,26 @@
 
             padding: 50px 54px;
 
+            background: #fff;
+
             border: 1px solid #e0dbd2;
 
             border-radius: 22px;
 
-            background: #fff;
-
-            box-shadow:
-                0 18px 55px rgba(0,0,0,.045);
+            box-shadow: 0 18px 55px rgba(0,0,0,.045);
         }
 
         .legal-section {
+
             margin-top: 43px;
 
-            padding-top: 35px;
+            padding-top: 34px;
 
-            border-top: 1px solid #e7e2da;
+            border-top: 1px solid #e6e1d9;
         }
 
         .legal-section:first-child {
+
             margin-top: 0;
 
             padding-top: 0;
@@ -272,6 +293,7 @@
         }
 
         .legal-section h2 {
+
             margin: 0 0 14px;
 
             font-family: "Montserrat", Arial, sans-serif;
@@ -281,8 +303,10 @@
             line-height: 1.2;
         }
 
-        .legal-section p,
-        .legal-section li {
+        .legal-section p {
+
+            margin: 0 0 16px;
+
             color: #59636d;
 
             font-size: 16px;
@@ -290,21 +314,26 @@
             line-height: 1.8;
         }
 
-        .legal-section p {
-            margin: 0 0 16px;
-        }
-
         .legal-section ul {
-            margin: 12px 0 18px;
+
+            margin: 12px 0 20px;
 
             padding-left: 26px;
         }
 
         .legal-section li {
-            margin-bottom: 9px;
+
+            margin-bottom: 10px;
+
+            color: #59636d;
+
+            font-size: 16px;
+
+            line-height: 1.8;
         }
 
         .legal-note {
+
             margin-top: 40px;
 
             padding: 20px 22px;
@@ -320,32 +349,32 @@
             line-height: 1.7;
         }
 
-        /* ================= FOOTER ================= */
+        /* FOOTER */
 
         .footer {
+
             background: #0b0c0d;
 
             color: #fff;
 
-            padding: 66px 0 25px;
+            padding: 65px 0 25px;
         }
 
         .footer-grid {
+
             width: min(1400px, calc(100% - 80px));
 
             margin: 0 auto;
 
             display: grid;
 
-            grid-template-columns:
-                1.2fr
-                1fr
-                1fr;
+            grid-template-columns: 1.2fr 1fr 1fr;
 
             gap: 70px;
         }
 
         .footer h3 {
+
             margin: 0 0 17px;
 
             font-family: "Montserrat", Arial, sans-serif;
@@ -354,6 +383,7 @@
         }
 
         .footer p {
+
             margin: 8px 0;
 
             color: #adb1b6;
@@ -362,14 +392,17 @@
         }
 
         .footer a {
+
             color: #adb1b6;
         }
 
         .footer a:hover {
+
             color: var(--gold);
         }
 
         .footer-bottom {
+
             width: min(1400px, calc(100% - 80px));
 
             margin: 44px auto 0;
@@ -389,15 +422,17 @@
             font-size: 12px;
         }
 
-        /* ================= MOBILE ================= */
+        /* MOBILE */
 
-        @media (max-width: 850px) {
+        @media (max-width:850px) {
 
             .site-header {
+
                 height: auto;
             }
 
             .header-inner {
+
                 width: calc(100% - 28px);
 
                 min-height: 70px;
@@ -408,32 +443,41 @@
             }
 
             .brand {
+
                 min-width: 0;
 
                 flex: 1;
             }
 
             .brand-logo {
+
                 width: 46px;
+
                 height: 46px;
             }
 
-            .brand-text strong {
+            .brand-copy strong {
+
                 font-size: 13px;
             }
 
-            .brand-text small {
+            .brand-copy span {
+
                 font-size: 5px;
+
                 letter-spacing: 1.2px;
             }
 
             .mobile-menu {
+
                 display: flex;
 
                 width: 42px;
+
                 height: 42px;
 
                 align-items: center;
+
                 justify-content: center;
 
                 border: 1px solid var(--line);
@@ -443,77 +487,98 @@
                 background: #fff;
 
                 font-size: 20px;
+
+                cursor: pointer;
             }
 
             .main-nav {
+
                 display: none;
+
+                order: 5;
 
                 flex: 0 0 100%;
 
+                width: 100%;
+
                 flex-direction: column;
 
-                align-items: stretch;
-
                 gap: 0;
+
+                align-items: stretch;
             }
 
             .main-nav.open {
+
                 display: flex;
             }
 
             .main-nav a {
+
                 padding: 12px 4px;
 
                 border-top: 1px solid var(--line);
+
+                font-size: 14px;
             }
 
             .header-phone {
+
                 display: none;
             }
 
             .legal-container,
             .legal-card {
+
                 width: calc(100% - 28px);
             }
 
             .legal-hero-inner {
-                padding: 44px 0 40px;
+
+                padding: 43px 0 40px;
             }
 
             .legal-title {
-                font-size: 45px;
+
+                font-size: 44px;
 
                 letter-spacing: -2.5px;
             }
 
             .legal-main {
-                padding: 43px 0 68px;
+
+                padding: 43px 0 70px;
             }
 
             .legal-card {
-                padding: 28px 20px;
+
+                padding: 27px 20px;
 
                 border-radius: 18px;
             }
 
             .legal-section {
+
                 margin-top: 36px;
 
                 padding-top: 28px;
             }
 
             .legal-section h2 {
+
                 font-size: 21px;
             }
 
             .legal-section p,
             .legal-section li {
+
                 font-size: 15px;
 
                 line-height: 1.75;
             }
 
             .footer-grid {
+
                 width: calc(100% - 28px);
 
                 grid-template-columns: 1fr;
@@ -522,30 +587,40 @@
             }
 
             .footer-bottom {
+
                 width: calc(100% - 28px);
 
                 flex-direction: column;
-
-                gap: 7px;
             }
+
         }
 
-        @media (max-width: 520px) {
+        @media (max-width:520px) {
 
             .brand-logo {
+
                 width: 42px;
+
                 height: 42px;
             }
 
-            .brand-text strong {
+            .brand-copy strong {
+
                 font-size: 11.5px;
             }
 
+            .brand-copy span {
+
+                font-size: 4.2px;
+            }
+
             .legal-title {
-                font-size: 40px;
+
+                font-size: 38px;
             }
 
             .legal-card {
+
                 padding: 22px 16px;
             }
 
@@ -557,28 +632,27 @@
 
 <body>
 
-
 <header class="site-header">
 
     <div class="header-inner">
 
-
         <a href="index.html" class="brand">
 
             <img
+                class="brand-logo"
                 src="./Logo Flughafentransfer.png"
                 alt="Flughafentransfer Salavati"
-                class="brand-logo"
             >
 
-            <div class="brand-text">
+            <div class="brand-copy">
 
-                <strong>FLUGHAFENTRANSFER</strong>
-                <strong>SALAVATI</strong>
+                <strong>
+                    FLUGHAFENTRANSFERSERVICE
+                </strong>
 
-                <small>
-                    SEIT ÜBER 30 JAHREN
-                </small>
+                <span>
+                    SALAVATI · SEIT ÜBER 30 JAHREN
+                </span>
 
             </div>
 
@@ -631,7 +705,6 @@
             ☎ 06441 – 36444
         </a>
 
-
     </div>
 
 </header>
@@ -646,7 +719,7 @@
         </div>
 
         <h1 class="legal-title">
-            Unsere AGB.
+            AGB.
         </h1>
 
     </div>
@@ -667,40 +740,33 @@
 
             <p>
                 Der Fahrtauftrag kann schriftlich, mündlich,
-                fernmündlich bzw. per Fax erfolgen. Dieser muss
-                mindestens die folgenden Daten enthalten: den Namen,
-                die Adresse und die Telefonnummer des Auftraggebers,
-                das Reiseziel sowie Datum und Uhrzeit der Abholung
-                durch den Veranstalter.
+                fernmündlich beziehungsweise über die auf der
+                Website angebotenen Kontaktmöglichkeiten erfolgen.
+                Der Auftrag sollte mindestens die für die Durchführung
+                der Fahrt erforderlichen Angaben enthalten.
             </p>
 
             <p>
-                Der Auftraggeber meldet hierbei auch alle an der Fahrt
-                teilnehmenden Personen an, wobei er für die Teilnahme
-                dieser genannten Personen verantwortlich ist und für
-                diese wie für seine eigene Teilnahmeverpflichtung
-                einsteht.
+                Hierzu gehören insbesondere Name, Adresse und
+                Telefonnummer des Auftraggebers, Reiseziel sowie
+                Datum und Uhrzeit der gewünschten Abholung.
             </p>
 
             <p>
-                Durch den Zahlungsdienst wird der Auftrag schriftlich
-                oder fernmündlich bestätigt und ist damit verbindlich.
+                Der Auftraggeber meldet die an der Fahrt
+                teilnehmenden Personen an und ist für die Richtigkeit
+                der angegebenen Daten verantwortlich.
             </p>
 
             <p>
-                Bei vom Auftraggeber gewünschten Umbuchungen, die
-                weniger als 2 Tage vor dem Reiseantritt liegen,
-                behalten wir uns das Recht vor, den Auftrag von
-                unserer Seite aus zu stornieren, wenn es uns
-                organisatorisch nicht möglich ist, die Änderungen
-                aufgrund der Fahrzeugauslastung zu berücksichtigen.
+                Ein Fahrtauftrag wird nach entsprechender Bestätigung
+                durch den Veranstalter verbindlich.
             </p>
 
             <p>
-                Die Reisebüros treten im Zusammenhang mit der
-                Auftragserteilung nur als Vermittler auf und
-                übernehmen deshalb auch keinerlei
-                Gewährleistungsverpflichtungen.
+                Bei Änderungswünschen nach erfolgter Auftragserteilung
+                wird geprüft, ob die Änderung organisatorisch noch
+                berücksichtigt werden kann.
             </p>
 
         </section>
@@ -713,28 +779,20 @@
             </h2>
 
             <p>
-                Der Fahrpreis ist bei der Ankunft am Flughafen bzw.
-                entsprechend bei einer Abholung vom Flughafen am
-                gewünschten Zielort in voller Höhe zu entrichten.
+                Der vereinbarte Fahrpreis ist entsprechend der
+                getroffenen Vereinbarung zu entrichten.
             </p>
 
             <p>
-                Im Ausnahmefall kann mit dem Veranstalter auch eine
-                andere Zahlungsweise, zum Beispiel per Überweisung
-                oder Scheck, vereinbart werden.
+                Der Fahrpreis umfasst grundsätzlich die vereinbarte
+                Beförderungsleistung zum gewünschten Zielort.
             </p>
 
             <p>
-                Der Fahrpreis beinhaltet die Fahrt zum gewünschten
-                Zielort inklusive Beförderung des üblichen Reisegepäcks
-                sowie eine Unfallversicherung der Fahrgäste und eine
-                Reisegepäckversicherung.
-            </p>
-
-            <p>
-                Besonders große Gepäckstücke oder mitgenommene Tiere
-                bedürfen der ausdrücklichen Zustimmung des Veranstalters
-                und werden unter Umständen extra berechnet.
+                Das übliche Reisegepäck kann im Rahmen der vorhandenen
+                Fahrzeugkapazität mitgeführt werden. Besonders großes
+                oder außergewöhnliches Gepäck sowie die Beförderung
+                von Tieren sind vor Fahrtantritt abzusprechen.
             </p>
 
         </section>
@@ -743,20 +801,40 @@
         <section class="legal-section">
 
             <h2>
-                3. Die Auftragsstornierung
+                3. Auftragsstornierung
             </h2>
 
             <p>
-                Die Stornierung des Fahrtauftrages kann durch den
-                Auftraggeber bis 4 Tage vor Antritt der Reise
-                kostenfrei erfolgen.
+                Eine Stornierung ist bis 4 Tage vor dem geplanten
+                Reiseantritt kostenfrei möglich.
             </p>
 
             <p>
-                Wird die Fahrt 3 Tage vor Reiseantritt storniert,
-                so berechnen wir 25 % des Fahrpreises, entsprechend
-                bei 2 Tagen 50 % und einen Tag vor der Reise bzw.
-                am Reisetag selbst 75 % des Fahrpreises.
+                Bei späteren Stornierungen können abhängig vom
+                Zeitpunkt der Stornierung folgende Kosten entstehen:
+            </p>
+
+            <ul>
+
+                <li>
+                    3 Tage vor Reiseantritt: 25 % des Fahrpreises
+                </li>
+
+                <li>
+                    2 Tage vor Reiseantritt: 50 % des Fahrpreises
+                </li>
+
+                <li>
+                    1 Tag vor Reiseantritt beziehungsweise am Reisetag:
+                    75 % des Fahrpreises
+                </li>
+
+            </ul>
+
+            <p>
+                Dem Kunden bleibt der Nachweis vorbehalten, dass
+                kein oder ein wesentlich geringerer Schaden entstanden
+                ist.
             </p>
 
         </section>
@@ -765,46 +843,31 @@
         <section class="legal-section">
 
             <h2>
-                4. Die Abholung vom Flughafen Frankfurt/Main
+                4. Abholung vom Flughafen
             </h2>
 
             <p>
-                Wird vom Fahrgast eine Abholung vom Flughafen
-                gewünscht, so hat er nach Überprüfung die Richtigkeit
-                der angegebenen Flugdaten zu bestätigen.
+                Bei einer Abholung vom Flughafen sind die bei der
+                Buchung mitgeteilten Flug- und Reisedaten sorgfältig
+                zu kontrollieren.
             </p>
 
             <p>
-                Es wird ein Merkblatt ausgehändigt, das die für die
-                Fahrer des Veranstalters verbindlichen Treffpunkte
-                enthält.
+                Änderungen der Flugzeiten oder Flugnummern sind dem
+                Veranstalter möglichst unverzüglich mitzuteilen.
             </p>
 
             <p>
-                Andere als die dort vermerkten Treffpunkte sind nicht
-                möglich und können deshalb nicht verbindlich mit den
-                Fahrern abgesprochen werden.
+                Die Abholung erfolgt an dem zuvor vereinbarten
+                Treffpunkt. Andere Treffpunkte können nur berücksichtigt
+                werden, wenn dies vorher ausdrücklich vereinbart wurde.
             </p>
 
             <p>
-                Fahrgäste, die nicht innerhalb der Wartezeit zum
-                Treffpunkt kommen oder falsche Rückflugdaten angegeben
-                haben, besitzen keinen Anspruch auf Beförderung.
-            </p>
-
-            <p>
-                Flugänderungen sind unmittelbar nach Kenntnisnahme
-                durch den Fahrgast dem Veranstalter telefonisch oder
-                per Fax vor Antritt des Rückflugs mitzuteilen.
-            </p>
-
-            <p>
-                <strong>Treffpunkte in Frankfurt:</strong>
-            </p>
-
-            <p>
-                Terminal 1 – Ankunftshalle B, Meeting Point<br>
-                Terminal 2 – Ankunftshalle D/E, Meeting Point
+                Sollte der Fahrgast nach der vereinbarten Wartezeit
+                nicht am Treffpunkt erscheinen und den Veranstalter
+                nicht über eine Verzögerung informieren, kann der
+                Beförderungsanspruch entfallen.
             </p>
 
         </section>
@@ -817,28 +880,123 @@
             </h2>
 
             <p>
-                Trifft der Fahrgast nicht bis spätestens 1 Stunde
-                nach der Landung am vereinbarten Meeting Point ein
-                oder hat dieser dem wartenden Fahrer bzw. dem
-                Veranstalter eine eventuelle Verzögerung nicht
-                mitgeteilt, so erlischt sein Anspruch auf Beförderung.
+                Bei Abholungen vom Flughafen kann eine angemessene
+                Wartezeit erforderlich sein, insbesondere bei
+                Verspätungen, Gepäckausgabe oder sonstigen
+                Verzögerungen im Ablauf des Flughafens.
             </p>
 
             <p>
-                Ebenso hat der Fahrgast eine eventuelle Wartezeit
-                von 1 Stunde bis zur Abholung zu akzeptieren.
+                Werden Änderungen der Flugzeiten rechtzeitig
+                mitgeteilt, wird die Abholung nach Möglichkeit
+                entsprechend angepasst.
             </p>
 
             <p>
-                Sollte dann – trotz telefonischer Rückfrage beim
-                Veranstalter – kein Fahrer eintreffen, übernimmt der
-                Veranstalter die Mehrkosten der Heimfahrt.
+                Eine über die vereinbarte Wartezeit hinausgehende
+                Wartezeit kann nach vorheriger Absprache gesondert
+                berechnet werden.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                6. Pflichten des Fahrgastes
+            </h2>
+
+            <p>
+                Der Fahrgast hat dafür Sorge zu tragen, dass die
+                erforderlichen Angaben zur Fahrt vollständig und
+                richtig mitgeteilt werden.
             </p>
 
             <p>
-                Außerdem werden die Fahrgäste bei einer Fahrzeugpanne
-                auf Kosten des Veranstalters mit einem Taxi oder
-                Ersatzfahrzeug weiterbefördert.
+                Den Anweisungen des Fahrers hinsichtlich Sicherheit
+                und ordnungsgemäßer Beförderung ist Folge zu leisten.
+            </p>
+
+            <p>
+                Sicherheitsgurte sind während der Fahrt entsprechend
+                den gesetzlichen Vorschriften zu benutzen.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                7. Gepäck und besondere Beförderungswünsche
+            </h2>
+
+            <p>
+                Übliches Reisegepäck wird im Rahmen der verfügbaren
+                Fahrzeugkapazität befördert.
+            </p>
+
+            <p>
+                Besonders sperrige Gegenstände, sehr große
+                Gepäckmengen, Fahrräder, Tiere oder sonstige
+                besondere Beförderungswünsche müssen vor Fahrtantritt
+                angekündigt und bestätigt werden.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                8. Fahrzeugausfall
+            </h2>
+
+            <p>
+                Sollte es zu einer Fahrzeugpanne oder einem sonstigen
+                technischen Ausfall kommen, bemühen wir uns um eine
+                angemessene Ersatzbeförderung.
+            </p>
+
+            <p>
+                Hierfür kann, soweit erforderlich und verfügbar,
+                ein Ersatzfahrzeug oder ein Taxi eingesetzt werden.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                9. Haftung
+            </h2>
+
+            <p>
+                Es gelten die gesetzlichen Haftungsbestimmungen.
+                Die Haftung für Schäden richtet sich insbesondere
+                nach den zwingenden gesetzlichen Vorschriften.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                10. Schlussbestimmungen
+            </h2>
+
+            <p>
+                Sollte eine Bestimmung dieser Bedingungen unwirksam
+                sein oder werden, bleiben die übrigen Bestimmungen
+                davon unberührt.
+            </p>
+
+            <p>
+                An die Stelle der unwirksamen Bestimmung treten die
+                gesetzlichen Regelungen.
             </p>
 
         </section>
@@ -846,9 +1004,10 @@
 
         <div class="legal-note">
 
-            Die vorstehenden Bedingungen entsprechen dem von Ihnen
-            bereitgestellten bisherigen AGB-Inhalt. Gesetzlich
-            zwingende Rechte bleiben unberührt.
+            Hinweis: Diese AGB-Seite übernimmt die wesentlichen
+            Inhalte der bisherigen von Ihnen verwendeten
+            Geschäftsbedingungen. Vor dem endgültigen Livegang
+            sollten die Bedingungen rechtlich geprüft werden.
 
         </div>
 
@@ -885,8 +1044,8 @@
             </p>
 
             <p>
-                <a href="mailto:medicar.prinz@gmail.com">
-                    medicar.prinz@gmail.com
+                <a href="mailto:info@flughafen-transfer-salavati.de">
+                    info@flughafen-transfer-salavati.de
                 </a>
             </p>
 
@@ -954,28 +1113,17 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+document
+    .getElementById("mobileMenu")
+    .addEventListener("click", function () {
 
-    const menu =
-        document.getElementById("mobileMenu");
+        document
+            .getElementById("mainNav")
+            .classList.toggle("open");
 
-    const nav =
-        document.getElementById("mainNav");
-
-    if (menu && nav) {
-
-        menu.addEventListener("click", function () {
-
-            nav.classList.toggle("open");
-
-        });
-
-    }
-
-});
+    });
 
 </script>
-
 
 </body>
 </html>
