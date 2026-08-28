@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Impressum – Flughafentransfer Salavati</title>
+    <title>Impressum – Flughafentransferservice Salavati</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +15,15 @@
     >
 
     <style>
+
         :root {
             --ink: #171a1f;
             --gold: #be8f3b;
-            --bg: #f5f4f1;
             --muted: #66707a;
-            --line: #ddd9d1;
+            --bg: #f5f4f1;
             --white: #ffffff;
-            --max: 1400px;
+            --line: #ddd9d1;
+            --card: #faf9f6;
         }
 
         * {
@@ -40,8 +41,9 @@
 
         body {
             font-family: "DM Sans", Arial, sans-serif;
-            background: var(--bg);
             color: var(--ink);
+            background: var(--bg);
+            line-height: 1.7;
         }
 
         a {
@@ -49,27 +51,26 @@
             text-decoration: none;
         }
 
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
         /* ================= HEADER ================= */
 
         .site-header {
             width: 100%;
             height: 100px;
+
             background: rgba(245,244,241,.98);
+
             border-bottom: 1px solid var(--line);
         }
 
         .header-inner {
-            width: min(var(--max), calc(100% - 80px));
+            width: min(1400px, calc(100% - 80px));
             height: 100%;
+
             margin: 0 auto;
 
             display: flex;
             align-items: center;
+
             gap: 28px;
         }
 
@@ -85,31 +86,44 @@
         .brand-logo {
             width: 62px;
             height: 62px;
+
             object-fit: contain;
+
             flex-shrink: 0;
         }
 
-        .brand-text {
+        .brand-copy {
             display: flex;
             flex-direction: column;
         }
 
-        .brand-text strong {
+        .brand-copy strong {
             font-family: "Montserrat", Arial, sans-serif;
+
             font-size: 19px;
             line-height: .94;
+
             font-weight: 900;
-            letter-spacing: .3px;
+
+            letter-spacing: .2px;
+
             white-space: nowrap;
         }
 
-        .brand-text small {
+        .brand-copy span {
             margin-top: 6px;
+
             font-family: "Montserrat", Arial, sans-serif;
+
             font-size: 7px;
+            line-height: 1;
+
             font-weight: 800;
+
             letter-spacing: 2px;
+
             color: #7b8086;
+
             white-space: nowrap;
         }
 
@@ -128,6 +142,7 @@
         .main-nav a {
             font-size: 14px;
             font-weight: 700;
+
             transition: color .2s ease;
         }
 
@@ -137,6 +152,7 @@
 
         .header-phone {
             min-height: 52px;
+
             padding: 0 22px;
 
             display: flex;
@@ -151,7 +167,10 @@
 
             white-space: nowrap;
 
-            transition: .2s ease;
+            transition:
+                background .2s ease,
+                color .2s ease,
+                font-weight .2s ease;
         }
 
         .header-phone:hover {
@@ -168,6 +187,7 @@
 
         .legal-hero {
             background: #eceae4;
+
             border-bottom: 1px solid var(--line);
         }
 
@@ -177,38 +197,47 @@
         }
 
         .legal-hero-inner {
-            padding: 63px 0 57px;
+            padding: 62px 0 58px;
         }
 
         .eyebrow {
             display: flex;
             align-items: center;
+
             gap: 12px;
 
             margin-bottom: 24px;
 
             font-family: "Montserrat", Arial, sans-serif;
+
             font-size: 10px;
             font-weight: 800;
+
             letter-spacing: 3px;
+
             color: var(--muted);
         }
 
         .eyebrow::before {
             content: "";
+
             width: 32px;
             height: 2px;
+
             background: var(--gold);
-            flex-shrink: 0;
         }
 
         .legal-title {
             margin: 0;
 
             font-family: "Montserrat", Arial, sans-serif;
-            font-size: clamp(58px, 6vw, 80px);
+
+            font-size: clamp(55px, 6vw, 78px);
+
             line-height: .95;
+
             letter-spacing: -4px;
+
             font-weight: 900;
 
             color: var(--gold);
@@ -218,92 +247,113 @@
 
         .legal-main {
             background: #fff;
-            padding: 70px 0 105px;
+
+            padding: 72px 0 110px;
         }
 
         .legal-card {
             width: min(1100px, calc(100% - 80px));
+
             margin: 0 auto;
+
+            padding: 48px 52px;
 
             background: #fff;
 
             border: 1px solid #e0dbd2;
-            border-radius: 22px;
 
-            padding: 48px 52px;
+            border-radius: 22px;
 
             box-shadow: 0 18px 55px rgba(0,0,0,.045);
         }
 
         .info-grid {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 18px;
         }
 
         .info-box {
-            padding: 27px 29px;
+            min-width: 0;
 
-            border: 1px solid #e0dbd2;
+            padding: 28px 29px;
+
+            background: var(--card);
+
+            border: 1px solid #e1dcd4;
+
             border-radius: 16px;
-
-            background: #faf9f6;
         }
 
         .info-box h2 {
             margin: 0 0 13px;
 
             font-family: "Montserrat", Arial, sans-serif;
+
             font-size: 22px;
+
             line-height: 1.2;
         }
 
         .info-box p {
-            margin: 7px 0;
+            margin: 6px 0;
 
             color: #5e6872;
+
             font-size: 15px;
+
             line-height: 1.7;
         }
 
         .info-box a {
             color: var(--gold);
+
             font-weight: 700;
         }
 
         .legal-section {
-            margin-top: 42px;
+            margin-top: 43px;
+
             padding-top: 34px;
 
             border-top: 1px solid #e6e1d9;
         }
 
         .legal-section h2 {
-            margin: 0 0 13px;
+            margin: 0 0 14px;
 
             font-family: "Montserrat", Arial, sans-serif;
-            font-size: 24px;
+
+            font-size: 25px;
+
             line-height: 1.2;
         }
 
         .legal-section p {
-            margin: 0 0 15px;
+            margin: 0 0 16px;
 
             color: #59636d;
+
             font-size: 16px;
+
             line-height: 1.8;
         }
 
         .legal-note {
-            margin-top: 38px;
-            padding: 19px 21px;
+            margin-top: 40px;
+
+            padding: 20px 22px;
 
             border-left: 3px solid var(--gold);
+
             background: #f4efe5;
 
             color: #59636d;
 
             font-size: 14px;
+
             line-height: 1.7;
         }
 
@@ -311,16 +361,19 @@
 
         .footer {
             background: #0b0c0d;
+
             color: #fff;
 
-            padding: 66px 0 25px;
+            padding: 65px 0 25px;
         }
 
         .footer-grid {
-            width: min(var(--max), calc(100% - 80px));
+            width: min(1400px, calc(100% - 80px));
+
             margin: 0 auto;
 
             display: grid;
+
             grid-template-columns: 1.2fr 1fr 1fr;
 
             gap: 70px;
@@ -330,6 +383,7 @@
             margin: 0 0 17px;
 
             font-family: "Montserrat", Arial, sans-serif;
+
             font-size: 18px;
         }
 
@@ -337,6 +391,7 @@
             margin: 8px 0;
 
             color: #adb1b6;
+
             font-size: 14px;
         }
 
@@ -349,7 +404,8 @@
         }
 
         .footer-bottom {
-            width: min(var(--max), calc(100% - 80px));
+            width: min(1400px, calc(100% - 80px));
+
             margin: 44px auto 0;
 
             padding-top: 18px;
@@ -357,11 +413,13 @@
             border-top: 1px solid #27292c;
 
             display: flex;
+
             justify-content: space-between;
 
             gap: 20px;
 
             color: #72777d;
+
             font-size: 12px;
         }
 
@@ -375,6 +433,7 @@
 
             .header-inner {
                 width: calc(100% - 28px);
+
                 min-height: 70px;
 
                 padding: 9px 0;
@@ -384,6 +443,7 @@
 
             .brand {
                 min-width: 0;
+
                 flex: 1;
             }
 
@@ -392,11 +452,11 @@
                 height: 46px;
             }
 
-            .brand-text strong {
+            .brand-copy strong {
                 font-size: 13px;
             }
 
-            .brand-text small {
+            .brand-copy span {
                 font-size: 5px;
                 letter-spacing: 1.2px;
             }
@@ -415,16 +475,24 @@
 
                 background: #fff;
 
+                color: var(--ink);
+
                 font-size: 20px;
+
                 cursor: pointer;
             }
 
             .main-nav {
                 display: none;
 
+                order: 5;
+
                 flex: 0 0 100%;
 
+                width: 100%;
+
                 flex-direction: column;
+
                 align-items: stretch;
 
                 gap: 0;
@@ -436,7 +504,9 @@
 
             .main-nav a {
                 padding: 12px 4px;
+
                 border-top: 1px solid var(--line);
+
                 font-size: 14px;
             }
 
@@ -450,20 +520,21 @@
             }
 
             .legal-hero-inner {
-                padding: 44px 0 40px;
+                padding: 43px 0 40px;
             }
 
             .legal-title {
-                font-size: 46px;
+                font-size: 44px;
                 letter-spacing: -2.5px;
             }
 
             .legal-main {
-                padding: 43px 0 68px;
+                padding: 43px 0 70px;
             }
 
             .legal-card {
                 padding: 27px 20px;
+
                 border-radius: 18px;
             }
 
@@ -476,7 +547,7 @@
             }
 
             .legal-section {
-                margin-top: 35px;
+                margin-top: 36px;
                 padding-top: 28px;
             }
 
@@ -489,18 +560,19 @@
                 line-height: 1.75;
             }
 
-            .footer-grid,
-            .footer-bottom {
-                width: calc(100% - 28px);
-            }
-
             .footer-grid {
+                width: calc(100% - 28px);
+
                 grid-template-columns: 1fr;
+
                 gap: 38px;
             }
 
             .footer-bottom {
+                width: calc(100% - 28px);
+
                 flex-direction: column;
+
                 gap: 7px;
             }
         }
@@ -512,18 +584,23 @@
                 height: 42px;
             }
 
-            .brand-text strong {
+            .brand-copy strong {
                 font-size: 11.5px;
             }
 
+            .brand-copy span {
+                font-size: 4.2px;
+            }
+
             .legal-title {
-                font-size: 40px;
+                font-size: 38px;
             }
 
             .legal-card {
                 padding: 22px 16px;
             }
         }
+
     </style>
 </head>
 
@@ -536,20 +613,14 @@
         <a href="index.html" class="brand">
 
             <img
+                class="brand-logo"
                 src="./Logo Flughafentransfer.png"
                 alt="Flughafentransfer Salavati"
-                class="brand-logo"
             >
 
-            <div class="brand-text">
-
-                <strong>FLUGHAFENTRANSFER</strong>
-                <strong>SALAVATI</strong>
-
-                <small>
-                    SEIT ÜBER 30 JAHREN
-                </small>
-
+            <div class="brand-copy">
+                <strong>FLUGHAFENTRANSFERSERVICE</strong>
+                <span>SALAVATI · SEIT ÜBER 30 JAHREN</span>
             </div>
 
         </a>
@@ -567,12 +638,29 @@
 
         <nav class="main-nav" id="mainNav">
 
-            <a href="index.html#ueber-uns">Über uns</a>
-            <a href="index.html#flughafen">Flughäfen</a>
-            <a href="index.html#warum">Warum Salavati?</a>
-            <a href="index.html#vorbestellung">Vorbestellung</a>
-            <a href="index.html#bewertungen">Bewertungen</a>
-            <a href="impressum.html">Impressum</a>
+            <a href="index.html#ueber-uns">
+                Über uns
+            </a>
+
+            <a href="index.html#flughafen">
+                Flughäfen
+            </a>
+
+            <a href="index.html#warum">
+                Warum Salavati?
+            </a>
+
+            <a href="index.html#vorbestellung">
+                Vorbestellung
+            </a>
+
+            <a href="index.html#bewertungen">
+                Bewertungen
+            </a>
+
+            <a href="impressum.html">
+                Impressum
+            </a>
 
         </nav>
 
@@ -609,7 +697,6 @@
 <main class="legal-main">
 
     <div class="legal-card">
-
 
         <div class="info-grid">
 
@@ -658,8 +745,8 @@
 
                 <p>
                     E-Mail:
-                    <a href="mailto:medicar.prinz@gmail.com">
-                        medicar.prinz@gmail.com
+                    <a href="mailto:info@flughafen-transfer-salavati.de">
+                        info@flughafen-transfer-salavati.de
                     </a>
                 </p>
 
@@ -684,11 +771,7 @@
 
             <div class="info-box">
 
-                <h2>Steuerliche Angaben</h2>
-
-                <p>
-                    Steuernummer: 2024790418
-                </p>
+                <h2>Finanzamt</h2>
 
                 <p>
                     Finanzamt Gießen
@@ -701,12 +784,10 @@
 
         <section class="legal-section">
 
-            <h2>
-                Verantwortlich für den Inhalt
-            </h2>
+            <h2>Verantwortlich für den Inhalt</h2>
 
             <p>
-                Verantwortlich für die Inhalte dieser Website ist die
+                Verantwortlich für den Inhalt dieser Website ist die
                 VPW GmbH, vertreten durch den Geschäftsführer
                 Dipl. Betriebswirt S. R. Salavati.
             </p>
@@ -716,14 +797,19 @@
 
         <section class="legal-section">
 
-            <h2>
-                Angaben zur Kontaktaufnahme
-            </h2>
+            <h2>Haftung für Inhalte</h2>
 
             <p>
-                Für Fragen zu unserem Flughafentransferservice können
-                Sie uns telefonisch oder per E-Mail kontaktieren.
-                Die entsprechenden Kontaktdaten sind oben angegeben.
+                Als Diensteanbieter sind wir gemäß den allgemeinen
+                gesetzlichen Vorschriften für eigene Inhalte auf diesen
+                Seiten verantwortlich. Wir bemühen uns, die Inhalte
+                dieser Website aktuell, vollständig und richtig zu halten.
+            </p>
+
+            <p>
+                Eine Gewähr für die Aktualität, Vollständigkeit und
+                Richtigkeit sämtlicher Inhalte kann jedoch nicht
+                übernommen werden.
             </p>
 
         </section>
@@ -731,29 +817,11 @@
 
         <section class="legal-section">
 
-            <h2>
-                Haftung für Inhalte
-            </h2>
+            <h2>Haftung für Links</h2>
 
             <p>
-                Wir bemühen uns, die Inhalte dieser Website aktuell,
-                vollständig und richtig zu halten. Eine Gewähr für die
-                Aktualität, Vollständigkeit und Richtigkeit sämtlicher
-                Inhalte kann jedoch nicht übernommen werden.
-            </p>
-
-        </section>
-
-
-        <section class="legal-section">
-
-            <h2>
-                Haftung für Links
-            </h2>
-
-            <p>
-                Soweit diese Website Links zu externen Websites Dritter
-                enthält, haben wir auf deren Inhalte keinen Einfluss.
+                Diese Website kann Links zu externen Websites Dritter
+                enthalten. Auf deren Inhalte haben wir keinen Einfluss.
                 Für die Inhalte der verlinkten Seiten ist grundsätzlich
                 der jeweilige Betreiber verantwortlich.
             </p>
@@ -761,13 +829,20 @@
         </section>
 
 
-        <div class="legal-note">
+        <section class="legal-section">
 
-            Die Angaben dieser Seite sollten vor dem endgültigen
-            Livegang nochmals mit den aktuellen Unternehmens-,
-            Register- und Kontaktdaten abgeglichen werden.
+            <h2>Urheberrecht</h2>
 
-        </div>
+            <p>
+                Die durch den Seitenbetreiber erstellten Inhalte und
+                Werke auf dieser Website unterliegen dem deutschen
+                Urheberrecht. Die Vervielfältigung, Bearbeitung,
+                Verbreitung und jede Art der Verwertung außerhalb der
+                Grenzen des Urheberrechts bedürfen der vorherigen
+                schriftlichen Zustimmung des jeweiligen Rechteinhabers.
+            </p>
+
+        </section>
 
 
     </div>
@@ -802,8 +877,8 @@
             </p>
 
             <p>
-                <a href="mailto:medicar.prinz@gmail.com">
-                    medicar.prinz@gmail.com
+                <a href="mailto:info@flughafen-transfer-salavati.de">
+                    info@flughafen-transfer-salavati.de
                 </a>
             </p>
 
@@ -818,11 +893,17 @@
                 Geschäftsführer: S. R. Salavati
             </p>
 
-            <p>HRB 6427</p>
+            <p>
+                HRB 6427
+            </p>
 
-            <p>Amtsgericht Wetzlar</p>
+            <p>
+                Amtsgericht Wetzlar
+            </p>
 
-            <p>Finanzamt Gießen</p>
+            <p>
+                Finanzamt Gießen
+            </p>
 
         </div>
 
@@ -871,25 +952,15 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+document
+    .getElementById("mobileMenu")
+    .addEventListener("click", function () {
 
-    const menu =
-        document.getElementById("mobileMenu");
+        document
+            .getElementById("mainNav")
+            .classList.toggle("open");
 
-    const nav =
-        document.getElementById("mainNav");
-
-    if (menu && nav) {
-
-        menu.addEventListener("click", function () {
-
-            nav.classList.toggle("open");
-
-        });
-
-    }
-
-});
+    });
 
 </script>
 
