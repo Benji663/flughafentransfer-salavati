@@ -38,6 +38,13 @@ input,
 select,
 textarea {
     font: inherit;
+    max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    min-width: 0;
 }
 
 :root {
@@ -95,9 +102,6 @@ textarea {
     min-width: 0;
 }
 
-
-/* MARKENBEREICH */
-
 .brand {
     display: flex;
     align-items: center;
@@ -145,16 +149,14 @@ textarea {
     font-family: "Montserrat", Arial, sans-serif;
 
     font-size: 7px;
-
     font-weight: 800;
 
     letter-spacing: 2px;
 
     color: #7b8086;
+
+    white-space: nowrap;
 }
-
-
-/* DESKTOP NAV */
 
 .main-nav {
     display: flex;
@@ -176,17 +178,12 @@ textarea {
 
     font-weight: 700;
 
-    transition:
-        color .2s ease,
-        opacity .2s ease;
+    transition: color .2s ease;
 }
 
 .main-nav a:hover {
     color: var(--gold);
 }
-
-
-/* TELEFON */
 
 .header-phone {
     min-height: 52px;
@@ -226,24 +223,8 @@ textarea {
     transform: translateY(-2px);
 }
 
-
-/* MOBILE MENU */
-
 .mobile-menu {
     display: none;
-
-    width: 45px;
-    height: 45px;
-
-    border: 1px solid var(--line);
-
-    border-radius: 10px;
-
-    background: white;
-
-    cursor: pointer;
-
-    font-size: 22px;
 }
 
 
@@ -325,6 +306,7 @@ textarea {
 
 .hero h1 {
     display: flex;
+
     flex-direction: column;
 
     margin: 0 0 28px;
@@ -419,13 +401,14 @@ textarea {
     border-right: 1px solid #d7d3cb;
 
     display: flex;
+
     flex-direction: column;
 
     gap: 5px;
 }
 
 .hero-stats > div:last-child {
-    border: none;
+    border: 0;
 
     margin-right: 0;
 }
@@ -441,7 +424,9 @@ textarea {
 }
 
 
-/* HERO IMAGE */
+/* =====================================================
+   HERO IMAGE
+===================================================== */
 
 .hero-image-wrap {
     position: relative;
@@ -575,6 +560,7 @@ textarea {
     z-index: 2;
 
     display: flex;
+
     flex-direction: column;
 }
 
@@ -981,6 +967,9 @@ textarea {
     color: #6e747a;
 }
 
+
+/* REVIEW SLIDER */
+
 .review-slider {
     display: grid;
 
@@ -1006,6 +995,8 @@ textarea {
 
     transition:
         transform .45s cubic-bezier(.22,.61,.36,1);
+
+    will-change: transform;
 }
 
 .review-card {
@@ -1024,6 +1015,8 @@ textarea {
     display: flex;
 
     flex-direction: column;
+
+    min-width: 0;
 }
 
 .review-head {
@@ -1047,6 +1040,8 @@ textarea {
     color: white;
 
     font-weight: 800;
+
+    flex-shrink: 0;
 }
 
 .avatar-orange {
@@ -1142,12 +1137,24 @@ textarea {
     cursor: pointer;
 
     font-size: 20px;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.review-arrow:hover {
+    transform: scale(1.06);
+
+    background: #faf9f6;
 }
 
 .review-dots {
     text-align: center;
 
     margin-top: 20px;
+
+    min-height: 12px;
 }
 
 .review-dots span {
@@ -1161,10 +1168,65 @@ textarea {
     background: #d3cec4;
 
     margin: 0 4px;
+
+    cursor: pointer;
 }
 
 .review-dots span.active {
     background: var(--gold);
+
+    transform: scale(1.2);
+}
+
+
+/* GOOGLE CTA */
+
+.google-review-cta {
+    margin-top: 48px;
+
+    padding: 28px 32px;
+
+    border: 1px solid #ddd8cf;
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.google-stars {
+    color: var(--gold);
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+}
+
+.google-review-cta h3 {
+    margin: 8px 0 5px;
+
+    font-family: "Montserrat", Arial, sans-serif;
+
+    font-size: 22px;
+}
+
+.google-review-cta p {
+    margin: 0;
+
+    color: #67717a;
+
+    font-size: 14px;
+}
+
+.google-button {
+    flex-shrink: 0;
 }
 
 
@@ -1241,6 +1303,9 @@ textarea {
 }
 
 .form-card {
+    width: 100%;
+    max-width: 100%;
+
     padding: 38px 42px;
 
     border: 1px solid #e0dbd2;
@@ -1251,6 +1316,8 @@ textarea {
 
     box-shadow:
         0 18px 60px rgba(0,0,0,.05);
+
+    min-width: 0;
 }
 
 .form-card h3 {
@@ -1270,6 +1337,8 @@ textarea {
 }
 
 .form-grid {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -1286,6 +1355,10 @@ textarea {
 }
 
 .field {
+    width: 100%;
+
+    min-width: 0;
+
     display: flex;
 
     flex-direction: column;
@@ -1304,6 +1377,8 @@ textarea {
 .message textarea {
     width: 100%;
 
+    min-width: 0;
+
     padding: 13px 15px;
 
     border: 1px solid #d8d2c9;
@@ -1321,10 +1396,16 @@ textarea {
 }
 
 .trip-grid {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns:
-        1fr 1.25fr 1.25fr .7fr auto;
+        minmax(0,1fr)
+        minmax(0,1.25fr)
+        minmax(0,1.25fr)
+        minmax(90px,.7fr)
+        auto;
 
     gap: 14px;
 
@@ -1350,13 +1431,16 @@ textarea {
 .return-toggle input {
     width: 18px;
     height: 18px;
+
+    flex-shrink: 0;
 }
 
 .returns {
     display: none;
 
-    grid-template-columns:
-        1fr 1fr 1fr;
+    width: 100%;
+
+    grid-template-columns: 1fr 1fr 1fr;
 
     gap: 14px;
 
@@ -1417,7 +1501,7 @@ textarea {
 .submit {
     width: 100%;
 
-    height: 52px;
+    min-height: 52px;
 
     border: 0;
 
@@ -1425,7 +1509,7 @@ textarea {
 
     background: #090a0b;
 
-    color: #fff;
+    color: white;
 
     font-size: 14px;
 
@@ -1451,7 +1535,9 @@ textarea {
     display: grid;
 
     grid-template-columns:
-        1.2fr 1fr 1fr;
+        1.2fr
+        1fr
+        1fr;
 
     gap: 70px;
 }
@@ -1500,7 +1586,7 @@ textarea {
 
 
 /* =====================================================
-   RECHTLICHE SEITEN
+   LEGAL PAGES
 ===================================================== */
 
 .legal-page {
@@ -1510,7 +1596,7 @@ textarea {
 }
 
 .legal-hero {
-    padding: 70px 0 58px;
+    padding: 72px 0 62px;
 
     background: #eceae4;
 
@@ -1520,13 +1606,11 @@ textarea {
 .legal-hero h1 {
     margin: 0;
 
-    max-width: 900px;
-
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: clamp(48px,5vw,76px);
+    font-size: clamp(50px,6vw,78px);
 
-    line-height: .98;
+    line-height: .96;
 
     letter-spacing: -3px;
 
@@ -1539,24 +1623,70 @@ textarea {
 
 .legal-content {
     padding: 70px 0 100px;
+
+    background: #fff;
 }
 
 .legal-inner {
-    max-width: 900px;
+    width: min(1050px, calc(100% - 80px));
+
+    margin: 0 auto;
 }
 
-.legal-section {
-    margin-bottom: 42px;
+.legal-card {
+    padding: 44px 48px;
+
+    border: 1px solid #e1ddd5;
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.04);
 }
 
+.legal-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 26px;
+}
+
+.legal-box {
+    padding: 26px 28px;
+
+    border: 1px solid #e4dfd7;
+
+    border-radius: 16px;
+
+    background: #faf9f6;
+}
+
+.legal-box h2,
 .legal-section h2 {
     margin: 0 0 13px;
 
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: 26px;
+    font-size: 23px;
 
-    line-height: 1.15;
+    line-height: 1.2;
+}
+
+.legal-section {
+    padding-top: 34px;
+
+    margin-top: 34px;
+
+    border-top: 1px solid #e7e2da;
+}
+
+.legal-section:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
 }
 
 .legal-section h3 {
@@ -1564,47 +1694,46 @@ textarea {
 
     font-family: "Montserrat", Arial, sans-serif;
 
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .legal-section p,
-.legal-section li {
+.legal-section li,
+.legal-box p {
+    margin: 0 0 12px;
+
     color: #59636d;
 
-    font-size: 16px;
+    font-size: 15px;
 
     line-height: 1.75;
-}
-
-.legal-section p {
-    margin-top: 0;
-    margin-bottom: 15px;
 }
 
 .legal-section ul {
     padding-left: 22px;
 }
 
-.legal-section a {
+.legal-section a,
+.legal-box a {
     color: var(--gold);
 
     font-weight: 700;
 }
 
-.legal-note {
-    margin-top: 45px;
+.legal-highlight {
+    margin-top: 35px;
 
-    padding: 18px 20px;
+    padding: 20px 22px;
 
     border-left: 3px solid var(--gold);
 
-    background: #efebe3;
+    background: #f3eee4;
 
     color: #59636d;
 
     font-size: 13px;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -1621,15 +1750,15 @@ textarea {
     }
 
     .brand {
-        min-width: 245px;
+        min-width: 235px;
     }
 
     .brand-wordmark strong {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .main-nav {
-        gap: 18px;
+        gap: 17px;
     }
 
     .main-nav a {
@@ -1652,6 +1781,10 @@ textarea {
         flex-basis: calc((100% - 20px) / 2);
     }
 
+    .legal-inner {
+        width: min(900px, calc(100% - 50px));
+    }
+
 }
 
 
@@ -1662,10 +1795,13 @@ textarea {
 @media (max-width: 850px) {
 
     .container,
-    .header-inner {
+    .header-inner,
+    .hero-container {
         width: calc(100% - 28px);
     }
 
+
+    /* HEADER */
 
     .site-header {
         height: auto;
@@ -1675,13 +1811,13 @@ textarea {
 
 
     .header-inner {
-        min-height: 74px;
+        min-height: 72px;
 
-        padding: 10px 0 12px;
+        padding: 9px 0 11px;
 
         flex-wrap: wrap;
 
-        gap: 10px;
+        gap: 8px;
     }
 
 
@@ -1695,29 +1831,45 @@ textarea {
 
 
     .brand-logo {
-        width: 49px;
-        height: 49px;
+        width: 48px;
+        height: 48px;
     }
 
 
     .brand-wordmark strong {
-        font-size: 16px;
+        font-size: 14px;
 
-        letter-spacing: .3px;
+        letter-spacing: .15px;
     }
 
 
     .brand-wordmark small {
         margin-top: 4px;
 
-        font-size: 5px;
+        font-size: 4.8px;
 
-        letter-spacing: 1.5px;
+        letter-spacing: 1.3px;
     }
 
 
     .mobile-menu {
-        display: block;
+        display: flex;
+
+        width: 44px;
+        height: 44px;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid var(--line);
+
+        border-radius: 10px;
+
+        background: white;
+
+        font-size: 21px;
+
+        cursor: pointer;
     }
 
 
@@ -1726,17 +1878,19 @@ textarea {
 
         order: 4;
 
-        width: 100%;
-
         flex: 0 0 100%;
+
+        width: 100%;
 
         flex-direction: column;
 
         align-items: stretch;
 
+        justify-content: flex-start;
+
         gap: 0;
 
-        padding: 6px 0 0;
+        padding: 5px 0 0;
     }
 
 
@@ -1748,7 +1902,7 @@ textarea {
     .main-nav a {
         width: 100%;
 
-        padding: 11px 4px;
+        padding: 12px 4px;
 
         border-top: 1px solid var(--line);
 
@@ -1756,12 +1910,12 @@ textarea {
     }
 
 
-    /* wichtig: KEIN großer leerer Abstand */
+    /* HERO */
 
     .hero {
         min-height: auto;
 
-        padding: 45px 0 55px;
+        padding: 36px 0 50px;
     }
 
 
@@ -1770,7 +1924,7 @@ textarea {
 
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 36px;
     }
 
 
@@ -1779,12 +1933,12 @@ textarea {
 
         letter-spacing: 2px;
 
-        max-width: 100%;
+        line-height: 1.5;
     }
 
 
     .hero h1 {
-        font-size: clamp(48px, 15vw, 66px);
+        font-size: clamp(48px,14vw,64px);
 
         letter-spacing: -3px;
     }
@@ -1797,8 +1951,6 @@ textarea {
 
     .hero-actions {
         flex-direction: column;
-
-        align-items: stretch;
     }
 
 
@@ -1807,21 +1959,14 @@ textarea {
     }
 
 
-    .hero-stats {
-        width: 100%;
-
-        gap: 0;
-    }
-
-
     .hero-stats > div {
         min-width: 0;
 
         flex: 1;
 
-        padding-right: 9px;
+        padding-right: 8px;
 
-        margin-right: 9px;
+        margin-right: 8px;
     }
 
 
@@ -1842,12 +1987,14 @@ textarea {
     }
 
 
+    /* SECTIONS */
+
     .about,
     .airports,
     .why,
     .reviews,
     .booking {
-        padding: 85px 0;
+        padding: 78px 0;
     }
 
 
@@ -1870,21 +2017,27 @@ textarea {
     .why h2,
     .reviews-head h2,
     .booking-copy h2 {
-        font-size: clamp(42px, 11vw, 64px);
+        font-size: clamp(42px,11vw,64px);
 
         letter-spacing: -2.5px;
     }
 
+
+    /* AIRPORTS */
 
     .airport-grid {
         grid-template-columns: 1fr;
     }
 
 
+    /* WHY */
+
     .why-grid {
         grid-template-columns: 1fr;
     }
 
+
+    /* REVIEWS */
 
     .reviews-head {
         flex-direction: column;
@@ -1901,55 +2054,118 @@ textarea {
 
 
     .review-slider {
-        grid-template-columns: 1fr;
+        grid-template-columns: 44px minmax(0,1fr) 44px;
+
+        gap: 7px;
     }
 
 
-    .review-arrow {
-        display: none;
+    .review-window {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+
+    .review-track {
+        gap: 12px;
     }
 
 
     .review-card {
-        flex-basis: 100%;
+        flex: 0 0 100%;
 
-        min-width: 0;
+        min-height: 310px;
+
+        padding: 24px;
     }
 
 
-    .form-card {
-        padding: 28px 20px;
+    .review-arrow {
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
     }
 
 
-    .trip-grid {
-        grid-template-columns: 1fr 1fr;
+    .review-dots {
+        display: block;
     }
 
 
-    .returns.show {
-        grid-template-columns: 1fr 1fr;
+    .google-review-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 24px;
     }
 
 
-    .footer {
-        padding: 55px 0 22px;
+    .google-button {
+        width: 100%;
     }
 
 
-    .footer-grid {
+    /* FORMULAR */
+
+    .booking-grid {
         grid-template-columns: 1fr;
 
         gap: 35px;
     }
 
 
-    .footer-bottom {
-        flex-direction: column;
+    .booking-copy {
+        padding-top: 0;
+    }
 
-        align-items: flex-start;
 
-        gap: 8px;
+    .form-card {
+        width: 100%;
+
+        padding: 26px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .trip-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .returns.show {
+        grid-template-columns: 1fr;
+    }
+
+
+    .return-toggle {
+        min-height: 42px;
+
+        white-space: normal;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
     }
 
 
@@ -1960,21 +2176,47 @@ textarea {
     }
 
 
-    .legal-content {
-        padding: 50px 0 75px;
+    .legal-hero h1 {
+        font-size: clamp(43px,11vw,62px);
+
+        letter-spacing: -2.5px;
     }
 
 
-    .legal-section h2 {
-        font-size: 23px;
+    .legal-content {
+        padding: 45px 0 70px;
+    }
+
+
+    .legal-inner {
+        width: calc(100% - 28px);
+    }
+
+
+    .legal-card {
+        padding: 26px 20px;
+
+        border-radius: 17px;
+    }
+
+
+    .legal-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .legal-section h2,
+    .legal-box h2 {
+        font-size: 21px;
     }
 
 
     .legal-section p,
-    .legal-section li {
+    .legal-section li,
+    .legal-box p {
         font-size: 15px;
-
-        line-height: 1.7;
     }
 
 }
@@ -1994,45 +2236,45 @@ textarea {
 
 
     .header-inner {
-        min-height: 68px;
+        min-height: 66px;
 
-        padding: 8px 0 10px;
+        padding: 7px 0 9px;
     }
 
 
     .brand-logo {
-        width: 45px;
-        height: 45px;
+        width: 43px;
+        height: 43px;
     }
 
 
     .brand-wordmark strong {
-        font-size: 14px;
+        font-size: 12px;
     }
 
 
     .brand-wordmark small {
-        font-size: 4.5px;
+        font-size: 4.2px;
 
-        letter-spacing: 1.2px;
+        letter-spacing: 1px;
     }
 
 
     .mobile-menu {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
     }
 
 
     .hero {
-        padding: 32px 0 45px;
+        padding: 28px 0 42px;
     }
 
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 47px;
 
-        letter-spacing: -2.5px;
+        letter-spacing: -2.4px;
     }
 
 
@@ -2046,12 +2288,12 @@ textarea {
     .why,
     .reviews,
     .booking {
-        padding: 70px 0;
+        padding: 65px 0;
     }
 
 
     .about-photo {
-        height: 290px;
+        height: 285px;
     }
 
 
@@ -2067,33 +2309,44 @@ textarea {
 
 
     .airport-card {
-        min-height: 235px;
+        min-height: 230px;
 
         padding: 25px;
     }
 
 
-    .form-grid,
-    .trip-grid,
-    .returns.show {
-        grid-template-columns: 1fr;
+    .review-card {
+        min-height: 330px;
+
+        padding: 22px;
+    }
+
+
+    .review-slider {
+        grid-template-columns: 38px minmax(0,1fr) 38px;
+    }
+
+
+    .review-arrow {
+        width: 38px;
+        height: 38px;
+
+        font-size: 17px;
     }
 
 
     .form-card {
-        padding: 23px 16px;
+        padding: 22px 14px;
     }
 
 
-    .legal-hero h1 {
-        font-size: 44px;
-
-        letter-spacing: -2px;
+    .form-card h3 {
+        font-size: 24px;
     }
 
 
-    .legal-content {
-        padding: 42px 0 65px;
+    .footer-grid {
+        grid-template-columns: 1fr;
     }
 
 }
