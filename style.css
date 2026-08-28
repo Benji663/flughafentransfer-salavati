@@ -33,6 +33,7 @@ body {
     width: 100%;
     max-width: 100%;
     min-width: 0;
+
     margin: 0;
     padding: 0;
 
@@ -267,7 +268,7 @@ button {
 }
 
 
-/* MOBILE BUTTON */
+/* MOBILE MENU */
 
 .mobile-menu {
     display: none;
@@ -332,7 +333,7 @@ button {
 
 
 /* =========================================================
-   GENERAL BUTTONS
+   BUTTONS
 ========================================================= */
 
 .btn {
@@ -341,6 +342,7 @@ button {
     padding: 0 24px;
 
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -357,9 +359,9 @@ button {
     font-weight: 800;
 
     transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        color 0.2s ease;
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease;
 }
 
 .btn:hover {
@@ -397,6 +399,7 @@ button {
     padding: 72px 0 88px;
 
     display: flex;
+
     align-items: center;
 
     background:
@@ -420,7 +423,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.92fr)
+        minmax(0, .92fr)
         minmax(0, 1.08fr);
 
     align-items: center;
@@ -436,6 +439,7 @@ button {
 
 .hero h1 {
     display: flex;
+
     flex-direction: column;
 
     margin: 0 0 28px;
@@ -448,7 +452,7 @@ button {
         92px
     );
 
-    line-height: 0.95;
+    line-height: .95;
 
     letter-spacing: -4px;
 
@@ -506,6 +510,7 @@ button {
     border-right: 1px solid #d7d3cb;
 
     display: flex;
+
     flex-direction: column;
 
     gap: 4px;
@@ -513,7 +518,9 @@ button {
 
 .hero-stats > div:last-child {
     margin-right: 0;
+
     padding-right: 0;
+
     border-right: 0;
 }
 
@@ -558,7 +565,7 @@ button {
     background:
         radial-gradient(
             circle,
-            rgba(190,143,59,0.18),
+            rgba(190,143,59,.18),
             transparent 67%
         );
 
@@ -579,7 +586,7 @@ button {
     border-radius: 28px;
 
     box-shadow:
-        0 25px 70px rgba(20,24,30,0.12);
+        0 25px 70px rgba(20,24,30,.12);
 }
 
 .hero-image img {
@@ -600,8 +607,8 @@ button {
         linear-gradient(
             to right,
             var(--bg) 0%,
-            rgba(245,244,241,0.92) 7%,
-            rgba(245,244,241,0.45) 18%,
+            rgba(245,244,241,.92) 7%,
+            rgba(245,244,241,.45) 18%,
             transparent 36%
         );
 
@@ -623,8 +630,8 @@ button {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
+        minmax(0,1fr)
+        minmax(0,1fr);
 
     align-items: center;
 
@@ -672,6 +679,7 @@ button {
     z-index: 2;
 
     display: flex;
+
     flex-direction: column;
 }
 
@@ -694,7 +702,7 @@ button {
 
     font-size: 70px;
 
-    line-height: 0.9;
+    line-height: .9;
 }
 
 .about-copy {
@@ -741,7 +749,7 @@ button {
     background:
         linear-gradient(
             90deg,
-            rgba(190,143,59,.1),
+            rgba(190,143,59,.10),
             transparent
         );
 
@@ -763,8 +771,8 @@ button {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
+        minmax(0,1fr)
+        minmax(0,1fr);
 
     gap: 60px;
 
@@ -809,7 +817,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        repeat(3,minmax(0,1fr));
 
     gap: 18px;
 }
@@ -824,6 +832,7 @@ button {
     overflow: hidden;
 
     display: flex;
+
     flex-direction: column;
 
     border: 1px solid #ddd9d1;
@@ -855,7 +864,7 @@ button {
     right: -22px;
     bottom: -25px;
 
-    border: 1px solid rgba(190,143,59,.3);
+    border: 1px solid rgba(190,143,59,.30);
 
     border-radius: 50%;
 }
@@ -933,7 +942,7 @@ button {
 
 
 /* =========================================================
-   WHY SALAVATI
+   WHY
 ========================================================= */
 
 .why {
@@ -968,7 +977,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        repeat(3,minmax(0,1fr));
 
     gap: 22px;
 }
@@ -1156,6 +1165,7 @@ button {
     padding: 28px;
 
     display: flex;
+
     flex-direction: column;
 
     border: 1px solid #dfdbd4;
@@ -1178,6 +1188,7 @@ button {
     height: 42px;
 
     display: grid;
+
     place-items: center;
 
     flex-shrink: 0;
@@ -1337,7 +1348,7 @@ button {
 }
 
 
-/* GOOGLE CTA */
+/* GOOGLE REVIEW CTA */
 
 .google-review-cta {
     margin-top: 48px;
@@ -1347,6 +1358,7 @@ button {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 30px;
@@ -1409,8 +1421,8 @@ button {
     display: grid;
 
     grid-template-columns:
-        minmax(0, .82fr)
-        minmax(0, 1.18fr);
+        minmax(0,.82fr)
+        minmax(0,1.18fr);
 
     align-items: start;
 
@@ -1420,9 +1432,9 @@ button {
 }
 
 .booking-copy {
-    padding-top: 38px;
-
     min-width: 0;
+
+    padding-top: 38px;
 }
 
 .booking-copy h2 {
@@ -1485,11 +1497,12 @@ button {
 
 
 /* =========================================================
-   FORMULAR KARTEN
+   FORMULAR
 ========================================================= */
 
 .form-card {
     width: 100%;
+
     max-width: 100%;
 
     min-width: 0;
@@ -1533,9 +1546,7 @@ button {
 }
 
 
-/* =========================================================
-   FORM FELDER
-========================================================= */
+/* FORM GRID */
 
 .form-grid {
     width: 100%;
@@ -1548,6 +1559,9 @@ button {
 
     gap: 18px;
 }
+
+
+/* FORM FIELD */
 
 .field {
     width: 100%;
@@ -1622,6 +1636,7 @@ button {
 
 /* =========================================================
    FAHRTDATEN
+   2 × 2 AUF DESKTOP
 ========================================================= */
 
 .trip-grid {
@@ -1631,21 +1646,24 @@ button {
 
     grid-template-columns:
         minmax(0,1fr)
-        minmax(0,1.15fr)
-        minmax(0,1.15fr)
-        minmax(0,.85fr);
+        minmax(0,1fr);
 
-    gap: 16px;
+    column-gap: 20px;
+
+    row-gap: 18px;
 
     align-items: end;
 }
 
+
+/* RÜCKFAHRT CHECKBOX */
+
 .return-toggle {
     grid-column: 1 / -1;
 
-    min-height: 30px;
+    min-height: 42px;
 
-    margin-top: 2px;
+    margin-top: 1px;
 
     display: flex;
 
@@ -1653,11 +1671,11 @@ button {
 
     gap: 9px;
 
+    color: var(--ink);
+
     font-size: 12px;
 
     font-weight: 800;
-
-    color: var(--ink);
 }
 
 .return-toggle input {
@@ -1673,7 +1691,7 @@ button {
 
 
 /* =========================================================
-   RÜCKFAHRT
+   RÜCKFAHRT FELDER
 ========================================================= */
 
 .returns {
@@ -1688,7 +1706,7 @@ button {
 
     gap: 16px;
 
-    margin-top: 17px;
+    margin-top: 18px;
 }
 
 .returns.show {
@@ -1768,7 +1786,7 @@ button {
 
 
 /* =========================================================
-   SENDEN BUTTON
+   SENDEN
 ========================================================= */
 
 .submit {
@@ -1932,6 +1950,14 @@ button {
     }
 
 
+    /* AIRPORTS */
+
+    .airport-grid {
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+
     /* REVIEWS */
 
     .review-card {
@@ -1951,6 +1977,11 @@ button {
 
         gap: 55px;
     }
+
+    /*
+       Formular bleibt auf 2 × 2,
+       damit es nicht wieder gequetscht wird.
+    */
 
     .trip-grid {
         grid-template-columns:
@@ -2269,7 +2300,9 @@ button {
     }
 
 
-    /* BOOKING */
+    /* =====================================================
+       BOOKING MOBILE
+    ===================================================== */
 
     .booking {
         padding: 78px 0;
@@ -2305,11 +2338,20 @@ button {
         font-size: 25px;
     }
 
+
+    /* Normale Formularfelder */
+
     .form-grid {
         grid-template-columns: 1fr;
 
         gap: 16px;
     }
+
+
+    /*
+       Auf Handy:
+       wirklich jedes Feld untereinander.
+    */
 
     .trip-grid {
         grid-template-columns: 1fr;
@@ -2325,24 +2367,31 @@ button {
         margin-top: 0;
     }
 
+
+    /* Rückfahrt */
+
     .returns.show {
+        display: grid;
+
         grid-template-columns: 1fr;
 
         gap: 16px;
     }
+
+
+    /* Nachricht */
 
     .message {
         margin-top: 18px;
     }
 
 
-    /* FOOTER */
+    /* Zustimmung */
 
-    .footer-grid {
-        grid-template-columns:
-            1fr 1fr;
+    .consent {
+        font-size: 11.5px;
 
-        gap: 40px;
+        line-height: 1.65;
     }
 
 }
