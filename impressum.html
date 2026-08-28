@@ -15,458 +15,513 @@
     >
 
     <style>
-        :root{
-            --ink:#171a1f;
-            --gold:#be8f3b;
-            --muted:#66707a;
-            --bg:#f5f4f1;
-            --white:#fff;
-            --line:#ddd9d1;
+        :root {
+            --ink: #171a1f;
+            --gold: #be8f3b;
+            --bg: #f5f4f1;
+            --muted: #66707a;
+            --line: #ddd9d1;
+            --white: #ffffff;
+            --max: 1400px;
         }
 
-        *{box-sizing:border-box}
-
-        html,body{
-            margin:0;
-            padding:0;
-            width:100%;
-            max-width:100%;
-            overflow-x:hidden;
+        * {
+            box-sizing: border-box;
         }
 
-        body{
-            font-family:"DM Sans",Arial,sans-serif;
-            color:var(--ink);
-            background:var(--bg);
-            line-height:1.7;
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
-        a{
-            color:inherit;
-            text-decoration:none;
+        body {
+            font-family: "DM Sans", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
         }
 
-        /* HEADER */
-
-        .site-header{
-            height:100px;
-            background:rgba(245,244,241,.98);
-            border-bottom:1px solid var(--line);
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
-        .header-inner{
-            width:min(1400px,calc(100% - 80px));
-            height:100%;
-            margin:auto;
-
-            display:flex;
-            align-items:center;
-            gap:30px;
+        img {
+            display: block;
+            max-width: 100%;
         }
 
-        .brand{
-            display:flex;
-            align-items:center;
-            gap:12px;
-            min-width:315px;
-            flex-shrink:0;
+        /* ================= HEADER ================= */
+
+        .site-header {
+            width: 100%;
+            height: 100px;
+            background: rgba(245,244,241,.98);
+            border-bottom: 1px solid var(--line);
         }
 
-        .brand-logo{
-            width:62px;
-            height:62px;
-            object-fit:contain;
+        .header-inner {
+            width: min(var(--max), calc(100% - 80px));
+            height: 100%;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            gap: 28px;
         }
 
-        .brand-name{
-            display:flex;
-            flex-direction:column;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            min-width: 315px;
+            flex-shrink: 0;
         }
 
-        .brand-name strong{
-            font-family:"Montserrat",Arial,sans-serif;
-            font-weight:900;
-            font-size:19px;
-            line-height:.95;
-            letter-spacing:.3px;
-            white-space:nowrap;
+        .brand-logo {
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
+            flex-shrink: 0;
         }
 
-        .brand-name small{
-            margin-top:6px;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:7px;
-            font-weight:800;
-            letter-spacing:2px;
-            color:#7b8086;
+        .brand-text {
+            display: flex;
+            flex-direction: column;
         }
 
-        .nav{
-            flex:1;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            gap:27px;
-            white-space:nowrap;
+        .brand-text strong {
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 19px;
+            line-height: .94;
+            font-weight: 900;
+            letter-spacing: .3px;
+            white-space: nowrap;
         }
 
-        .nav a{
-            font-size:14px;
-            font-weight:700;
-            transition:.2s;
+        .brand-text small {
+            margin-top: 6px;
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 7px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #7b8086;
+            white-space: nowrap;
         }
 
-        .nav a:hover{
-            color:var(--gold);
+        .main-nav {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 26px;
+
+            white-space: nowrap;
         }
 
-        .phone{
-            min-height:52px;
-            padding:0 21px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-
-            border:1.5px solid var(--ink);
-            border-radius:11px;
-
-            font-weight:700;
-            font-size:14px;
-            white-space:nowrap;
-
-            transition:.2s;
+        .main-nav a {
+            font-size: 14px;
+            font-weight: 700;
+            transition: color .2s ease;
         }
 
-        .phone:hover{
-            background:var(--ink);
-            color:#fff;
-            font-weight:900;
+        .main-nav a:hover {
+            color: var(--gold);
         }
 
-        .mobile-menu{
-            display:none;
+        .header-phone {
+            min-height: 52px;
+            padding: 0 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1.5px solid var(--ink);
+            border-radius: 11px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            white-space: nowrap;
+
+            transition: .2s ease;
         }
 
-        /* TITLE */
-
-        .legal-hero{
-            background:#eceae4;
-            border-bottom:1px solid var(--line);
+        .header-phone:hover {
+            background: var(--ink);
+            color: #fff;
+            font-weight: 900;
         }
 
-        .legal-hero-inner{
-            width:min(1400px,calc(100% - 80px));
-            margin:auto;
-            padding:64px 0 58px;
+        .mobile-menu {
+            display: none;
         }
 
-        .kicker{
-            display:flex;
-            align-items:center;
-            gap:12px;
+        /* ================= HERO ================= */
 
-            margin-bottom:24px;
-
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:10px;
-            font-weight:800;
-            letter-spacing:3px;
-            color:#66707a;
+        .legal-hero {
+            background: #eceae4;
+            border-bottom: 1px solid var(--line);
         }
 
-        .kicker::before{
-            content:"";
-            width:32px;
-            height:2px;
-            background:var(--gold);
+        .legal-container {
+            width: min(1100px, calc(100% - 80px));
+            margin: 0 auto;
         }
 
-        .legal-title{
-            margin:0;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-weight:900;
-            font-size:clamp(58px,6vw,82px);
-            line-height:.96;
-            letter-spacing:-4px;
-            color:var(--gold);
+        .legal-hero-inner {
+            padding: 63px 0 57px;
         }
 
-        /* CONTENT */
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
 
-        .content{
-            background:#fff;
-            padding:76px 0 105px;
+            margin-bottom: 24px;
+
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--muted);
         }
 
-        .content-inner{
-            width:min(1100px,calc(100% - 80px));
-            margin:auto;
+        .eyebrow::before {
+            content: "";
+            width: 32px;
+            height: 2px;
+            background: var(--gold);
+            flex-shrink: 0;
         }
 
-        .legal-card{
-            background:#fff;
-            border:1px solid #e0dbd2;
-            border-radius:22px;
-            padding:50px 54px;
-            box-shadow:0 18px 55px rgba(0,0,0,.045);
+        .legal-title {
+            margin: 0;
+
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: clamp(58px, 6vw, 80px);
+            line-height: .95;
+            letter-spacing: -4px;
+            font-weight: 900;
+
+            color: var(--gold);
         }
 
-        .info-grid{
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:18px;
+        /* ================= CONTENT ================= */
+
+        .legal-main {
+            background: #fff;
+            padding: 70px 0 105px;
         }
 
-        .info-box{
-            padding:28px 30px;
-            background:#faf9f6;
-            border:1px solid #e2ddd5;
-            border-radius:16px;
+        .legal-card {
+            width: min(1100px, calc(100% - 80px));
+            margin: 0 auto;
+
+            background: #fff;
+
+            border: 1px solid #e0dbd2;
+            border-radius: 22px;
+
+            padding: 48px 52px;
+
+            box-shadow: 0 18px 55px rgba(0,0,0,.045);
         }
 
-        .info-box h2{
-            margin:0 0 14px;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:22px;
-            line-height:1.2;
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
         }
 
-        .info-box p{
-            margin:7px 0;
-            color:#5e6872;
-            font-size:15px;
-            line-height:1.7;
+        .info-box {
+            padding: 27px 29px;
+
+            border: 1px solid #e0dbd2;
+            border-radius: 16px;
+
+            background: #faf9f6;
         }
 
-        .info-box a{
-            color:var(--gold);
-            font-weight:700;
+        .info-box h2 {
+            margin: 0 0 13px;
+
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 22px;
+            line-height: 1.2;
         }
 
-        .legal-section{
-            margin-top:42px;
-            padding-top:35px;
-            border-top:1px solid #e7e2da;
+        .info-box p {
+            margin: 7px 0;
+
+            color: #5e6872;
+            font-size: 15px;
+            line-height: 1.7;
         }
 
-        .legal-section h2{
-            margin:0 0 13px;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:24px;
-            line-height:1.2;
+        .info-box a {
+            color: var(--gold);
+            font-weight: 700;
         }
 
-        .legal-section p{
-            margin:0 0 15px;
-            color:#59636d;
-            font-size:16px;
-            line-height:1.8;
+        .legal-section {
+            margin-top: 42px;
+            padding-top: 34px;
+
+            border-top: 1px solid #e6e1d9;
         }
 
-        .legal-note{
-            margin-top:38px;
-            padding:20px 22px;
-            border-left:3px solid var(--gold);
-            background:#f4efe5;
-            color:#5d6670;
-            font-size:14px;
-            line-height:1.7;
+        .legal-section h2 {
+            margin: 0 0 13px;
+
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 24px;
+            line-height: 1.2;
         }
 
-        /* FOOTER */
+        .legal-section p {
+            margin: 0 0 15px;
 
-        .footer{
-            background:#0b0c0d;
-            color:#fff;
-            padding:66px 0 25px;
+            color: #59636d;
+            font-size: 16px;
+            line-height: 1.8;
         }
 
-        .footer-grid{
-            width:min(1400px,calc(100% - 80px));
-            margin:auto;
+        .legal-note {
+            margin-top: 38px;
+            padding: 19px 21px;
 
-            display:grid;
-            grid-template-columns:1.2fr 1fr 1fr;
-            gap:70px;
+            border-left: 3px solid var(--gold);
+            background: #f4efe5;
+
+            color: #59636d;
+
+            font-size: 14px;
+            line-height: 1.7;
         }
 
-        .footer h3{
-            margin:0 0 17px;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:18px;
+        /* ================= FOOTER ================= */
+
+        .footer {
+            background: #0b0c0d;
+            color: #fff;
+
+            padding: 66px 0 25px;
         }
 
-        .footer p{
-            margin:8px 0;
-            color:#adb1b6;
-            font-size:14px;
+        .footer-grid {
+            width: min(var(--max), calc(100% - 80px));
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+
+            gap: 70px;
         }
 
-        .footer a{
-            color:#adb1b6;
+        .footer h3 {
+            margin: 0 0 17px;
+
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 18px;
         }
 
-        .footer a:hover{
-            color:var(--gold);
+        .footer p {
+            margin: 8px 0;
+
+            color: #adb1b6;
+            font-size: 14px;
         }
 
-        .footer-bottom{
-            width:min(1400px,calc(100% - 80px));
-            margin:44px auto 0;
-            padding-top:18px;
-            border-top:1px solid #27292c;
-
-            display:flex;
-            justify-content:space-between;
-            gap:20px;
-
-            color:#72777d;
-            font-size:12px;
+        .footer a {
+            color: #adb1b6;
         }
 
-        /* MOBILE */
+        .footer a:hover {
+            color: var(--gold);
+        }
 
-        @media(max-width:850px){
+        .footer-bottom {
+            width: min(var(--max), calc(100% - 80px));
+            margin: 44px auto 0;
 
-            .site-header{
-                height:auto;
+            padding-top: 18px;
+
+            border-top: 1px solid #27292c;
+
+            display: flex;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: #72777d;
+            font-size: 12px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            .site-header {
+                height: auto;
             }
 
-            .header-inner{
-                width:calc(100% - 28px);
-                min-height:70px;
-                flex-wrap:wrap;
-                padding:9px 0;
-                gap:8px;
+            .header-inner {
+                width: calc(100% - 28px);
+                min-height: 70px;
+
+                padding: 9px 0;
+
+                flex-wrap: wrap;
             }
 
-            .brand{
-                min-width:0;
-                flex:1;
+            .brand {
+                min-width: 0;
+                flex: 1;
             }
 
-            .brand-logo{
-                width:46px;
-                height:46px;
+            .brand-logo {
+                width: 46px;
+                height: 46px;
             }
 
-            .brand-name strong{
-                font-size:13px;
+            .brand-text strong {
+                font-size: 13px;
             }
 
-            .brand-name small{
-                font-size:5px;
-                letter-spacing:1.2px;
+            .brand-text small {
+                font-size: 5px;
+                letter-spacing: 1.2px;
             }
 
-            .mobile-menu{
-                display:flex;
-                width:42px;
-                height:42px;
-                align-items:center;
-                justify-content:center;
-                border:1px solid var(--line);
-                border-radius:10px;
-                background:#fff;
-                font-size:20px;
+            .mobile-menu {
+                display: flex;
+
+                width: 42px;
+                height: 42px;
+
+                align-items: center;
+                justify-content: center;
+
+                border: 1px solid var(--line);
+                border-radius: 10px;
+
+                background: #fff;
+
+                font-size: 20px;
+                cursor: pointer;
             }
 
-            .nav{
-                display:none;
-                flex:0 0 100%;
-                flex-direction:column;
-                align-items:stretch;
-                gap:0;
+            .main-nav {
+                display: none;
+
+                flex: 0 0 100%;
+
+                flex-direction: column;
+                align-items: stretch;
+
+                gap: 0;
             }
 
-            .nav.open{
-                display:flex;
+            .main-nav.open {
+                display: flex;
             }
 
-            .nav a{
-                padding:12px 4px;
-                border-top:1px solid var(--line);
+            .main-nav a {
+                padding: 12px 4px;
+                border-top: 1px solid var(--line);
+                font-size: 14px;
             }
 
-            .phone{
-                display:none;
+            .header-phone {
+                display: none;
             }
 
-            .legal-hero-inner{
-                width:calc(100% - 28px);
-                padding:45px 0 42px;
+            .legal-container,
+            .legal-card {
+                width: calc(100% - 28px);
             }
 
-            .legal-title{
-                font-size:47px;
-                letter-spacing:-2.5px;
+            .legal-hero-inner {
+                padding: 44px 0 40px;
             }
 
-            .content{
-                padding:45px 0 70px;
+            .legal-title {
+                font-size: 46px;
+                letter-spacing: -2.5px;
             }
 
-            .content-inner{
-                width:calc(100% - 28px);
+            .legal-main {
+                padding: 43px 0 68px;
             }
 
-            .legal-card{
-                padding:28px 20px;
-                border-radius:18px;
+            .legal-card {
+                padding: 27px 20px;
+                border-radius: 18px;
             }
 
-            .info-grid{
-                grid-template-columns:1fr;
+            .info-grid {
+                grid-template-columns: 1fr;
             }
 
-            .info-box{
-                padding:24px 21px;
+            .info-box {
+                padding: 24px 21px;
             }
 
-            .legal-section{
-                margin-top:35px;
-                padding-top:28px;
+            .legal-section {
+                margin-top: 35px;
+                padding-top: 28px;
             }
 
-            .legal-section h2{
-                font-size:21px;
+            .legal-section h2 {
+                font-size: 21px;
             }
 
-            .legal-section p{
-                font-size:15px;
-                line-height:1.75;
+            .legal-section p {
+                font-size: 15px;
+                line-height: 1.75;
             }
 
-            .footer-grid{
-                width:calc(100% - 28px);
-                grid-template-columns:1fr;
-                gap:38px;
+            .footer-grid,
+            .footer-bottom {
+                width: calc(100% - 28px);
             }
 
-            .footer-bottom{
-                width:calc(100% - 28px);
-                flex-direction:column;
-                gap:7px;
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 7px;
             }
         }
 
-        @media(max-width:520px){
+        @media (max-width: 520px) {
 
-            .brand-logo{
-                width:42px;
-                height:42px;
+            .brand-logo {
+                width: 42px;
+                height: 42px;
             }
 
-            .brand-name strong{
-                font-size:11.5px;
+            .brand-text strong {
+                font-size: 11.5px;
             }
 
-            .legal-title{
-                font-size:42px;
+            .legal-title {
+                font-size: 40px;
             }
 
-            .legal-card{
-                padding:22px 16px;
+            .legal-card {
+                padding: 22px 16px;
             }
         }
     </style>
@@ -479,36 +534,53 @@
     <div class="header-inner">
 
         <a href="index.html" class="brand">
+
             <img
+                src="./Logo Flughafentransfer.png"
+                alt="Flughafentransfer Salavati"
                 class="brand-logo"
-                src="Logo Flughafentransfer.png"
-                alt="Salavati Flughafentransfer"
             >
 
-            <div class="brand-name">
+            <div class="brand-text">
+
                 <strong>FLUGHAFENTRANSFER</strong>
                 <strong>SALAVATI</strong>
-                <small>SEIT ÜBER 30 JAHREN</small>
+
+                <small>
+                    SEIT ÜBER 30 JAHREN
+                </small>
+
             </div>
+
         </a>
+
 
         <button
             class="mobile-menu"
             id="mobileMenu"
             type="button"
             aria-label="Menü öffnen"
-        >☰</button>
+        >
+            ☰
+        </button>
 
-        <nav class="nav" id="nav">
+
+        <nav class="main-nav" id="mainNav">
+
             <a href="index.html#ueber-uns">Über uns</a>
             <a href="index.html#flughafen">Flughäfen</a>
             <a href="index.html#warum">Warum Salavati?</a>
             <a href="index.html#vorbestellung">Vorbestellung</a>
             <a href="index.html#bewertungen">Bewertungen</a>
             <a href="impressum.html">Impressum</a>
+
         </nav>
 
-        <a href="tel:+49644136444" class="phone">
+
+        <a
+            href="tel:+49644136444"
+            class="header-phone"
+        >
             ☎ 06441 – 36444
         </a>
 
@@ -519,9 +591,9 @@
 
 <section class="legal-hero">
 
-    <div class="legal-hero-inner">
+    <div class="legal-container legal-hero-inner">
 
-        <div class="kicker">
+        <div class="eyebrow">
             RECHTLICHE INFORMATIONEN
         </div>
 
@@ -534,162 +606,169 @@
 </section>
 
 
-<main class="content">
+<main class="legal-main">
 
-    <div class="content-inner">
-
-        <div class="legal-card">
-
-            <div class="info-grid">
-
-                <div class="info-box">
-
-                    <h2>Anbieter</h2>
-
-                    <p>
-                        <strong>VPW GmbH</strong>
-                    </p>
-
-                    <p>
-                        Bahnhof Nordseite 10<br>
-                        35576 Wetzlar<br>
-                        Deutschland
-                    </p>
-
-                </div>
+    <div class="legal-card">
 
 
-                <div class="info-box">
+        <div class="info-grid">
 
-                    <h2>Vertretungsberechtigter</h2>
+            <div class="info-box">
 
-                    <p>
-                        Geschäftsführer
-                    </p>
+                <h2>Anbieter</h2>
 
-                    <p>
-                        Dipl. Betriebswirt S. R. Salavati
-                    </p>
+                <p>
+                    <strong>VPW GmbH</strong>
+                </p>
 
-                </div>
-
-
-                <div class="info-box">
-
-                    <h2>Kontakt</h2>
-
-                    <p>
-                        Telefon:
-                        <a href="tel:+49644136444">
-                            06441 36444
-                        </a>
-                    </p>
-
-                    <p>
-                        E-Mail:
-                        <a href="mailto:medicar.prinz@gmail.com">
-                            medicar.prinz@gmail.com
-                        </a>
-                    </p>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <h2>Registereintrag</h2>
-
-                    <p>
-                        Handelsregister: HRB 6427
-                    </p>
-
-                    <p>
-                        Registergericht:<br>
-                        Amtsgericht Wetzlar
-                    </p>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <h2>Steuerliche Angaben</h2>
-
-                    <p>
-                        Steuernummer: 2024790418
-                    </p>
-
-                    <p>
-                        Finanzamt Gießen
-                    </p>
-
-                </div>
+                <p>
+                    Bahnhof Nordseite 10<br>
+                    35576 Wetzlar<br>
+                    Deutschland
+                </p>
 
             </div>
 
 
-            <section class="legal-section">
+            <div class="info-box">
 
-                <h2>
-                    Verantwortlich für den Inhalt
-                </h2>
+                <h2>Vertretungsberechtigter</h2>
 
                 <p>
-                    Verantwortlich für die Inhalte dieser Website
-                    im Rahmen der gesetzlichen Vorschriften ist die
-                    VPW GmbH, vertreten durch den Geschäftsführer
-                    Dipl. Betriebswirt S. R. Salavati.
-                </p>
-
-            </section>
-
-
-            <section class="legal-section">
-
-                <h2>
-                    Informationen nach dem Digitale-Dienste-Gesetz
-                </h2>
-
-                <p>
-                    Diese Website wird durch die VPW GmbH als
-                    geschäftsmäßiger Anbieter eines digitalen Dienstes
-                    betrieben.
+                    Geschäftsführer
                 </p>
 
                 <p>
-                    Die erforderlichen Angaben zur schnellen elektronischen
-                    Kontaktaufnahme und zum Handelsregister sind oben
-                    angegeben.
+                    Dipl. Betriebswirt S. R. Salavati
                 </p>
 
-            </section>
+            </div>
 
 
-            <section class="legal-section">
+            <div class="info-box">
 
-                <h2>
-                    Hinweis zur Kontaktaufnahme
-                </h2>
+                <h2>Kontakt</h2>
 
                 <p>
-                    Anfragen zu Flughafentransfers können telefonisch
-                    oder über das auf der Website bereitgestellte
-                    Reservierungsformular gestellt werden.
+                    Telefon:
+                    <a href="tel:+49644136444">
+                        06441 36444
+                    </a>
                 </p>
 
-            </section>
+                <p>
+                    E-Mail:
+                    <a href="mailto:medicar.prinz@gmail.com">
+                        medicar.prinz@gmail.com
+                    </a>
+                </p>
+
+            </div>
 
 
-            <div class="legal-note">
+            <div class="info-box">
 
-                Bitte beachten Sie, dass dieses Impressum vor dem
-                endgültigen Livegang noch einmal mit den aktuellen
-                Unternehmens-, Register- und Kontaktdaten abgeglichen
-                werden sollte.
+                <h2>Handelsregister</h2>
+
+                <p>
+                    Handelsregister: HRB 6427
+                </p>
+
+                <p>
+                    Registergericht:<br>
+                    Amtsgericht Wetzlar
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h2>Steuerliche Angaben</h2>
+
+                <p>
+                    Steuernummer: 2024790418
+                </p>
+
+                <p>
+                    Finanzamt Gießen
+                </p>
 
             </div>
 
         </div>
+
+
+        <section class="legal-section">
+
+            <h2>
+                Verantwortlich für den Inhalt
+            </h2>
+
+            <p>
+                Verantwortlich für die Inhalte dieser Website ist die
+                VPW GmbH, vertreten durch den Geschäftsführer
+                Dipl. Betriebswirt S. R. Salavati.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                Angaben zur Kontaktaufnahme
+            </h2>
+
+            <p>
+                Für Fragen zu unserem Flughafentransferservice können
+                Sie uns telefonisch oder per E-Mail kontaktieren.
+                Die entsprechenden Kontaktdaten sind oben angegeben.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                Haftung für Inhalte
+            </h2>
+
+            <p>
+                Wir bemühen uns, die Inhalte dieser Website aktuell,
+                vollständig und richtig zu halten. Eine Gewähr für die
+                Aktualität, Vollständigkeit und Richtigkeit sämtlicher
+                Inhalte kann jedoch nicht übernommen werden.
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                Haftung für Links
+            </h2>
+
+            <p>
+                Soweit diese Website Links zu externen Websites Dritter
+                enthält, haben wir auf deren Inhalte keinen Einfluss.
+                Für die Inhalte der verlinkten Seiten ist grundsätzlich
+                der jeweilige Betreiber verantwortlich.
+            </p>
+
+        </section>
+
+
+        <div class="legal-note">
+
+            Die Angaben dieser Seite sollten vor dem endgültigen
+            Livegang nochmals mit den aktuellen Unternehmens-,
+            Register- und Kontaktdaten abgeglichen werden.
+
+        </div>
+
 
     </div>
 
@@ -701,11 +780,20 @@
     <div class="footer-grid">
 
         <div>
+
             <h3>Kontakt</h3>
 
-            <p>VPW GmbH · Flughafentransferservice Salavati</p>
-            <p>Bahnhof Nordseite 10</p>
-            <p>35576 Wetzlar</p>
+            <p>
+                VPW GmbH · Flughafentransferservice Salavati
+            </p>
+
+            <p>
+                Bahnhof Nordseite 10
+            </p>
+
+            <p>
+                35576 Wetzlar
+            </p>
 
             <p>
                 <a href="tel:+49644136444">
@@ -718,24 +806,35 @@
                     medicar.prinz@gmail.com
                 </a>
             </p>
+
         </div>
 
 
         <div>
+
             <h3>Unternehmen</h3>
 
-            <p>Geschäftsführer: S. R. Salavati</p>
+            <p>
+                Geschäftsführer: S. R. Salavati
+            </p>
+
             <p>HRB 6427</p>
+
             <p>Amtsgericht Wetzlar</p>
+
             <p>Finanzamt Gießen</p>
+
         </div>
 
 
         <div>
+
             <h3>Rechtliches</h3>
 
             <p>
-                <a href="impressum.html">Impressum</a>
+                <a href="impressum.html">
+                    Impressum
+                </a>
             </p>
 
             <p>
@@ -745,8 +844,11 @@
             </p>
 
             <p>
-                <a href="agb.html">AGB</a>
+                <a href="agb.html">
+                    AGB
+                </a>
             </p>
+
         </div>
 
     </div>
@@ -768,18 +870,27 @@
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
 
-    const button = document.getElementById("mobileMenu");
-    const nav = document.getElementById("nav");
+document.addEventListener("DOMContentLoaded", function () {
 
-    if(button && nav){
-        button.addEventListener("click", function(){
+    const menu =
+        document.getElementById("mobileMenu");
+
+    const nav =
+        document.getElementById("mainNav");
+
+    if (menu && nav) {
+
+        menu.addEventListener("click", function () {
+
             nav.classList.toggle("open");
+
         });
+
     }
 
 });
+
 </script>
 
 </body>
