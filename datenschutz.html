@@ -3,27 +3,525 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Salavati – Flughafentransfer Wetzlar</title>
+    <title>Datenschutzerklärung – Flughafentransfer Salavati</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
         rel="stylesheet"
     >
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <style>
 
+        :root{
+            --ink:#171a1f;
+            --gold:#be8f3b;
+            --bg:#f5f4f1;
+            --line:#ddd9d1;
+        }
+
+        *{
+            box-sizing:border-box;
+        }
+
+        html,
+        body{
+            margin:0;
+            padding:0;
+            width:100%;
+            max-width:100%;
+            overflow-x:hidden;
+        }
+
+        body{
+            font-family:"DM Sans",Arial,sans-serif;
+            color:var(--ink);
+            background:var(--bg);
+            line-height:1.7;
+        }
+
+        a{
+            color:inherit;
+            text-decoration:none;
+        }
+
+        /* HEADER */
+
+        .site-header{
+            height:100px;
+            background:rgba(245,244,241,.98);
+            border-bottom:1px solid var(--line);
+        }
+
+        .header-inner{
+            width:min(1400px,calc(100% - 80px));
+            height:100%;
+            margin:auto;
+
+            display:flex;
+            align-items:center;
+            gap:30px;
+        }
+
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:12px;
+
+            min-width:315px;
+            flex-shrink:0;
+        }
+
+        .brand-logo{
+            width:62px;
+            height:62px;
+            object-fit:contain;
+        }
+
+        .brand-name{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .brand-name strong{
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:19px;
+            line-height:.95;
+            font-weight:900;
+            white-space:nowrap;
+        }
+
+        .brand-name small{
+            margin-top:6px;
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:7px;
+            font-weight:800;
+            letter-spacing:2px;
+            color:#777d83;
+        }
+
+        .nav{
+            flex:1;
+
+            display:flex;
+            justify-content:center;
+
+            gap:27px;
+
+            white-space:nowrap;
+        }
+
+        .nav a{
+            font-size:14px;
+            font-weight:700;
+        }
+
+        .nav a:hover{
+            color:var(--gold);
+        }
+
+        .phone{
+            min-height:52px;
+            padding:0 21px;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            border:1.5px solid var(--ink);
+            border-radius:11px;
+
+            font-size:14px;
+            font-weight:700;
+
+            white-space:nowrap;
+        }
+
+        .phone:hover{
+            background:var(--ink);
+            color:#fff;
+            font-weight:900;
+        }
+
+        .mobile-menu{
+            display:none;
+        }
+
+        /* TITLE */
+
+        .legal-hero{
+            background:#eceae4;
+            border-bottom:1px solid var(--line);
+        }
+
+        .hero-inner{
+            width:min(1400px,calc(100% - 80px));
+            margin:auto;
+
+            padding:64px 0 58px;
+        }
+
+        .kicker{
+            display:flex;
+            align-items:center;
+            gap:12px;
+
+            margin-bottom:24px;
+
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:10px;
+            font-weight:800;
+            letter-spacing:3px;
+            color:#66707a;
+        }
+
+        .kicker::before{
+            content:"";
+
+            width:32px;
+            height:2px;
+
+            background:var(--gold);
+        }
+
+        .hero-title{
+            margin:0;
+
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:clamp(48px,5.4vw,72px);
+            line-height:.96;
+            letter-spacing:-3px;
+
+            font-weight:900;
+
+            color:var(--gold);
+        }
+
+        /* CONTENT */
+
+        .content{
+            background:#fff;
+
+            padding:75px 0 105px;
+        }
+
+        .content-inner{
+            width:min(1100px,calc(100% - 80px));
+            margin:auto;
+        }
+
+        .legal-card{
+            padding:50px 54px;
+
+            background:#fff;
+
+            border:1px solid #e0dbd2;
+            border-radius:22px;
+
+            box-shadow:
+                0 18px 55px rgba(0,0,0,.045);
+        }
+
+        .legal-section{
+            margin-top:43px;
+            padding-top:35px;
+
+            border-top:1px solid #e7e2da;
+        }
+
+        .legal-section:first-child{
+            margin-top:0;
+            padding-top:0;
+            border-top:0;
+        }
+
+        .legal-section h2{
+            margin:0 0 14px;
+
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:25px;
+            line-height:1.2;
+        }
+
+        .legal-section h3{
+            margin:25px 0 10px;
+
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:18px;
+        }
+
+        .legal-section p,
+        .legal-section li{
+            color:#59636d;
+
+            font-size:16px;
+            line-height:1.8;
+        }
+
+        .legal-section p{
+            margin:0 0 16px;
+        }
+
+        .legal-section ul{
+            margin:10px 0 20px;
+            padding-left:26px;
+        }
+
+        .legal-section li{
+            margin-bottom:9px;
+        }
+
+        .legal-section a{
+            color:var(--gold);
+            font-weight:700;
+        }
+
+        .info-box{
+            margin-top:35px;
+
+            padding:24px 25px;
+
+            border-left:3px solid var(--gold);
+
+            background:#f4efe5;
+
+            color:#59636d;
+
+            font-size:14px;
+            line-height:1.7;
+        }
+
+        /* FOOTER */
+
+        .footer{
+            background:#0b0c0d;
+            color:#fff;
+
+            padding:66px 0 25px;
+        }
+
+        .footer-grid{
+            width:min(1400px,calc(100% - 80px));
+            margin:auto;
+
+            display:grid;
+
+            grid-template-columns:1.2fr 1fr 1fr;
+
+            gap:70px;
+        }
+
+        .footer h3{
+            margin:0 0 17px;
+
+            font-family:"Montserrat",Arial,sans-serif;
+
+            font-size:18px;
+        }
+
+        .footer p{
+            margin:8px 0;
+
+            color:#adb1b6;
+
+            font-size:14px;
+        }
+
+        .footer a{
+            color:#adb1b6;
+        }
+
+        .footer a:hover{
+            color:var(--gold);
+        }
+
+        .footer-bottom{
+            width:min(1400px,calc(100% - 80px));
+
+            margin:44px auto 0;
+
+            padding-top:18px;
+
+            border-top:1px solid #27292c;
+
+            display:flex;
+            justify-content:space-between;
+
+            gap:20px;
+
+            color:#72777d;
+            font-size:12px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:850px){
+
+            .site-header{
+                height:auto;
+            }
+
+            .header-inner{
+                width:calc(100% - 28px);
+
+                min-height:70px;
+
+                padding:9px 0;
+
+                flex-wrap:wrap;
+            }
+
+            .brand{
+                min-width:0;
+                flex:1;
+            }
+
+            .brand-logo{
+                width:46px;
+                height:46px;
+            }
+
+            .brand-name strong{
+                font-size:13px;
+            }
+
+            .brand-name small{
+                font-size:5px;
+                letter-spacing:1.2px;
+            }
+
+            .mobile-menu{
+                display:flex;
+
+                width:42px;
+                height:42px;
+
+                align-items:center;
+                justify-content:center;
+
+                border:1px solid var(--line);
+                border-radius:10px;
+
+                background:#fff;
+
+                font-size:20px;
+            }
+
+            .nav{
+                display:none;
+
+                flex:0 0 100%;
+
+                flex-direction:column;
+
+                gap:0;
+            }
+
+            .nav.open{
+                display:flex;
+            }
+
+            .nav a{
+                padding:12px 4px;
+
+                border-top:1px solid var(--line);
+            }
+
+            .phone{
+                display:none;
+            }
+
+            .hero-inner{
+                width:calc(100% - 28px);
+
+                padding:45px 0 42px;
+            }
+
+            .hero-title{
+                font-size:45px;
+                letter-spacing:-2.4px;
+            }
+
+            .content{
+                padding:45px 0 70px;
+            }
+
+            .content-inner{
+                width:calc(100% - 28px);
+            }
+
+            .legal-card{
+                padding:28px 20px;
+
+                border-radius:18px;
+            }
+
+            .legal-section{
+                margin-top:36px;
+
+                padding-top:28px;
+            }
+
+            .legal-section h2{
+                font-size:21px;
+            }
+
+            .legal-section h3{
+                font-size:17px;
+            }
+
+            .legal-section p,
+            .legal-section li{
+                font-size:15px;
+                line-height:1.75;
+            }
+
+            .footer-grid{
+                width:calc(100% - 28px);
+
+                grid-template-columns:1fr;
+
+                gap:38px;
+            }
+
+            .footer-bottom{
+                width:calc(100% - 28px);
+
+                flex-direction:column;
+
+                gap:7px;
+            }
+        }
+
+        @media(max-width:520px){
+
+            .brand-logo{
+                width:42px;
+                height:42px;
+            }
+
+            .brand-name strong{
+                font-size:11.5px;
+            }
+
+            .hero-title{
+                font-size:40px;
+            }
+
+            .legal-card{
+                padding:22px 16px;
+            }
+
+        }
+
+    </style>
 </head>
 
-
-<body class="legal-page">
+<body>
 
 
 <header class="site-header">
@@ -31,21 +529,23 @@
     <div class="header-inner">
 
 
-        <a
-            href="index.html"
-            class="brand"
-        >
+        <a href="index.html" class="brand">
 
             <img
-                src="logo.png"
-                alt="Salavati Flughafentransfer"
                 class="brand-logo"
+                src="Logo Flughafentransfer.png"
+                alt="Salavati Flughafentransfer"
             >
 
-            <div class="brand-wordmark">
+            <div class="brand-name">
 
-                <strong>FLUGHAFENTRANSFER</strong>
-                <strong>SALAVATI</strong>
+                <strong>
+                    FLUGHAFENTRANSFER
+                </strong>
+
+                <strong>
+                    SALAVATI
+                </strong>
 
                 <small>
                     SEIT ÜBER 30 JAHREN
@@ -65,7 +565,7 @@
         </button>
 
 
-        <nav class="main-nav" id="mainNav">
+        <nav class="nav" id="nav">
 
             <a href="index.html#ueber-uns">
                 Über uns
@@ -96,10 +596,11 @@
 
         <a
             href="tel:+49644136444"
-            class="header-phone"
+            class="phone"
         >
             ☎ 06441 – 36444
         </a>
+
 
     </div>
 
@@ -108,19 +609,14 @@
 
 <section class="legal-hero">
 
-    <div class="container">
+    <div class="hero-inner">
 
-        <div class="eyebrow">
-            <span></span>
-            DATENSCHUTZ
+        <div class="kicker">
+            RECHTLICHE INFORMATIONEN
         </div>
 
-        <h1>
-
-            <span>
-                Datenschutzerklärung.
-            </span>
-
+        <h1 class="hero-title">
+            Datenschutzerklärung.
         </h1>
 
     </div>
@@ -128,10 +624,9 @@
 </section>
 
 
-<main class="legal-content">
+<main class="content">
 
-    <div class="legal-inner">
-
+    <div class="content-inner">
 
         <div class="legal-card">
 
@@ -144,7 +639,17 @@
 
                 <p>
 
-                    VPW GmbH<br>
+                    Verantwortlicher für die Verarbeitung
+                    personenbezogener Daten auf dieser Website ist:
+
+                </p>
+
+                <p>
+
+                    <strong>
+                        VPW GmbH · Flughafentransferservice Salavati
+                    </strong><br>
+
                     Bahnhof Nordseite 10<br>
                     35576 Wetzlar<br>
                     Deutschland
@@ -157,12 +662,11 @@
                     <a href="tel:+49644136444">
                         06441 36444
                     </a>
-
                     <br>
 
                     E-Mail:
-                    <a href="mailto:info@flughafen-transfer-salavati.de">
-                        info@flughafen-transfer-salavati.de
+                    <a href="mailto:medicar.prinz@gmail.com">
+                        medicar.prinz@gmail.com
                     </a>
 
                 </p>
@@ -173,14 +677,25 @@
             <section class="legal-section">
 
                 <h2>
-                    2. Allgemeine Hinweise
+                    2. Allgemeine Hinweise zur Datenverarbeitung
                 </h2>
 
                 <p>
 
-                    Der Schutz personenbezogener Daten ist uns wichtig.
-                    Personenbezogene Daten werden nur im Rahmen der
-                    jeweils geltenden gesetzlichen Vorschriften verarbeitet.
+                    Wir nehmen den Schutz Ihrer persönlichen Daten ernst.
+                    Personenbezogene Daten werden nur verarbeitet, soweit
+                    dies für die Bereitstellung unserer Website, die
+                    Bearbeitung von Anfragen, die Vorbereitung einer
+                    gewünschten Fahrt oder aufgrund gesetzlicher
+                    Verpflichtungen erforderlich ist.
+
+                </p>
+
+                <p>
+
+                    Welche Daten konkret verarbeitet werden, richtet sich
+                    danach, welche Funktionen Sie auf unserer Website
+                    nutzen und mit uns in Kontakt treten.
 
                 </p>
 
@@ -190,14 +705,26 @@
             <section class="legal-section">
 
                 <h2>
-                    3. Besuch der Website
+                    3. Besuch unserer Website
                 </h2>
 
                 <p>
 
-                    Beim Aufruf der Website können technisch notwendige
-                    Daten verarbeitet werden, die für die Bereitstellung,
-                    Sicherheit und Stabilität der Website erforderlich sind.
+                    Beim Aufruf unserer Website können durch den
+                    technischen Betrieb des Webservers bestimmte
+                    Informationen verarbeitet werden. Hierzu können
+                    insbesondere IP-Adresse, Datum und Uhrzeit des
+                    Zugriffs, angeforderte Seite, Browsertyp,
+                    Betriebssystem und Referrer-URL gehören.
+
+                </p>
+
+                <p>
+
+                    Diese Informationen können erforderlich sein, um
+                    die Website technisch bereitzustellen, ihre
+                    Sicherheit zu gewährleisten und technische Fehler
+                    zu erkennen.
 
                 </p>
 
@@ -212,19 +739,33 @@
 
                 <p>
 
-                    Wenn Sie unser Formular verwenden, werden die von Ihnen
-                    eingegebenen Daten verarbeitet. Dazu können insbesondere
-                    Name, Vorname, Telefonnummer, E-Mail-Adresse,
-                    Abholadresse, Flughafen, Flugnummer, Datum, Uhrzeit,
-                    Personenzahl, Rückfahrtdaten und Ihre Nachricht gehören.
+                    Wenn Sie unser Reservierungsformular verwenden,
+                    verarbeiten wir die von Ihnen eingegebenen Angaben.
+                    Dazu können insbesondere gehören:
 
                 </p>
 
+                <ul>
+
+                    <li>Name und Vorname</li>
+                    <li>Telefonnummer</li>
+                    <li>E-Mail-Adresse</li>
+                    <li>Abholadresse</li>
+                    <li>gewünschter Flughafen</li>
+                    <li>Flugnummer</li>
+                    <li>Datum und Uhrzeit der Fahrt</li>
+                    <li>Personenzahl</li>
+                    <li>Rückfahrtdaten</li>
+                    <li>sonstige Angaben in Ihrer Nachricht</li>
+
+                </ul>
+
                 <p>
 
-                    Die Angaben werden zur Bearbeitung Ihrer Anfrage
-                    und zur Vorbereitung bzw. Durchführung der gewünschten
-                    Fahrt verwendet.
+                    Die Verarbeitung erfolgt, soweit erforderlich,
+                    zur Bearbeitung Ihrer Anfrage, zur Abstimmung der
+                    gewünschten Fahrt sowie zur anschließenden
+                    persönlichen Bestätigung.
 
                 </p>
 
@@ -234,32 +775,23 @@
             <section class="legal-section">
 
                 <h2>
-                    5. Kommunikation
+                    5. Kontaktaufnahme per Telefon oder E-Mail
                 </h2>
 
                 <p>
 
-                    Wenn Sie uns per Telefon oder E-Mail kontaktieren,
-                    verarbeiten wir die dabei übermittelten Informationen
+                    Wenn Sie uns telefonisch oder per E-Mail kontaktieren,
+                    verarbeiten wir die von Ihnen mitgeteilten Informationen,
                     soweit dies zur Bearbeitung Ihres Anliegens erforderlich
                     ist.
 
                 </p>
 
-            </section>
-
-
-            <section class="legal-section">
-
-                <h2>
-                    6. Rechtsgrundlagen
-                </h2>
-
                 <p>
 
-                    Die konkrete Rechtsgrundlage richtet sich nach dem
-                    jeweiligen Zweck der Verarbeitung und den gesetzlichen
-                    Voraussetzungen.
+                    Wir verwenden die Angaben nicht für andere Zwecke,
+                    soweit hierfür keine entsprechende Rechtsgrundlage
+                    besteht oder Sie ausdrücklich eingewilligt haben.
 
                 </p>
 
@@ -269,7 +801,118 @@
             <section class="legal-section">
 
                 <h2>
-                    7. Speicherdauer
+                    6. Zweck der Verarbeitung
+                </h2>
+
+                <p>
+
+                    Personenbezogene Daten können insbesondere für folgende
+                    Zwecke verarbeitet werden:
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Bearbeitung von Reservierungsanfragen
+                    </li>
+
+                    <li>
+                        Kommunikation mit Interessenten und Kunden
+                    </li>
+
+                    <li>
+                        Vorbereitung und Durchführung vereinbarter Fahrten
+                    </li>
+
+                    <li>
+                        Erfüllung gesetzlicher Verpflichtungen
+                    </li>
+
+                    <li>
+                        Gewährleistung von Sicherheit und technischem Betrieb
+                        der Website
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <section class="legal-section">
+
+                <h2>
+                    7. Rechtsgrundlagen
+                </h2>
+
+                <p>
+
+                    Die Verarbeitung personenbezogener Daten erfolgt
+                    abhängig vom jeweiligen Zweck auf Grundlage der
+                    jeweils einschlägigen gesetzlichen Vorschriften,
+                    insbesondere der Datenschutz-Grundverordnung (DSGVO).
+
+                </p>
+
+                <p>
+
+                    Soweit die Verarbeitung zur Durchführung vorvertraglicher
+                    Maßnahmen oder zur Erfüllung eines Vertrags erforderlich
+                    ist, kann insbesondere Art. 6 Abs. 1 lit. b DSGVO
+                    einschlägig sein.
+
+                </p>
+
+                <p>
+
+                    Soweit eine Einwilligung erteilt wurde, kann die
+                    Verarbeitung auf Art. 6 Abs. 1 lit. a DSGVO beruhen.
+
+                </p>
+
+                <p>
+
+                    Für technisch erforderliche und sicherheitsbezogene
+                    Verarbeitungen können die jeweils einschlägigen
+                    gesetzlichen Grundlagen herangezogen werden.
+
+                </p>
+
+            </section>
+
+
+            <section class="legal-section">
+
+                <h2>
+                    8. Empfänger personenbezogener Daten
+                </h2>
+
+                <p>
+
+                    Personenbezogene Daten werden grundsätzlich nur
+                    verarbeitet, soweit dies für den jeweiligen Zweck
+                    erforderlich ist.
+
+                </p>
+
+                <p>
+
+                    Soweit externe Dienstleister für Hosting, technische
+                    Infrastruktur oder die Verarbeitung von Anfragen
+                    eingesetzt werden, können diese Daten im erforderlichen
+                    Umfang erhalten. Soweit gesetzlich erforderlich, erfolgt
+                    die Verarbeitung auf Grundlage entsprechender
+                    Vereinbarungen.
+
+                </p>
+
+            </section>
+
+
+            <section class="legal-section">
+
+                <h2>
+                    9. Speicherdauer
                 </h2>
 
                 <p>
@@ -280,21 +923,11 @@
 
                 </p>
 
-            </section>
-
-
-            <section class="legal-section">
-
-                <h2>
-                    8. Ihre Rechte
-                </h2>
-
                 <p>
 
-                    Ihnen stehen im Rahmen der gesetzlichen Voraussetzungen
-                    insbesondere Rechte auf Auskunft, Berichtigung,
-                    Löschung, Einschränkung der Verarbeitung,
-                    Datenübertragbarkeit und Widerspruch zu.
+                    Nach Wegfall des jeweiligen Zwecks werden die Daten
+                    gelöscht, sofern keine gesetzlichen Gründe einer
+                    Löschung entgegenstehen.
 
                 </p>
 
@@ -304,28 +937,116 @@
             <section class="legal-section">
 
                 <h2>
-                    9. Beschwerderecht
+                    10. Ihre Rechte
+                </h2>
+
+                <p>
+
+                    Sie haben im Rahmen der gesetzlichen Voraussetzungen
+                    insbesondere das Recht auf:
+
+                </p>
+
+                <ul>
+
+                    <li>Auskunft über Ihre gespeicherten personenbezogenen Daten</li>
+                    <li>Berichtigung unrichtiger Daten</li>
+                    <li>Löschung personenbezogener Daten</li>
+                    <li>Einschränkung der Verarbeitung</li>
+                    <li>Datenübertragbarkeit</li>
+                    <li>Widerspruch gegen bestimmte Verarbeitungen</li>
+                    <li>Widerruf einer erteilten Einwilligung</li>
+
+                </ul>
+
+                <p>
+
+                    Zur Ausübung Ihrer Rechte können Sie sich jederzeit
+                    unter den oben genannten Kontaktdaten an uns wenden.
+
+                </p>
+
+            </section>
+
+
+            <section class="legal-section">
+
+                <h2>
+                    11. Beschwerderecht bei einer Aufsichtsbehörde
                 </h2>
 
                 <p>
 
                     Sie haben das Recht, sich bei einer zuständigen
                     Datenschutzaufsichtsbehörde zu beschweren, wenn Sie
-                    der Auffassung sind, dass Ihre personenbezogenen Daten
-                    nicht rechtmäßig verarbeitet werden.
+                    der Ansicht sind, dass die Verarbeitung Ihrer
+                    personenbezogenen Daten gegen geltendes
+                    Datenschutzrecht verstößt.
 
                 </p>
 
             </section>
 
 
-            <div class="legal-highlight">
+            <section class="legal-section">
 
-                Wichtig: Diese Datenschutzerklärung muss vor dem
-                endgültigen Livegang mit der tatsächlich eingesetzten
-                Technik abgeglichen werden, insbesondere mit Hosting,
-                Formularversand, Analysewerkzeugen, Cookies und
-                gegebenenfalls externen Diensten.
+                <h2>
+                    12. Datensicherheit
+                </h2>
+
+                <p>
+
+                    Wir treffen im Rahmen unserer Möglichkeiten technische
+                    und organisatorische Maßnahmen, um personenbezogene
+                    Daten gegen Verlust, Manipulation, Zerstörung oder
+                    unberechtigten Zugriff zu schützen.
+
+                </p>
+
+                <p>
+
+                    Eine vollständig sichere Datenübertragung über das
+                    Internet kann jedoch nicht garantiert werden.
+
+                </p>
+
+            </section>
+
+
+            <section class="legal-section">
+
+                <h2>
+                    13. Änderungen dieser Datenschutzerklärung
+                </h2>
+
+                <p>
+
+                    Wir können diese Datenschutzerklärung anpassen,
+                    wenn sich die rechtlichen Anforderungen oder die
+                    von uns eingesetzten technischen Dienste ändern.
+
+                </p>
+
+                <p>
+
+                    Es gilt jeweils die auf dieser Website veröffentlichte
+                    aktuelle Fassung.
+
+                </p>
+
+            </section>
+
+
+            <div class="info-box">
+
+                <strong>Wichtiger technischer Hinweis:</strong><br>
+
+                Diese Datenschutzerklärung muss vor dem endgültigen
+                Livegang noch mit der tatsächlich verwendeten
+                Hosting-, Formular-, Analyse-, Cookie- und sonstigen
+                Drittanbieter-Technik abgeglichen werden. Nur dann
+                kann der Text die tatsächlich stattfindenden
+                Verarbeitungen vollständig abbilden.
 
             </div>
 
@@ -339,14 +1060,11 @@
 
 <footer class="footer">
 
-    <div class="container footer-grid">
-
+    <div class="footer-grid">
 
         <div>
 
-            <h3>
-                Kontakt
-            </h3>
+            <h3>Kontakt</h3>
 
             <p>
                 VPW GmbH · Flughafentransferservice Salavati
@@ -367,8 +1085,8 @@
             </p>
 
             <p>
-                <a href="mailto:info@flughafen-transfer-salavati.de">
-                    info@flughafen-transfer-salavati.de
+                <a href="mailto:medicar.prinz@gmail.com">
+                    medicar.prinz@gmail.com
                 </a>
             </p>
 
@@ -377,9 +1095,7 @@
 
         <div>
 
-            <h3>
-                Unternehmen
-            </h3>
+            <h3>Unternehmen</h3>
 
             <p>
                 Geschäftsführer: S. R. Salavati
@@ -402,9 +1118,7 @@
 
         <div>
 
-            <h3>
-                Rechtliches
-            </h3>
+            <h3>Rechtliches</h3>
 
             <p>
                 <a href="impressum.html">
@@ -426,11 +1140,10 @@
 
         </div>
 
-
     </div>
 
 
-    <div class="footer-bottom container">
+    <div class="footer-bottom">
 
         <span>
             © 2026 VPW GmbH · Flughafentransferservice Salavati
@@ -447,21 +1160,21 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function(){
 
-    const mobileMenu =
+    const button =
         document.getElementById("mobileMenu");
 
-    const mainNav =
-        document.getElementById("mainNav");
+    const nav =
+        document.getElementById("nav");
 
-    if (mobileMenu && mainNav) {
+    if(button && nav){
 
-        mobileMenu.addEventListener(
+        button.addEventListener(
             "click",
-            function () {
+            function(){
 
-                mainNav.classList.toggle("open");
+                nav.classList.toggle("open");
 
             }
         );
@@ -471,6 +1184,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
+
 
 </body>
 </html>
