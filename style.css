@@ -2709,3 +2709,79 @@ button {
     }
 
 }
+/* =========================================================
+   MOBILE HERO – ABSTAND UNTER HEADER KORRIGIEREN
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .site-header {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .header-inner {
+        height: auto !important;
+        min-height: 78px !important;
+    }
+
+    .hero {
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-grid {
+        height: auto !important;
+        min-height: 0 !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        align-content: start !important;
+        align-items: start !important;
+
+        gap: 34px !important;
+
+        padding-top: 30px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .hero-copy {
+        width: 100% !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-visual {
+        width: 100% !important;
+
+        height: 285px !important;
+        min-height: 285px !important;
+
+        margin: 0 !important;
+    }
+
+    .hero-image-wrap {
+        width: 100% !important;
+        height: 285px !important;
+
+        margin: 0 !important;
+    }
+
+}
+
+
+/* Noch kleiner Abstand auf kleinen Handys */
+
+@media (max-width: 520px) {
+
+    .hero-grid {
+        padding-top: 24px !important;
+        gap: 30px !important;
+    }
+
+}
