@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
     /* =====================================================
-       MOBILE NAVIGATION
+       MOBILE MENÜ
     ===================================================== */
 
     const mobileMenu =
@@ -13,33 +14,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (mobileMenu && mainNav) {
 
-        mobileMenu.addEventListener("click", function () {
+        mobileMenu.addEventListener(
+            "click",
+            function () {
 
-            const open =
-                mainNav.classList.toggle("open");
-
-            mobileMenu.setAttribute(
-                "aria-expanded",
-                open ? "true" : "false"
-            );
-
-        });
-
-
-        mainNav.querySelectorAll("a").forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                mainNav.classList.remove("open");
+                const open =
+                    mainNav.classList.toggle("open");
 
                 mobileMenu.setAttribute(
                     "aria-expanded",
-                    "false"
+                    open ? "true" : "false"
+                );
+
+            }
+        );
+
+
+        mainNav
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        mainNav.classList.remove("open");
+
+                        mobileMenu.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
                 );
 
             });
-
-        });
 
     }
 
@@ -75,29 +84,108 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       BEWERTUNGEN
+       FLUGHAFEN AUTOMATISCH INS FORMULAR ÜBERNEHMEN
     ===================================================== */
 
-    const track =
-        document.getElementById("reviewTrack");
-
-    const prev =
-        document.getElementById("reviewPrev");
-
-    const next =
-        document.getElementById("reviewNext");
-
-    const dots =
+    const airportCards =
         document.querySelectorAll(
-            "#reviewDots span"
+            ".airport-card[data-airport]"
+        );
+
+    const airportSelect =
+        document.getElementById(
+            "airportSelect"
         );
 
 
-    let current =
-        0;
+    airportCards.forEach(
+        function (card) {
+
+            card.addEventListener(
+                "click",
+                function () {
+
+                    const airport =
+                        card.dataset.airport;
 
 
-    function cardsVisible() {
+                    if (
+                        airportSelect &&
+                        airport
+                    ) {
+
+                        for (
+                            const option
+                            of airportSelect.options
+                        ) {
+
+                            if (
+                                option.text === airport
+                            ) {
+
+                                airportSelect.value =
+                                    option.value;
+
+                                break;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       BEWERTUNGSSLIDER
+    ===================================================== */
+
+    const track =
+        document.getElementById(
+            "reviewTrack"
+        );
+
+    const prev =
+        document.getElementById(
+            "reviewPrev"
+        );
+
+    const next =
+        document.getElementById(
+            "reviewNext"
+        );
+
+    const dotsContainer =
+        document.getElementById(
+            "reviewDots"
+        );
+
+
+    if (!track) {
+        return;
+    }
+
+
+    const cards =
+        Array.from(
+            track.children
+        );
+
+
+    let currentIndex = 0;
+
+    let startX = 0;
+    let currentX = 0;
+    let dragging = false;
+
+
+    function visibleCards() {
 
         if (window.innerWidth <= 850) {
             return 1;
@@ -112,84 +200,160 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    function maximum() {
-
-        if (!track) {
-            return 0;
-        }
+    function maxIndex() {
 
         return Math.max(
             0,
-            track.children.length -
-            cardsVisible()
+            cards.length -
+            visibleCards()
         );
 
     }
 
 
-    function updateReviews() {
+    function createDots() {
 
-        if (!track || !track.children.length) {
+        if (!dotsContainer) {
             return;
         }
 
 
-        const card =
-            track.children[0];
+        dotsContainer.innerHTML = "";
 
 
-        const width =
-            card.getBoundingClientRect().width;
+        const count =
+            maxIndex() + 1;
 
 
-        const gap =
-            parseFloat(
-                window.getComputedStyle(track).gap
-            ) || 0;
+        for (
+            let index = 0;
+            index < count;
+            index++
+        ) {
+
+            const dot =
+                document.createElement(
+                    "span"
+                );
 
 
-        const distance =
-            current * (width + gap);
+            if (
+                index === currentIndex
+            ) {
+
+                dot.classList.add(
+                    "active"
+                );
+
+            }
 
 
-        track.style.transform =
-            "translateX(-" +
-            distance +
-            "px)";
+            dot.addEventListener(
+                "click",
+                function () {
 
+                    currentIndex =
+                        index;
 
-        dots.forEach(function (dot, index) {
+                    updateSlider();
 
-            dot.classList.toggle(
-                "active",
-                index === current
+                }
             );
 
-        });
+
+            dotsContainer.appendChild(
+                dot
+            );
+
+        }
 
     }
 
 
-    function moveReviews(direction) {
+    function updateSlider() {
 
-        current += direction;
-
-
-        const max =
-            maximum();
+        const firstCard =
+            cards[0];
 
 
-        if (current < 0) {
-            current = 0;
+        if (!firstCard) {
+            return;
         }
 
 
-        if (current > max) {
-            current = max;
+        const cardWidth =
+            firstCard.getBoundingClientRect()
+                .width;
+
+
+        const gap =
+            parseFloat(
+                window
+                    .getComputedStyle(track)
+                    .gap
+            ) || 0;
+
+
+        const offset =
+            currentIndex *
+            (cardWidth + gap);
+
+
+        track.style.transform =
+            "translateX(-" +
+            offset +
+            "px)";
+
+
+        if (dotsContainer) {
+
+            Array.from(
+                dotsContainer.children
+            ).forEach(
+                function (dot, index) {
+
+                    dot.classList.toggle(
+                        "active",
+                        index === currentIndex
+                    );
+
+                }
+            );
+
+        }
+
+    }
+
+
+    function move(direction) {
+
+        const maximum =
+            maxIndex();
+
+
+        currentIndex += direction;
+
+
+        if (
+            currentIndex < 0
+        ) {
+
+            currentIndex =
+                maximum;
+
         }
 
 
-        updateReviews();
+        if (
+            currentIndex > maximum
+        ) {
+
+            currentIndex = 0;
+
+        }
+
+
+        updateSlider();
 
     }
 
@@ -199,7 +363,9 @@ document.addEventListener("DOMContentLoaded", function () {
         prev.addEventListener(
             "click",
             function () {
-                moveReviews(-1);
+
+                move(-1);
+
             }
         );
 
@@ -211,49 +377,109 @@ document.addEventListener("DOMContentLoaded", function () {
         next.addEventListener(
             "click",
             function () {
-                moveReviews(1);
+
+                move(1);
+
             }
         );
 
     }
 
 
-    dots.forEach(function (dot, index) {
+    /* TOUCH / SWIPE */
 
-        dot.addEventListener(
-            "click",
-            function () {
+    track.addEventListener(
+        "touchstart",
+        function (event) {
 
-                current =
-                    Math.min(
-                        index,
-                        maximum()
-                    );
+            startX =
+                event.touches[0].clientX;
 
-                updateReviews();
+            currentX =
+                startX;
+
+            dragging = true;
+
+        },
+        { passive: true }
+    );
+
+
+    track.addEventListener(
+        "touchmove",
+        function (event) {
+
+            if (!dragging) {
+                return;
+            }
+
+            currentX =
+                event.touches[0].clientX;
+
+        },
+        { passive: true }
+    );
+
+
+    track.addEventListener(
+        "touchend",
+        function () {
+
+            if (!dragging) {
+                return;
+            }
+
+
+            const distance =
+                currentX - startX;
+
+
+            dragging = false;
+
+
+            if (
+                Math.abs(distance) < 45
+            ) {
+
+                return;
 
             }
-        );
 
-    });
+
+            if (distance < 0) {
+
+                move(1);
+
+            } else {
+
+                move(-1);
+
+            }
+
+        }
+    );
 
 
     window.addEventListener(
         "resize",
         function () {
 
-            current =
+            currentIndex =
                 Math.min(
-                    current,
-                    maximum()
+                    currentIndex,
+                    maxIndex()
                 );
 
-            updateReviews();
+            createDots();
+
+            updateSlider();
 
         }
     );
 
 
-    updateReviews();
+    createDots();
+
+    updateSlider();
 
 });
