@@ -1,106 +1,516 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Salavati – Flughafentransfer Wetzlar</title>
+    <title>Impressum – Flughafentransfer Salavati</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
         rel="stylesheet"
     >
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <style>
+        :root{
+            --ink:#171a1f;
+            --gold:#be8f3b;
+            --muted:#66707a;
+            --bg:#f5f4f1;
+            --white:#fff;
+            --line:#ddd9d1;
+        }
 
+        *{box-sizing:border-box}
+
+        html,body{
+            margin:0;
+            padding:0;
+            width:100%;
+            max-width:100%;
+            overflow-x:hidden;
+        }
+
+        body{
+            font-family:"DM Sans",Arial,sans-serif;
+            color:var(--ink);
+            background:var(--bg);
+            line-height:1.7;
+        }
+
+        a{
+            color:inherit;
+            text-decoration:none;
+        }
+
+        /* HEADER */
+
+        .site-header{
+            height:100px;
+            background:rgba(245,244,241,.98);
+            border-bottom:1px solid var(--line);
+        }
+
+        .header-inner{
+            width:min(1400px,calc(100% - 80px));
+            height:100%;
+            margin:auto;
+
+            display:flex;
+            align-items:center;
+            gap:30px;
+        }
+
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            min-width:315px;
+            flex-shrink:0;
+        }
+
+        .brand-logo{
+            width:62px;
+            height:62px;
+            object-fit:contain;
+        }
+
+        .brand-name{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .brand-name strong{
+            font-family:"Montserrat",Arial,sans-serif;
+            font-weight:900;
+            font-size:19px;
+            line-height:.95;
+            letter-spacing:.3px;
+            white-space:nowrap;
+        }
+
+        .brand-name small{
+            margin-top:6px;
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:7px;
+            font-weight:800;
+            letter-spacing:2px;
+            color:#7b8086;
+        }
+
+        .nav{
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:27px;
+            white-space:nowrap;
+        }
+
+        .nav a{
+            font-size:14px;
+            font-weight:700;
+            transition:.2s;
+        }
+
+        .nav a:hover{
+            color:var(--gold);
+        }
+
+        .phone{
+            min-height:52px;
+            padding:0 21px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            border:1.5px solid var(--ink);
+            border-radius:11px;
+
+            font-weight:700;
+            font-size:14px;
+            white-space:nowrap;
+
+            transition:.2s;
+        }
+
+        .phone:hover{
+            background:var(--ink);
+            color:#fff;
+            font-weight:900;
+        }
+
+        .mobile-menu{
+            display:none;
+        }
+
+        /* TITLE */
+
+        .legal-hero{
+            background:#eceae4;
+            border-bottom:1px solid var(--line);
+        }
+
+        .legal-hero-inner{
+            width:min(1400px,calc(100% - 80px));
+            margin:auto;
+            padding:64px 0 58px;
+        }
+
+        .kicker{
+            display:flex;
+            align-items:center;
+            gap:12px;
+
+            margin-bottom:24px;
+
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:10px;
+            font-weight:800;
+            letter-spacing:3px;
+            color:#66707a;
+        }
+
+        .kicker::before{
+            content:"";
+            width:32px;
+            height:2px;
+            background:var(--gold);
+        }
+
+        .legal-title{
+            margin:0;
+            font-family:"Montserrat",Arial,sans-serif;
+            font-weight:900;
+            font-size:clamp(58px,6vw,82px);
+            line-height:.96;
+            letter-spacing:-4px;
+            color:var(--gold);
+        }
+
+        /* CONTENT */
+
+        .content{
+            background:#fff;
+            padding:76px 0 105px;
+        }
+
+        .content-inner{
+            width:min(1100px,calc(100% - 80px));
+            margin:auto;
+        }
+
+        .legal-card{
+            background:#fff;
+            border:1px solid #e0dbd2;
+            border-radius:22px;
+            padding:50px 54px;
+            box-shadow:0 18px 55px rgba(0,0,0,.045);
+        }
+
+        .info-grid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:18px;
+        }
+
+        .info-box{
+            padding:28px 30px;
+            background:#faf9f6;
+            border:1px solid #e2ddd5;
+            border-radius:16px;
+        }
+
+        .info-box h2{
+            margin:0 0 14px;
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:22px;
+            line-height:1.2;
+        }
+
+        .info-box p{
+            margin:7px 0;
+            color:#5e6872;
+            font-size:15px;
+            line-height:1.7;
+        }
+
+        .info-box a{
+            color:var(--gold);
+            font-weight:700;
+        }
+
+        .legal-section{
+            margin-top:42px;
+            padding-top:35px;
+            border-top:1px solid #e7e2da;
+        }
+
+        .legal-section h2{
+            margin:0 0 13px;
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:24px;
+            line-height:1.2;
+        }
+
+        .legal-section p{
+            margin:0 0 15px;
+            color:#59636d;
+            font-size:16px;
+            line-height:1.8;
+        }
+
+        .legal-note{
+            margin-top:38px;
+            padding:20px 22px;
+            border-left:3px solid var(--gold);
+            background:#f4efe5;
+            color:#5d6670;
+            font-size:14px;
+            line-height:1.7;
+        }
+
+        /* FOOTER */
+
+        .footer{
+            background:#0b0c0d;
+            color:#fff;
+            padding:66px 0 25px;
+        }
+
+        .footer-grid{
+            width:min(1400px,calc(100% - 80px));
+            margin:auto;
+
+            display:grid;
+            grid-template-columns:1.2fr 1fr 1fr;
+            gap:70px;
+        }
+
+        .footer h3{
+            margin:0 0 17px;
+            font-family:"Montserrat",Arial,sans-serif;
+            font-size:18px;
+        }
+
+        .footer p{
+            margin:8px 0;
+            color:#adb1b6;
+            font-size:14px;
+        }
+
+        .footer a{
+            color:#adb1b6;
+        }
+
+        .footer a:hover{
+            color:var(--gold);
+        }
+
+        .footer-bottom{
+            width:min(1400px,calc(100% - 80px));
+            margin:44px auto 0;
+            padding-top:18px;
+            border-top:1px solid #27292c;
+
+            display:flex;
+            justify-content:space-between;
+            gap:20px;
+
+            color:#72777d;
+            font-size:12px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:850px){
+
+            .site-header{
+                height:auto;
+            }
+
+            .header-inner{
+                width:calc(100% - 28px);
+                min-height:70px;
+                flex-wrap:wrap;
+                padding:9px 0;
+                gap:8px;
+            }
+
+            .brand{
+                min-width:0;
+                flex:1;
+            }
+
+            .brand-logo{
+                width:46px;
+                height:46px;
+            }
+
+            .brand-name strong{
+                font-size:13px;
+            }
+
+            .brand-name small{
+                font-size:5px;
+                letter-spacing:1.2px;
+            }
+
+            .mobile-menu{
+                display:flex;
+                width:42px;
+                height:42px;
+                align-items:center;
+                justify-content:center;
+                border:1px solid var(--line);
+                border-radius:10px;
+                background:#fff;
+                font-size:20px;
+            }
+
+            .nav{
+                display:none;
+                flex:0 0 100%;
+                flex-direction:column;
+                align-items:stretch;
+                gap:0;
+            }
+
+            .nav.open{
+                display:flex;
+            }
+
+            .nav a{
+                padding:12px 4px;
+                border-top:1px solid var(--line);
+            }
+
+            .phone{
+                display:none;
+            }
+
+            .legal-hero-inner{
+                width:calc(100% - 28px);
+                padding:45px 0 42px;
+            }
+
+            .legal-title{
+                font-size:47px;
+                letter-spacing:-2.5px;
+            }
+
+            .content{
+                padding:45px 0 70px;
+            }
+
+            .content-inner{
+                width:calc(100% - 28px);
+            }
+
+            .legal-card{
+                padding:28px 20px;
+                border-radius:18px;
+            }
+
+            .info-grid{
+                grid-template-columns:1fr;
+            }
+
+            .info-box{
+                padding:24px 21px;
+            }
+
+            .legal-section{
+                margin-top:35px;
+                padding-top:28px;
+            }
+
+            .legal-section h2{
+                font-size:21px;
+            }
+
+            .legal-section p{
+                font-size:15px;
+                line-height:1.75;
+            }
+
+            .footer-grid{
+                width:calc(100% - 28px);
+                grid-template-columns:1fr;
+                gap:38px;
+            }
+
+            .footer-bottom{
+                width:calc(100% - 28px);
+                flex-direction:column;
+                gap:7px;
+            }
+        }
+
+        @media(max-width:520px){
+
+            .brand-logo{
+                width:42px;
+                height:42px;
+            }
+
+            .brand-name strong{
+                font-size:11.5px;
+            }
+
+            .legal-title{
+                font-size:42px;
+            }
+
+            .legal-card{
+                padding:22px 16px;
+            }
+        }
+    </style>
 </head>
 
-
-<body class="legal-page">
-
+<body>
 
 <header class="site-header">
 
     <div class="header-inner">
 
-
-        <a
-            href="index.html"
-            class="brand"
-        >
-
+        <a href="index.html" class="brand">
             <img
-                src="logo.png"
-                alt="Salavati Flughafentransfer"
                 class="brand-logo"
+                src="Logo Flughafentransfer.png"
+                alt="Salavati Flughafentransfer"
             >
 
-            <div class="brand-wordmark">
-
+            <div class="brand-name">
                 <strong>FLUGHAFENTRANSFER</strong>
                 <strong>SALAVATI</strong>
-
-                <small>
-                    SEIT ÜBER 30 JAHREN
-                </small>
-
+                <small>SEIT ÜBER 30 JAHREN</small>
             </div>
-
         </a>
-
 
         <button
             class="mobile-menu"
             id="mobileMenu"
             type="button"
-        >
-            ☰
-        </button>
+            aria-label="Menü öffnen"
+        >☰</button>
 
-
-        <nav class="main-nav" id="mainNav">
-
-            <a href="index.html#ueber-uns">
-                Über uns
-            </a>
-
-            <a href="index.html#flughafen">
-                Flughäfen
-            </a>
-
-            <a href="index.html#warum">
-                Warum Salavati?
-            </a>
-
-            <a href="index.html#vorbestellung">
-                Vorbestellung
-            </a>
-
-            <a href="index.html#bewertungen">
-                Bewertungen
-            </a>
-
-            <a href="impressum.html">
-                Impressum
-            </a>
-
+        <nav class="nav" id="nav">
+            <a href="index.html#ueber-uns">Über uns</a>
+            <a href="index.html#flughafen">Flughäfen</a>
+            <a href="index.html#warum">Warum Salavati?</a>
+            <a href="index.html#vorbestellung">Vorbestellung</a>
+            <a href="index.html#bewertungen">Bewertungen</a>
+            <a href="impressum.html">Impressum</a>
         </nav>
 
-
-        <a
-            href="tel:+49644136444"
-            class="header-phone"
-        >
+        <a href="tel:+49644136444" class="phone">
             ☎ 06441 – 36444
         </a>
-
 
     </div>
 
@@ -109,15 +519,14 @@
 
 <section class="legal-hero">
 
-    <div class="container">
+    <div class="legal-hero-inner">
 
-        <div class="eyebrow">
-            <span></span>
+        <div class="kicker">
             RECHTLICHE INFORMATIONEN
         </div>
 
-        <h1>
-            <span>Impressum.</span>
+        <h1 class="legal-title">
+            Impressum.
         </h1>
 
     </div>
@@ -125,22 +534,17 @@
 </section>
 
 
-<main class="legal-content">
+<main class="content">
 
-    <div class="legal-inner">
-
+    <div class="content-inner">
 
         <div class="legal-card">
 
+            <div class="info-grid">
 
-            <div class="legal-grid">
+                <div class="info-box">
 
-
-                <div class="legal-box">
-
-                    <h2>
-                        Anbieter
-                    </h2>
+                    <h2>Anbieter</h2>
 
                     <p>
                         <strong>VPW GmbH</strong>
@@ -155,11 +559,9 @@
                 </div>
 
 
-                <div class="legal-box">
+                <div class="info-box">
 
-                    <h2>
-                        Vertretungsberechtigter
-                    </h2>
+                    <h2>Vertretungsberechtigter</h2>
 
                     <p>
                         Geschäftsführer
@@ -172,11 +574,9 @@
                 </div>
 
 
-                <div class="legal-box">
+                <div class="info-box">
 
-                    <h2>
-                        Kontakt
-                    </h2>
+                    <h2>Kontakt</h2>
 
                     <p>
                         Telefon:
@@ -187,37 +587,33 @@
 
                     <p>
                         E-Mail:
-                        <a href="mailto:info@flughafen-transfer-salavati.de">
-                            info@flughafen-transfer-salavati.de
+                        <a href="mailto:medicar.prinz@gmail.com">
+                            medicar.prinz@gmail.com
                         </a>
                     </p>
 
                 </div>
 
 
-                <div class="legal-box">
+                <div class="info-box">
 
-                    <h2>
-                        Registereintrag
-                    </h2>
+                    <h2>Registereintrag</h2>
 
                     <p>
                         Handelsregister: HRB 6427
                     </p>
 
                     <p>
-                        Registergericht:
+                        Registergericht:<br>
                         Amtsgericht Wetzlar
                     </p>
 
                 </div>
 
 
-                <div class="legal-box">
+                <div class="info-box">
 
-                    <h2>
-                        Steuerliche Angaben
-                    </h2>
+                    <h2>Steuerliche Angaben</h2>
 
                     <p>
                         Steuernummer: 2024790418
@@ -229,22 +625,20 @@
 
                 </div>
 
-
             </div>
 
 
             <section class="legal-section">
 
                 <h2>
-                    Gegenstand der Website
+                    Verantwortlich für den Inhalt
                 </h2>
 
                 <p>
-
-                    Diese Website informiert über den von der
-                    VPW GmbH angebotenen Flughafentransferservice
-                    aus Wetzlar und Umgebung.
-
+                    Verantwortlich für die Inhalte dieser Website
+                    im Rahmen der gesetzlichen Vorschriften ist die
+                    VPW GmbH, vertreten durch den Geschäftsführer
+                    Dipl. Betriebswirt S. R. Salavati.
                 </p>
 
             </section>
@@ -253,30 +647,47 @@
             <section class="legal-section">
 
                 <h2>
-                    Verantwortlichkeit für Inhalte
+                    Informationen nach dem Digitale-Dienste-Gesetz
                 </h2>
 
                 <p>
+                    Diese Website wird durch die VPW GmbH als
+                    geschäftsmäßiger Anbieter eines digitalen Dienstes
+                    betrieben.
+                </p>
 
-                    Wir bemühen uns, die Inhalte dieser Website
-                    aktuell und korrekt zu halten. Maßgeblich sind
-                    jedoch die jeweils tatsächlich vereinbarten
-                    Leistungen und Angaben des Unternehmens.
-
+                <p>
+                    Die erforderlichen Angaben zur schnellen elektronischen
+                    Kontaktaufnahme und zum Handelsregister sind oben
+                    angegeben.
                 </p>
 
             </section>
 
 
-            <div class="legal-highlight">
+            <section class="legal-section">
 
-                Die Angaben auf dieser Seite müssen vor der
-                endgültigen Veröffentlichung nochmals mit den
-                aktuellen Unternehmens- und Registerunterlagen
-                abgeglichen werden.
+                <h2>
+                    Hinweis zur Kontaktaufnahme
+                </h2>
+
+                <p>
+                    Anfragen zu Flughafentransfers können telefonisch
+                    oder über das auf der Website bereitgestellte
+                    Reservierungsformular gestellt werden.
+                </p>
+
+            </section>
+
+
+            <div class="legal-note">
+
+                Bitte beachten Sie, dass dieses Impressum vor dem
+                endgültigen Livegang noch einmal mit den aktuellen
+                Unternehmens-, Register- und Kontaktdaten abgeglichen
+                werden sollte.
 
             </div>
-
 
         </div>
 
@@ -287,26 +698,14 @@
 
 <footer class="footer">
 
-    <div class="container footer-grid">
-
+    <div class="footer-grid">
 
         <div>
+            <h3>Kontakt</h3>
 
-            <h3>
-                Kontakt
-            </h3>
-
-            <p>
-                VPW GmbH · Flughafentransferservice Salavati
-            </p>
-
-            <p>
-                Bahnhof Nordseite 10
-            </p>
-
-            <p>
-                35576 Wetzlar
-            </p>
+            <p>VPW GmbH · Flughafentransferservice Salavati</p>
+            <p>Bahnhof Nordseite 10</p>
+            <p>35576 Wetzlar</p>
 
             <p>
                 <a href="tel:+49644136444">
@@ -315,49 +714,28 @@
             </p>
 
             <p>
-                <a href="mailto:info@flughafen-transfer-salavati.de">
-                    info@flughafen-transfer-salavati.de
+                <a href="mailto:medicar.prinz@gmail.com">
+                    medicar.prinz@gmail.com
                 </a>
             </p>
-
         </div>
 
 
         <div>
+            <h3>Unternehmen</h3>
 
-            <h3>
-                Unternehmen
-            </h3>
-
-            <p>
-                Geschäftsführer: S. R. Salavati
-            </p>
-
-            <p>
-                HRB 6427
-            </p>
-
-            <p>
-                Amtsgericht Wetzlar
-            </p>
-
-            <p>
-                Finanzamt Gießen
-            </p>
-
+            <p>Geschäftsführer: S. R. Salavati</p>
+            <p>HRB 6427</p>
+            <p>Amtsgericht Wetzlar</p>
+            <p>Finanzamt Gießen</p>
         </div>
 
 
         <div>
-
-            <h3>
-                Rechtliches
-            </h3>
+            <h3>Rechtliches</h3>
 
             <p>
-                <a href="impressum.html">
-                    Impressum
-                </a>
+                <a href="impressum.html">Impressum</a>
             </p>
 
             <p>
@@ -367,18 +745,14 @@
             </p>
 
             <p>
-                <a href="agb.html">
-                    AGB
-                </a>
+                <a href="agb.html">AGB</a>
             </p>
-
         </div>
-
 
     </div>
 
 
-    <div class="footer-bottom container">
+    <div class="footer-bottom">
 
         <span>
             © 2026 VPW GmbH · Flughafentransferservice Salavati
@@ -394,30 +768,18 @@
 
 
 <script>
+document.addEventListener("DOMContentLoaded", function(){
 
-document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("mobileMenu");
+    const nav = document.getElementById("nav");
 
-    const mobileMenu =
-        document.getElementById("mobileMenu");
-
-    const mainNav =
-        document.getElementById("mainNav");
-
-    if (mobileMenu && mainNav) {
-
-        mobileMenu.addEventListener(
-            "click",
-            function () {
-
-                mainNav.classList.toggle("open");
-
-            }
-        );
-
+    if(button && nav){
+        button.addEventListener("click", function(){
+            nav.classList.toggle("open");
+        });
     }
 
 });
-
 </script>
 
 </body>
