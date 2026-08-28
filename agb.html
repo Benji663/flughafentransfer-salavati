@@ -15,465 +15,622 @@
     >
 
     <style>
-        :root{
-            --ink:#171a1f;
-            --gold:#be8f3b;
-            --bg:#f5f4f1;
-            --line:#ddd9d1;
+
+        :root {
+            --ink: #171a1f;
+            --gold: #be8f3b;
+            --bg: #f5f4f1;
+            --muted: #66707a;
+            --line: #ddd9d1;
         }
 
-        *{box-sizing:border-box}
-
-        html,body{
-            margin:0;
-            padding:0;
-            width:100%;
-            max-width:100%;
-            overflow-x:hidden;
+        * {
+            box-sizing: border-box;
         }
 
-        body{
-            font-family:"DM Sans",Arial,sans-serif;
-            color:var(--ink);
-            background:#f5f4f1;
-            line-height:1.7;
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
-        a{
-            color:inherit;
-            text-decoration:none;
+        body {
+            font-family: "DM Sans", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.7;
         }
 
-        /* HEADER */
-
-        .site-header{
-            height:100px;
-            background:rgba(245,244,241,.98);
-            border-bottom:1px solid var(--line);
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
-        .header-inner{
-            width:min(1400px,calc(100% - 80px));
-            height:100%;
-            margin:auto;
-            display:flex;
-            align-items:center;
-            gap:30px;
+        /* ================= HEADER ================= */
+
+        .site-header {
+            width: 100%;
+            height: 100px;
+
+            background: rgba(245,244,241,.98);
+
+            border-bottom: 1px solid var(--line);
         }
 
-        .brand{
-            display:flex;
-            align-items:center;
-            gap:12px;
-            min-width:315px;
-            flex-shrink:0;
+        .header-inner {
+            width: min(1400px, calc(100% - 80px));
+            height: 100%;
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+
+            gap: 28px;
         }
 
-        .brand-logo{
-            width:62px;
-            height:62px;
-            object-fit:contain;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            min-width: 315px;
+            flex-shrink: 0;
         }
 
-        .brand-name{
-            display:flex;
-            flex-direction:column;
+        .brand-logo {
+            width: 62px;
+            height: 62px;
+
+            object-fit: contain;
+            flex-shrink: 0;
         }
 
-        .brand-name strong{
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:19px;
-            line-height:.95;
-            font-weight:900;
-            white-space:nowrap;
+        .brand-text {
+            display: flex;
+            flex-direction: column;
         }
 
-        .brand-name small{
-            margin-top:6px;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:7px;
-            font-weight:800;
-            letter-spacing:2px;
-            color:#777d83;
+        .brand-text strong {
+            font-family: "Montserrat", Arial, sans-serif;
+
+            font-size: 19px;
+            line-height: .94;
+
+            font-weight: 900;
+
+            letter-spacing: .3px;
+
+            white-space: nowrap;
         }
 
-        .nav{
-            flex:1;
-            display:flex;
-            justify-content:center;
-            gap:27px;
-            white-space:nowrap;
+        .brand-text small {
+            margin-top: 6px;
+
+            font-family: "Montserrat", Arial, sans-serif;
+
+            font-size: 7px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            color: #7b8086;
         }
 
-        .nav a{
-            font-size:14px;
-            font-weight:700;
+        .main-nav {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 26px;
+
+            white-space: nowrap;
         }
 
-        .nav a:hover{
-            color:var(--gold);
+        .main-nav a {
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: color .2s ease;
         }
 
-        .phone{
-            min-height:52px;
-            padding:0 21px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            border:1.5px solid var(--ink);
-            border-radius:11px;
-            font-size:14px;
-            font-weight:700;
-            white-space:nowrap;
+        .main-nav a:hover {
+            color: var(--gold);
         }
 
-        .phone:hover{
-            background:var(--ink);
-            color:#fff;
-            font-weight:900;
+        .header-phone {
+            min-height: 52px;
+            padding: 0 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1.5px solid var(--ink);
+            border-radius: 11px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            white-space: nowrap;
         }
 
-        .mobile-menu{
-            display:none;
+        .header-phone:hover {
+            background: var(--ink);
+            color: #fff;
+            font-weight: 900;
         }
 
-        /* HERO */
-
-        .legal-hero{
-            background:#eceae4;
-            border-bottom:1px solid var(--line);
+        .mobile-menu {
+            display: none;
         }
 
-        .hero-inner{
-            width:min(1400px,calc(100% - 80px));
-            margin:auto;
-            padding:64px 0 58px;
+        /* ================= HERO ================= */
+
+        .legal-hero {
+            background: #eceae4;
+
+            border-bottom: 1px solid var(--line);
         }
 
-        .kicker{
-            display:flex;
-            align-items:center;
-            gap:12px;
-            margin-bottom:24px;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:10px;
-            font-weight:800;
-            letter-spacing:3px;
-            color:#66707a;
+        .legal-container {
+            width: min(1100px, calc(100% - 80px));
+            margin: 0 auto;
         }
 
-        .kicker::before{
-            content:"";
-            width:32px;
-            height:2px;
-            background:var(--gold);
+        .legal-hero-inner {
+            padding: 63px 0 57px;
         }
 
-        .hero-title{
-            margin:0;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:clamp(56px,6vw,80px);
-            line-height:.96;
-            letter-spacing:-4px;
-            color:var(--gold);
-            font-weight:900;
+        .eyebrow {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 24px;
+
+            font-family: "Montserrat", Arial, sans-serif;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            color: var(--muted);
         }
 
-        /* CONTENT */
+        .eyebrow::before {
+            content: "";
 
-        .content{
-            background:#fff;
-            padding:75px 0 105px;
+            width: 32px;
+            height: 2px;
+
+            background: var(--gold);
         }
 
-        .content-inner{
-            width:min(1100px,calc(100% - 80px));
-            margin:auto;
+        .legal-title {
+            margin: 0;
+
+            font-family: "Montserrat", Arial, sans-serif;
+
+            font-size: clamp(56px, 6vw, 78px);
+
+            line-height: .96;
+
+            letter-spacing: -4px;
+
+            font-weight: 900;
+
+            color: var(--gold);
         }
 
-        .legal-card{
-            padding:50px 54px;
-            background:#fff;
-            border:1px solid #e0dbd2;
-            border-radius:22px;
-            box-shadow:0 18px 55px rgba(0,0,0,.045);
+        /* ================= CONTENT ================= */
+
+        .legal-main {
+            background: #fff;
+
+            padding: 70px 0 105px;
         }
 
-        .legal-section{
-            margin-top:43px;
-            padding-top:35px;
-            border-top:1px solid #e7e2da;
+        .legal-card {
+            width: min(1100px, calc(100% - 80px));
+
+            margin: 0 auto;
+
+            padding: 50px 54px;
+
+            border: 1px solid #e0dbd2;
+
+            border-radius: 22px;
+
+            background: #fff;
+
+            box-shadow:
+                0 18px 55px rgba(0,0,0,.045);
         }
 
-        .legal-section:first-child{
-            margin-top:0;
-            padding-top:0;
-            border-top:0;
+        .legal-section {
+            margin-top: 43px;
+
+            padding-top: 35px;
+
+            border-top: 1px solid #e7e2da;
         }
 
-        .legal-section h2{
-            margin:0 0 14px;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:25px;
-            line-height:1.2;
+        .legal-section:first-child {
+            margin-top: 0;
+
+            padding-top: 0;
+
+            border-top: 0;
         }
 
-        .legal-section p{
-            margin:0 0 16px;
-            color:#59636d;
-            font-size:16px;
-            line-height:1.8;
+        .legal-section h2 {
+            margin: 0 0 14px;
+
+            font-family: "Montserrat", Arial, sans-serif;
+
+            font-size: 25px;
+
+            line-height: 1.2;
         }
 
-        .legal-section ul{
-            margin:12px 0 18px;
-            padding-left:26px;
+        .legal-section p,
+        .legal-section li {
+            color: #59636d;
+
+            font-size: 16px;
+
+            line-height: 1.8;
         }
 
-        .legal-section li{
-            margin-bottom:9px;
-            color:#59636d;
-            font-size:16px;
-            line-height:1.7;
+        .legal-section p {
+            margin: 0 0 16px;
         }
 
-        .legal-note{
-            margin-top:40px;
-            padding:20px 22px;
-            border-left:3px solid var(--gold);
-            background:#f4efe5;
-            color:#59636d;
-            font-size:14px;
+        .legal-section ul {
+            margin: 12px 0 18px;
+
+            padding-left: 26px;
         }
 
-        /* FOOTER */
-
-        .footer{
-            background:#0b0c0d;
-            color:#fff;
-            padding:66px 0 25px;
+        .legal-section li {
+            margin-bottom: 9px;
         }
 
-        .footer-grid{
-            width:min(1400px,calc(100% - 80px));
-            margin:auto;
-            display:grid;
-            grid-template-columns:1.2fr 1fr 1fr;
-            gap:70px;
+        .legal-note {
+            margin-top: 40px;
+
+            padding: 20px 22px;
+
+            border-left: 3px solid var(--gold);
+
+            background: #f4efe5;
+
+            color: #59636d;
+
+            font-size: 14px;
+
+            line-height: 1.7;
         }
 
-        .footer h3{
-            margin:0 0 17px;
-            font-family:"Montserrat",Arial,sans-serif;
-            font-size:18px;
+        /* ================= FOOTER ================= */
+
+        .footer {
+            background: #0b0c0d;
+
+            color: #fff;
+
+            padding: 66px 0 25px;
         }
 
-        .footer p{
-            margin:8px 0;
-            color:#adb1b6;
-            font-size:14px;
+        .footer-grid {
+            width: min(1400px, calc(100% - 80px));
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr
+                1fr
+                1fr;
+
+            gap: 70px;
         }
 
-        .footer a{
-            color:#adb1b6;
+        .footer h3 {
+            margin: 0 0 17px;
+
+            font-family: "Montserrat", Arial, sans-serif;
+
+            font-size: 18px;
         }
 
-        .footer a:hover{
-            color:var(--gold);
+        .footer p {
+            margin: 8px 0;
+
+            color: #adb1b6;
+
+            font-size: 14px;
         }
 
-        .footer-bottom{
-            width:min(1400px,calc(100% - 80px));
-            margin:44px auto 0;
-            padding-top:18px;
-            border-top:1px solid #27292c;
-            display:flex;
-            justify-content:space-between;
-            gap:20px;
-            color:#72777d;
-            font-size:12px;
+        .footer a {
+            color: #adb1b6;
         }
 
-        @media(max-width:850px){
+        .footer a:hover {
+            color: var(--gold);
+        }
 
-            .site-header{
-                height:auto;
+        .footer-bottom {
+            width: min(1400px, calc(100% - 80px));
+
+            margin: 44px auto 0;
+
+            padding-top: 18px;
+
+            border-top: 1px solid #27292c;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: #72777d;
+
+            font-size: 12px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            .site-header {
+                height: auto;
             }
 
-            .header-inner{
-                width:calc(100% - 28px);
-                min-height:70px;
-                padding:9px 0;
-                flex-wrap:wrap;
+            .header-inner {
+                width: calc(100% - 28px);
+
+                min-height: 70px;
+
+                padding: 9px 0;
+
+                flex-wrap: wrap;
             }
 
-            .brand{
-                min-width:0;
-                flex:1;
+            .brand {
+                min-width: 0;
+
+                flex: 1;
             }
 
-            .brand-logo{
-                width:46px;
-                height:46px;
+            .brand-logo {
+                width: 46px;
+                height: 46px;
             }
 
-            .brand-name strong{
-                font-size:13px;
+            .brand-text strong {
+                font-size: 13px;
             }
 
-            .brand-name small{
-                font-size:5px;
-                letter-spacing:1.2px;
+            .brand-text small {
+                font-size: 5px;
+                letter-spacing: 1.2px;
             }
 
-            .mobile-menu{
-                display:flex;
-                width:42px;
-                height:42px;
-                align-items:center;
-                justify-content:center;
-                border:1px solid var(--line);
-                border-radius:10px;
-                background:#fff;
-                font-size:20px;
+            .mobile-menu {
+                display: flex;
+
+                width: 42px;
+                height: 42px;
+
+                align-items: center;
+                justify-content: center;
+
+                border: 1px solid var(--line);
+
+                border-radius: 10px;
+
+                background: #fff;
+
+                font-size: 20px;
             }
 
-            .nav{
-                display:none;
-                flex:0 0 100%;
-                flex-direction:column;
-                gap:0;
+            .main-nav {
+                display: none;
+
+                flex: 0 0 100%;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
             }
 
-            .nav.open{
-                display:flex;
+            .main-nav.open {
+                display: flex;
             }
 
-            .nav a{
-                padding:12px 4px;
-                border-top:1px solid var(--line);
+            .main-nav a {
+                padding: 12px 4px;
+
+                border-top: 1px solid var(--line);
             }
 
-            .phone{
-                display:none;
+            .header-phone {
+                display: none;
             }
 
-            .hero-inner{
-                width:calc(100% - 28px);
-                padding:45px 0 42px;
+            .legal-container,
+            .legal-card {
+                width: calc(100% - 28px);
             }
 
-            .hero-title{
-                font-size:47px;
-                letter-spacing:-2.5px;
+            .legal-hero-inner {
+                padding: 44px 0 40px;
             }
 
-            .content{
-                padding:45px 0 70px;
+            .legal-title {
+                font-size: 45px;
+
+                letter-spacing: -2.5px;
             }
 
-            .content-inner{
-                width:calc(100% - 28px);
+            .legal-main {
+                padding: 43px 0 68px;
             }
 
-            .legal-card{
-                padding:28px 20px;
-                border-radius:18px;
+            .legal-card {
+                padding: 28px 20px;
+
+                border-radius: 18px;
             }
 
-            .legal-section{
-                margin-top:36px;
-                padding-top:28px;
+            .legal-section {
+                margin-top: 36px;
+
+                padding-top: 28px;
             }
 
-            .legal-section h2{
-                font-size:21px;
+            .legal-section h2 {
+                font-size: 21px;
             }
 
             .legal-section p,
-            .legal-section li{
-                font-size:15px;
-                line-height:1.75;
+            .legal-section li {
+                font-size: 15px;
+
+                line-height: 1.75;
             }
 
-            .footer-grid{
-                width:calc(100% - 28px);
-                grid-template-columns:1fr;
-                gap:38px;
+            .footer-grid {
+                width: calc(100% - 28px);
+
+                grid-template-columns: 1fr;
+
+                gap: 38px;
             }
 
-            .footer-bottom{
-                width:calc(100% - 28px);
-                flex-direction:column;
-            }
-        }
+            .footer-bottom {
+                width: calc(100% - 28px);
 
-        @media(max-width:520px){
+                flex-direction: column;
 
-            .brand-logo{
-                width:42px;
-                height:42px;
-            }
-
-            .brand-name strong{
-                font-size:11.5px;
-            }
-
-            .hero-title{
-                font-size:42px;
-            }
-
-            .legal-card{
-                padding:22px 16px;
+                gap: 7px;
             }
         }
+
+        @media (max-width: 520px) {
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+            }
+
+            .brand-text strong {
+                font-size: 11.5px;
+            }
+
+            .legal-title {
+                font-size: 40px;
+            }
+
+            .legal-card {
+                padding: 22px 16px;
+            }
+
+        }
+
     </style>
+
 </head>
 
 <body>
+
 
 <header class="site-header">
 
     <div class="header-inner">
 
+
         <a href="index.html" class="brand">
 
             <img
+                src="./Logo Flughafentransfer.png"
+                alt="Flughafentransfer Salavati"
                 class="brand-logo"
-                src="Logo Flughafentransfer.png"
-                alt="Salavati Flughafentransfer"
             >
 
-            <div class="brand-name">
+            <div class="brand-text">
+
                 <strong>FLUGHAFENTRANSFER</strong>
                 <strong>SALAVATI</strong>
-                <small>SEIT ÜBER 30 JAHREN</small>
+
+                <small>
+                    SEIT ÜBER 30 JAHREN
+                </small>
+
             </div>
 
         </a>
+
 
         <button
             class="mobile-menu"
             id="mobileMenu"
             type="button"
+            aria-label="Menü öffnen"
         >
             ☰
         </button>
 
-        <nav class="nav" id="nav">
 
-            <a href="index.html#ueber-uns">Über uns</a>
-            <a href="index.html#flughafen">Flughäfen</a>
-            <a href="index.html#warum">Warum Salavati?</a>
-            <a href="index.html#vorbestellung">Vorbestellung</a>
-            <a href="index.html#bewertungen">Bewertungen</a>
-            <a href="impressum.html">Impressum</a>
+        <nav class="main-nav" id="mainNav">
+
+            <a href="index.html#ueber-uns">
+                Über uns
+            </a>
+
+            <a href="index.html#flughafen">
+                Flughäfen
+            </a>
+
+            <a href="index.html#warum">
+                Warum Salavati?
+            </a>
+
+            <a href="index.html#vorbestellung">
+                Vorbestellung
+            </a>
+
+            <a href="index.html#bewertungen">
+                Bewertungen
+            </a>
+
+            <a href="impressum.html">
+                Impressum
+            </a>
 
         </nav>
 
-        <a href="tel:+49644136444" class="phone">
+
+        <a
+            href="tel:+49644136444"
+            class="header-phone"
+        >
             ☎ 06441 – 36444
         </a>
+
 
     </div>
 
@@ -482,13 +639,13 @@
 
 <section class="legal-hero">
 
-    <div class="hero-inner">
+    <div class="legal-container legal-hero-inner">
 
-        <div class="kicker">
+        <div class="eyebrow">
             RECHTLICHE INFORMATIONEN
         </div>
 
-        <h1 class="hero-title">
+        <h1 class="legal-title">
             Unsere AGB.
         </h1>
 
@@ -497,200 +654,204 @@
 </section>
 
 
-<main class="content">
+<main class="legal-main">
 
-    <div class="content-inner">
-
-        <div class="legal-card">
+    <div class="legal-card">
 
 
-            <section class="legal-section">
+        <section class="legal-section">
 
-                <h2>
-                    1. Die Auftragserteilung
-                </h2>
+            <h2>
+                1. Die Auftragserteilung
+            </h2>
 
-                <p>
-                    Der Fahrtauftrag kann schriftlich, mündlich, fernmündlich
-                    bzw. per Fax erfolgen. Dieser muss mindestens die folgenden
-                    Daten enthalten: den Namen, die Adresse und die Telefonnummer
-                    des Auftraggebers, das Reiseziel sowie Datum und Uhrzeit der
-                    Abholung durch den Veranstalter.
-                </p>
+            <p>
+                Der Fahrtauftrag kann schriftlich, mündlich,
+                fernmündlich bzw. per Fax erfolgen. Dieser muss
+                mindestens die folgenden Daten enthalten: den Namen,
+                die Adresse und die Telefonnummer des Auftraggebers,
+                das Reiseziel sowie Datum und Uhrzeit der Abholung
+                durch den Veranstalter.
+            </p>
 
-                <p>
-                    Der Auftraggeber meldet hierbei auch alle an der Fahrt
-                    teilnehmenden Personen an, wobei er für die Teilnahme dieser
-                    genannten Personen verantwortlich ist und für diese wie für
-                    seine eigene Teilnahmeverpflichtung einsteht.
-                </p>
+            <p>
+                Der Auftraggeber meldet hierbei auch alle an der Fahrt
+                teilnehmenden Personen an, wobei er für die Teilnahme
+                dieser genannten Personen verantwortlich ist und für
+                diese wie für seine eigene Teilnahmeverpflichtung
+                einsteht.
+            </p>
 
-                <p>
-                    Durch den Zahlungsdienst wird der Auftrag schriftlich oder
-                    fernmündlich bestätigt und ist damit verbindlich.
-                </p>
+            <p>
+                Durch den Zahlungsdienst wird der Auftrag schriftlich
+                oder fernmündlich bestätigt und ist damit verbindlich.
+            </p>
 
-                <p>
-                    Bei vom Auftraggeber gewünschten Umbuchungen, die weniger
-                    als 2 Tage vor dem Reiseantritt liegen, behalten wir uns das
-                    Recht vor, den Auftrag von unserer Seite aus zu stornieren,
-                    wenn es uns organisatorisch nicht möglich ist, die Änderungen
-                    aufgrund der Fahrzeugauslastung zu berücksichtigen.
-                </p>
+            <p>
+                Bei vom Auftraggeber gewünschten Umbuchungen, die
+                weniger als 2 Tage vor dem Reiseantritt liegen,
+                behalten wir uns das Recht vor, den Auftrag von
+                unserer Seite aus zu stornieren, wenn es uns
+                organisatorisch nicht möglich ist, die Änderungen
+                aufgrund der Fahrzeugauslastung zu berücksichtigen.
+            </p>
 
-                <p>
-                    Die Reisebüros treten im Zusammenhang mit der Auftragserteilung
-                    nur als Vermittler auf und übernehmen deshalb auch keinerlei
-                    Gewährleistungsverpflichtungen.
-                </p>
+            <p>
+                Die Reisebüros treten im Zusammenhang mit der
+                Auftragserteilung nur als Vermittler auf und
+                übernehmen deshalb auch keinerlei
+                Gewährleistungsverpflichtungen.
+            </p>
 
-            </section>
-
-
-            <section class="legal-section">
-
-                <h2>
-                    2. Der Fahrpreis
-                </h2>
-
-                <p>
-                    Der Fahrpreis ist bei der Ankunft am Flughafen bzw. entsprechend
-                    bei einer Abholung vom Flughafen am gewünschten Zielort in
-                    voller Höhe zu entrichten.
-                </p>
-
-                <p>
-                    Im Ausnahmefall kann mit dem Veranstalter auch eine andere
-                    Zahlungsweise, zum Beispiel per Überweisung oder Scheck,
-                    vereinbart werden.
-                </p>
-
-                <p>
-                    Der Fahrpreis beinhaltet die Fahrt zum gewünschten Zielort
-                    inklusive Beförderung des üblichen Reisegepäcks sowie eine
-                    Unfallversicherung der Fahrgäste und eine Reisegepäckversicherung.
-                </p>
-
-                <p>
-                    Besonders große Gepäckstücke oder mitgenommene Tiere bedürfen
-                    der ausdrücklichen Zustimmung des Veranstalters und werden
-                    unter Umständen extra berechnet.
-                </p>
-
-            </section>
+        </section>
 
 
-            <section class="legal-section">
+        <section class="legal-section">
 
-                <h2>
-                    3. Die Auftragsstornierung
-                </h2>
+            <h2>
+                2. Der Fahrpreis
+            </h2>
 
-                <p>
-                    Die Stornierung des Fahrtauftrages kann durch den Auftraggeber
-                    bis 4 Tage vor Antritt der Reise kostenfrei erfolgen.
-                </p>
+            <p>
+                Der Fahrpreis ist bei der Ankunft am Flughafen bzw.
+                entsprechend bei einer Abholung vom Flughafen am
+                gewünschten Zielort in voller Höhe zu entrichten.
+            </p>
 
-                <p>
-                    Wird die Fahrt 3 Tage vor Reiseantritt storniert, so berechnen
-                    wir 25 % des Fahrpreises, entsprechend bei 2 Tagen 50 % und
-                    einen Tag vor der Reise bzw. am Reisetag selbst 75 % des
-                    Fahrpreises.
-                </p>
+            <p>
+                Im Ausnahmefall kann mit dem Veranstalter auch eine
+                andere Zahlungsweise, zum Beispiel per Überweisung
+                oder Scheck, vereinbart werden.
+            </p>
 
-            </section>
+            <p>
+                Der Fahrpreis beinhaltet die Fahrt zum gewünschten
+                Zielort inklusive Beförderung des üblichen Reisegepäcks
+                sowie eine Unfallversicherung der Fahrgäste und eine
+                Reisegepäckversicherung.
+            </p>
 
+            <p>
+                Besonders große Gepäckstücke oder mitgenommene Tiere
+                bedürfen der ausdrücklichen Zustimmung des Veranstalters
+                und werden unter Umständen extra berechnet.
+            </p>
 
-            <section class="legal-section">
-
-                <h2>
-                    4. Die Abholung vom Flughafen Frankfurt/Main
-                </h2>
-
-                <p>
-                    Wird vom Fahrgast eine Abholung vom Flughafen gewünscht, so
-                    hat er nach Überprüfung die Richtigkeit der angegebenen
-                    Flugdaten zu bestätigen.
-                </p>
-
-                <p>
-                    Es wird ein Merkblatt ausgehändigt, das die für die Fahrer
-                    des Veranstalters verbindlichen Treffpunkte enthält.
-                </p>
-
-                <p>
-                    Andere als die dort vermerkten Treffpunkte sind nicht möglich
-                    und können deshalb nicht verbindlich mit den Fahrern
-                    abgesprochen werden.
-                </p>
-
-                <p>
-                    Fahrgäste, die nicht innerhalb der Wartezeit zum Treffpunkt
-                    kommen oder falsche Rückflugdaten angegeben haben, besitzen
-                    keinen Anspruch auf Beförderung.
-                </p>
-
-                <p>
-                    Flugänderungen sind unmittelbar nach Kenntnisnahme durch
-                    den Fahrgast dem Veranstalter telefonisch oder per Fax
-                    vor Antritt des Rückflugs mitzuteilen.
-                </p>
-
-                <p>
-                    <strong>Treffpunkte in Frankfurt:</strong>
-                </p>
-
-                <p>
-                    Terminal 1 – Ankunftshalle B, Meeting Point<br>
-                    Terminal 2 – Ankunftshalle D/E, Meeting Point
-                </p>
-
-            </section>
+        </section>
 
 
-            <section class="legal-section">
+        <section class="legal-section">
 
-                <h2>
-                    5. Wartezeiten
-                </h2>
+            <h2>
+                3. Die Auftragsstornierung
+            </h2>
 
-                <p>
-                    Trifft der Fahrgast nicht bis spätestens 1 Stunde nach der
-                    Landung am vereinbarten Meeting Point ein oder hat dieser
-                    dem wartenden Fahrer bzw. dem Veranstalter eine eventuelle
-                    Verzögerung nicht mitgeteilt, so erlischt sein Anspruch
-                    auf Beförderung.
-                </p>
+            <p>
+                Die Stornierung des Fahrtauftrages kann durch den
+                Auftraggeber bis 4 Tage vor Antritt der Reise
+                kostenfrei erfolgen.
+            </p>
 
-                <p>
-                    Ebenso hat der Fahrgast eine eventuelle Wartezeit von
-                    1 Stunde bis zur Abholung zu akzeptieren.
-                </p>
+            <p>
+                Wird die Fahrt 3 Tage vor Reiseantritt storniert,
+                so berechnen wir 25 % des Fahrpreises, entsprechend
+                bei 2 Tagen 50 % und einen Tag vor der Reise bzw.
+                am Reisetag selbst 75 % des Fahrpreises.
+            </p>
 
-                <p>
-                    Sollte dann – trotz telefonischer Rückfrage beim Veranstalter –
-                    kein Fahrer eintreffen, übernimmt der Veranstalter die
-                    Mehrkosten der Heimfahrt.
-                </p>
-
-                <p>
-                    Außerdem werden die Fahrgäste bei einer Fahrzeugpanne auf
-                    Kosten des Veranstalters mit einem Taxi oder Ersatzfahrzeug
-                    weiterbefördert.
-                </p>
-
-            </section>
+        </section>
 
 
-            <div class="legal-note">
+        <section class="legal-section">
 
-                Maßgeblich für die konkrete Fahrt sind die zum Zeitpunkt der
-                Buchung vereinbarten Bedingungen. Gesetzlich zwingende
-                Verbraucherrechte bleiben unberührt.
+            <h2>
+                4. Die Abholung vom Flughafen Frankfurt/Main
+            </h2>
 
-            </div>
+            <p>
+                Wird vom Fahrgast eine Abholung vom Flughafen
+                gewünscht, so hat er nach Überprüfung die Richtigkeit
+                der angegebenen Flugdaten zu bestätigen.
+            </p>
+
+            <p>
+                Es wird ein Merkblatt ausgehändigt, das die für die
+                Fahrer des Veranstalters verbindlichen Treffpunkte
+                enthält.
+            </p>
+
+            <p>
+                Andere als die dort vermerkten Treffpunkte sind nicht
+                möglich und können deshalb nicht verbindlich mit den
+                Fahrern abgesprochen werden.
+            </p>
+
+            <p>
+                Fahrgäste, die nicht innerhalb der Wartezeit zum
+                Treffpunkt kommen oder falsche Rückflugdaten angegeben
+                haben, besitzen keinen Anspruch auf Beförderung.
+            </p>
+
+            <p>
+                Flugänderungen sind unmittelbar nach Kenntnisnahme
+                durch den Fahrgast dem Veranstalter telefonisch oder
+                per Fax vor Antritt des Rückflugs mitzuteilen.
+            </p>
+
+            <p>
+                <strong>Treffpunkte in Frankfurt:</strong>
+            </p>
+
+            <p>
+                Terminal 1 – Ankunftshalle B, Meeting Point<br>
+                Terminal 2 – Ankunftshalle D/E, Meeting Point
+            </p>
+
+        </section>
+
+
+        <section class="legal-section">
+
+            <h2>
+                5. Wartezeiten
+            </h2>
+
+            <p>
+                Trifft der Fahrgast nicht bis spätestens 1 Stunde
+                nach der Landung am vereinbarten Meeting Point ein
+                oder hat dieser dem wartenden Fahrer bzw. dem
+                Veranstalter eine eventuelle Verzögerung nicht
+                mitgeteilt, so erlischt sein Anspruch auf Beförderung.
+            </p>
+
+            <p>
+                Ebenso hat der Fahrgast eine eventuelle Wartezeit
+                von 1 Stunde bis zur Abholung zu akzeptieren.
+            </p>
+
+            <p>
+                Sollte dann – trotz telefonischer Rückfrage beim
+                Veranstalter – kein Fahrer eintreffen, übernimmt der
+                Veranstalter die Mehrkosten der Heimfahrt.
+            </p>
+
+            <p>
+                Außerdem werden die Fahrgäste bei einer Fahrzeugpanne
+                auf Kosten des Veranstalters mit einem Taxi oder
+                Ersatzfahrzeug weiterbefördert.
+            </p>
+
+        </section>
+
+
+        <div class="legal-note">
+
+            Die vorstehenden Bedingungen entsprechen dem von Ihnen
+            bereitgestellten bisherigen AGB-Inhalt. Gesetzlich
+            zwingende Rechte bleiben unberührt.
 
         </div>
+
 
     </div>
 
@@ -702,11 +863,20 @@
     <div class="footer-grid">
 
         <div>
+
             <h3>Kontakt</h3>
 
-            <p>VPW GmbH · Flughafentransferservice Salavati</p>
-            <p>Bahnhof Nordseite 10</p>
-            <p>35576 Wetzlar</p>
+            <p>
+                VPW GmbH · Flughafentransferservice Salavati
+            </p>
+
+            <p>
+                Bahnhof Nordseite 10
+            </p>
+
+            <p>
+                35576 Wetzlar
+            </p>
 
             <p>
                 <a href="tel:+49644136444">
@@ -719,25 +889,53 @@
                     medicar.prinz@gmail.com
                 </a>
             </p>
+
         </div>
 
+
         <div>
+
             <h3>Unternehmen</h3>
-            <p>Geschäftsführer: S. R. Salavati</p>
+
+            <p>
+                Geschäftsführer: S. R. Salavati
+            </p>
+
             <p>HRB 6427</p>
+
             <p>Amtsgericht Wetzlar</p>
+
             <p>Finanzamt Gießen</p>
+
         </div>
 
+
         <div>
+
             <h3>Rechtliches</h3>
 
-            <p><a href="impressum.html">Impressum</a></p>
-            <p><a href="datenschutz.html">Datenschutzerklärung</a></p>
-            <p><a href="agb.html">AGB</a></p>
+            <p>
+                <a href="impressum.html">
+                    Impressum
+                </a>
+            </p>
+
+            <p>
+                <a href="datenschutz.html">
+                    Datenschutzerklärung
+                </a>
+            </p>
+
+            <p>
+                <a href="agb.html">
+                    AGB
+                </a>
+            </p>
+
         </div>
 
     </div>
+
 
     <div class="footer-bottom">
 
@@ -755,19 +953,29 @@
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
 
-    const button = document.getElementById("mobileMenu");
-    const nav = document.getElementById("nav");
+document.addEventListener("DOMContentLoaded", function () {
 
-    if(button && nav){
-        button.addEventListener("click", function(){
+    const menu =
+        document.getElementById("mobileMenu");
+
+    const nav =
+        document.getElementById("mainNav");
+
+    if (menu && nav) {
+
+        menu.addEventListener("click", function () {
+
             nav.classList.toggle("open");
+
         });
+
     }
 
 });
+
 </script>
+
 
 </body>
 </html>
