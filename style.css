@@ -1889,3 +1889,105 @@ button{cursor:pointer}
     animation:none !important;
   }
 }
+/* =========================================================
+   BEWERTUNGEN – PROPORTIONEN KORRIGIEREN
+========================================================= */
+
+.reviews-heading {
+    margin-bottom: 48px !important;
+}
+
+.reviews-heading .section-title {
+    max-width: 790px !important;
+
+    font-size: 68px !important;
+
+    line-height: 1.10 !important;
+
+    letter-spacing: -1px !important;
+
+    transform: scaleY(1.10) !important;
+    transform-origin: left top !important;
+}
+
+/* zweite Zeile etwas Luft, aber nicht auseinanderziehen */
+.reviews-heading .section-title span {
+    margin-top: 0 !important;
+}
+
+
+/* Untertitel näher an den Titel */
+.reviews-subtitle {
+    margin-top: 18px !important;
+}
+
+
+/* Bewertungsbereich insgesamt kompakter */
+.review-slider {
+    margin-top: 0 !important;
+}
+
+.review-card {
+    min-height: 300px !important;
+}
+
+
+/* Punkte nicht so weit weg */
+.review-dots {
+    margin-top: 20px !important;
+}
+
+
+/* Google-Box wieder näher an die Bewertungen */
+.google-review-cta {
+    margin-top: 42px !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:1100px){
+
+    .reviews-heading .section-title {
+        max-width: 700px !important;
+        font-size: 57px !important;
+        line-height: 1.08 !important;
+        letter-spacing: -.7px !important;
+        transform: scaleY(1.07) !important;
+    }
+
+}
+
+
+/* =========================================================
+   HANDY
+========================================================= */
+
+@media (max-width:800px){
+
+    .reviews-heading {
+        margin-bottom: 31px !important;
+    }
+
+    .reviews-heading .section-title {
+        max-width: 100% !important;
+        font-size: 42px !important;
+        line-height: 1.06 !important;
+        letter-spacing: -.4px !important;
+        transform: scaleY(1.05) !important;
+    }
+
+    .reviews-subtitle {
+        margin-top: 16px !important;
+    }
+
+    .review-dots {
+        margin-top: 17px !important;
+    }
+
+    .google-review-cta {
+        margin-top: 35px !important;
+    }
+}
