@@ -3211,3 +3211,91 @@ button{
         padding: 25px 21px !important;
     }
 }
+/* =========================================================
+   BEWERTUNGEN – TITEL LUFTIG UND NICHT GEQUETSCHT
+========================================================= */
+
+.reviews-heading .section-title {
+    max-width: 900px !important;
+
+    margin: 0 !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 76px !important;
+
+    line-height: 1.12 !important;
+
+    letter-spacing: -1.5px !important;
+
+    font-weight: 900 !important;
+}
+
+.reviews-heading .section-title span {
+    display: block !important;
+}
+
+.reviews-subtitle {
+    margin-top: 25px !important;
+}
+
+
+/* =========================================================
+   WARUM SALAVATI – GLEICHER LUFTIGER STIL
+========================================================= */
+
+.why-section .section-title {
+    max-width: 850px !important;
+
+    margin: 0 !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 76px !important;
+
+    line-height: 1.12 !important;
+
+    letter-spacing: -1.5px !important;
+
+    font-weight: 900 !important;
+}
+
+.why-section .section-title span {
+    display: block !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .reviews-heading .section-title,
+    .why-section .section-title {
+        font-size: 62px !important;
+
+        line-height: 1.1 !important;
+
+        letter-spacing: -1.2px !important;
+    }
+
+}
+
+
+/* =========================================================
+   HANDY
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .reviews-heading .section-title,
+    .why-section .section-title {
+        font-size: 43px !important;
+
+        line-height: 1.08 !important;
+
+        letter-spacing: -0.8px !important;
+    }
+
+}
