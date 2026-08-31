@@ -2236,3 +2236,95 @@ button{
     }
 
 }
+/* =========================================================
+   MOBILE FIX – REVIEWS
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* Bewertungen Überschrift */
+    .reviews-heading {
+        display: block;
+    }
+
+    .reviews-heading .section-title {
+        font-size: 42px;
+        line-height: 0.98;
+        letter-spacing: -2.5px;
+        max-width: 100%;
+        overflow-wrap: normal;
+    }
+
+    .reviews-subtitle {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    /* Bewertungsbox */
+    .rating-box {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin-top: 28px;
+        padding: 28px 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rating-box strong {
+        font-size: 42px;
+        line-height: 1;
+    }
+
+    .rating-box strong span {
+        font-size: 42px;
+    }
+
+    .rating-box > div {
+        font-size: 20px;
+    }
+
+    .rating-box small {
+        display: block;
+        width: 100%;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    /* Slider */
+    .review-slider {
+        width: 100%;
+        margin-top: 28px;
+        display: block;
+    }
+
+    .review-window {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .review-track {
+        display: flex;
+        gap: 14px;
+    }
+
+    .review-card {
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 24px;
+    }
+
+    /* Pfeile auf dem Handy nicht neben die Karte quetschen */
+    .review-arrow {
+        display: none;
+    }
+
+    /* Punkte */
+    .review-dots {
+        margin-top: 18px;
+    }
+
+}
