@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Datenschutzerklärung – Flughafentransferservice Salavati</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Datenschutzerklärung – Flughafentransferservice Salavati
+    </title>
+
+    <meta
+        name="description"
+        content="Datenschutzerklärung des Flughafentransferservice Salavati aus Wetzlar."
+    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
@@ -16,6 +33,10 @@
     >
 
     <style>
+
+        /* =========================================================
+           GRUNDLAGEN
+        ========================================================= */
 
         :root {
             --ink: #171a1f;
@@ -29,23 +50,30 @@
             box-sizing: border-box;
         }
 
-        html,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             margin: 0;
             padding: 0;
             width: 100%;
             max-width: 100%;
             overflow-x: hidden;
-        }
 
-        body {
             font-family: "DM Sans", Arial, sans-serif;
 
             background: var(--bg);
-
             color: var(--ink);
 
             line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
         }
 
         a {
@@ -53,26 +81,24 @@
             text-decoration: none;
         }
 
-        /* HEADER */
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
 
         .site-header {
             width: 100%;
-            height: 100px;
-
-            background: rgba(245,244,241,.98);
-
+            background: rgba(245, 244, 241, 0.98);
             border-bottom: 1px solid var(--line);
         }
 
         .header-inner {
             width: min(1400px, calc(100% - 80px));
-
-            height: 100%;
+            min-height: 100px;
 
             margin: 0 auto;
 
             display: flex;
-
             align-items: center;
 
             gap: 28px;
@@ -80,13 +106,11 @@
 
         .brand {
             display: flex;
-
             align-items: center;
 
             gap: 12px;
 
             min-width: 315px;
-
             flex-shrink: 0;
         }
 
@@ -95,20 +119,22 @@
             height: 62px;
 
             object-fit: contain;
+
+            flex-shrink: 0;
         }
 
         .brand-copy {
             display: flex;
-
             flex-direction: column;
+
+            min-width: 0;
         }
 
         .brand-copy strong {
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 19px;
-
-            line-height: .94;
+            line-height: 0.94;
 
             font-weight: 900;
 
@@ -121,21 +147,20 @@
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 7px;
-
             font-weight: 800;
 
             letter-spacing: 2px;
 
             color: #7b8086;
+
+            white-space: nowrap;
         }
 
         .main-nav {
             flex: 1;
 
             display: flex;
-
             justify-content: center;
-
             align-items: center;
 
             gap: 26px;
@@ -145,8 +170,9 @@
 
         .main-nav a {
             font-size: 14px;
-
             font-weight: 700;
+
+            transition: color 0.2s ease;
         }
 
         .main-nav a:hover {
@@ -159,35 +185,52 @@
             padding: 0 22px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             border: 1.5px solid var(--ink);
-
             border-radius: 11px;
 
             font-size: 14px;
-
             font-weight: 700;
 
             white-space: nowrap;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
         }
 
         .header-phone:hover {
             background: var(--ink);
-
             color: #fff;
-
-            font-weight: 900;
         }
 
         .mobile-menu {
             display: none;
+
+            width: 44px;
+            height: 44px;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid var(--line);
+            border-radius: 11px;
+
+            background: #fff;
+
+            color: var(--ink);
+
+            font-size: 22px;
+
+            cursor: pointer;
         }
 
-        /* HERO */
+
+        /* =========================================================
+           HERO
+        ========================================================= */
 
         .legal-hero {
             background: #eceae4;
@@ -207,7 +250,6 @@
 
         .eyebrow {
             display: flex;
-
             align-items: center;
 
             gap: 12px;
@@ -217,7 +259,6 @@
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 10px;
-
             font-weight: 800;
 
             letter-spacing: 3px;
@@ -229,8 +270,9 @@
             content: "";
 
             width: 32px;
-
             height: 2px;
+
+            flex-shrink: 0;
 
             background: var(--gold);
         }
@@ -238,20 +280,29 @@
         .legal-title {
             margin: 0;
 
+            max-width: 100%;
+
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: clamp(48px, 5.7vw, 74px);
 
-            line-height: .96;
+            line-height: 0.96;
 
             letter-spacing: -3.5px;
 
             font-weight: 900;
 
             color: var(--gold);
+
+            overflow-wrap: break-word;
+            word-break: normal;
+            hyphens: auto;
         }
 
-        /* CONTENT */
+
+        /* =========================================================
+           INHALT
+        ========================================================= */
 
         .legal-main {
             background: #fff;
@@ -272,11 +323,10 @@
 
             border-radius: 22px;
 
-            box-shadow: 0 18px 55px rgba(0,0,0,.045);
+            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.045);
         }
 
         .legal-section {
-
             margin-top: 43px;
 
             padding-top: 34px;
@@ -285,7 +335,6 @@
         }
 
         .legal-section:first-child {
-
             margin-top: 0;
 
             padding-top: 0;
@@ -294,7 +343,6 @@
         }
 
         .legal-section h2 {
-
             margin: 0 0 14px;
 
             font-family: "Montserrat", Arial, sans-serif;
@@ -302,10 +350,11 @@
             font-size: 25px;
 
             line-height: 1.2;
+
+            font-weight: 800;
         }
 
         .legal-section p {
-
             margin: 0 0 16px;
 
             color: #59636d;
@@ -313,17 +362,17 @@
             font-size: 16px;
 
             line-height: 1.8;
+
+            overflow-wrap: break-word;
         }
 
         .legal-section ul {
-
             margin: 12px 0 20px;
 
             padding-left: 26px;
         }
 
         .legal-section li {
-
             margin-bottom: 10px;
 
             color: #59636d;
@@ -331,17 +380,19 @@
             font-size: 16px;
 
             line-height: 1.8;
+
+            overflow-wrap: break-word;
         }
 
         .legal-section a {
-
             color: var(--gold);
 
             font-weight: 700;
+
+            overflow-wrap: anywhere;
         }
 
         .legal-note {
-
             margin-top: 40px;
 
             padding: 20px 22px;
@@ -355,12 +406,16 @@
             font-size: 14px;
 
             line-height: 1.7;
+
+            overflow-wrap: break-word;
         }
 
-        /* FOOTER */
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
 
         .footer {
-
             background: #0b0c0d;
 
             color: #fff;
@@ -369,20 +424,19 @@
         }
 
         .footer-grid {
-
             width: min(1400px, calc(100% - 80px));
 
             margin: 0 auto;
 
             display: grid;
 
-            grid-template-columns: 1.2fr 1fr 1fr;
+            grid-template-columns:
+                1.2fr 1fr 1fr;
 
             gap: 70px;
         }
 
         .footer h3 {
-
             margin: 0 0 17px;
 
             font-family: "Montserrat", Arial, sans-serif;
@@ -391,26 +445,26 @@
         }
 
         .footer p {
-
             margin: 8px 0;
 
             color: #adb1b6;
 
             font-size: 14px;
+
+            overflow-wrap: break-word;
         }
 
         .footer a {
-
             color: #adb1b6;
+
+            overflow-wrap: anywhere;
         }
 
         .footer a:hover {
-
             color: var(--gold);
         }
 
         .footer-bottom {
-
             width: min(1400px, calc(100% - 80px));
 
             margin: 44px auto 0;
@@ -430,17 +484,14 @@
             font-size: 12px;
         }
 
-        /* MOBILE */
 
-        @media (max-width:850px) {
+        /* =========================================================
+           TABLET
+        ========================================================= */
 
-            .site-header {
-
-                height: auto;
-            }
+        @media (max-width: 850px) {
 
             .header-inner {
-
                 width: calc(100% - 28px);
 
                 min-height: 70px;
@@ -451,56 +502,35 @@
             }
 
             .brand {
-
                 min-width: 0;
 
                 flex: 1;
+
+                max-width: calc(100% - 60px);
             }
 
             .brand-logo {
-
                 width: 46px;
-
                 height: 46px;
             }
 
             .brand-copy strong {
-
                 font-size: 13px;
             }
 
             .brand-copy span {
-
                 font-size: 5px;
 
                 letter-spacing: 1.2px;
             }
 
             .mobile-menu {
-
                 display: flex;
 
-                width: 42px;
-
-                height: 42px;
-
-                align-items: center;
-
-                justify-content: center;
-
-                border: 1px solid var(--line);
-
-                border-radius: 10px;
-
-                background: #fff;
-
-                font-size: 20px;
-
-                cursor: pointer;
+                flex-shrink: 0;
             }
 
             .main-nav {
-
                 display: none;
 
                 order: 5;
@@ -511,19 +541,17 @@
 
                 flex-direction: column;
 
-                gap: 0;
-
                 align-items: stretch;
+
+                gap: 0;
             }
 
             .main-nav.open {
-
                 display: flex;
             }
 
             .main-nav a {
-
-                padding: 12px 4px;
+                padding: 13px 4px;
 
                 border-top: 1px solid var(--line);
 
@@ -531,105 +559,258 @@
             }
 
             .header-phone {
-
                 display: none;
             }
 
-            .legal-container,
-            .legal-card {
+            .legal-container {
+                width: calc(100% - 28px);
+            }
 
+            .legal-card {
                 width: calc(100% - 28px);
             }
 
             .legal-hero-inner {
-
                 padding: 43px 0 40px;
             }
 
             .legal-title {
-
                 font-size: 42px;
 
+                line-height: 0.98;
+
                 letter-spacing: -2.5px;
+
+                overflow-wrap: anywhere;
+
+                hyphens: auto;
             }
 
             .legal-main {
-
                 padding: 43px 0 70px;
             }
 
             .legal-card {
-
-                padding: 27px 20px;
+                padding: 30px 22px;
 
                 border-radius: 18px;
             }
 
             .legal-section {
-
                 margin-top: 36px;
 
                 padding-top: 28px;
             }
 
             .legal-section h2 {
-
                 font-size: 21px;
             }
 
             .legal-section p,
             .legal-section li {
-
                 font-size: 15px;
 
                 line-height: 1.75;
             }
 
             .footer-grid {
-
                 width: calc(100% - 28px);
 
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
 
                 gap: 38px;
             }
 
             .footer-bottom {
-
                 width: calc(100% - 28px);
 
                 flex-direction: column;
+
+                gap: 8px;
             }
 
         }
 
-        @media (max-width:520px) {
+
+        /* =========================================================
+           HANDY
+        ========================================================= */
+
+        @media (max-width: 520px) {
+
+            .header-inner {
+                width: calc(100% - 24px);
+            }
+
+            .brand {
+                gap: 9px;
+            }
 
             .brand-logo {
-
                 width: 42px;
-
                 height: 42px;
             }
 
             .brand-copy strong {
-
                 font-size: 11.5px;
+
+                letter-spacing: -0.2px;
             }
 
             .brand-copy span {
+                margin-top: 5px;
 
                 font-size: 4.2px;
+
+                letter-spacing: 1px;
             }
 
+            .mobile-menu {
+                width: 42px;
+                height: 42px;
+
+                border-radius: 10px;
+
+                font-size: 20px;
+            }
+
+            .legal-container {
+                width: calc(100% - 24px);
+            }
+
+            .legal-hero-inner {
+                padding: 38px 0 36px;
+            }
+
+            .eyebrow {
+                gap: 10px;
+
+                margin-bottom: 20px;
+
+                font-size: 8px;
+
+                letter-spacing: 2.2px;
+            }
+
+            .eyebrow::before {
+                width: 26px;
+            }
+
+            /*
+             * WICHTIG:
+             * Die Überschrift bleibt innerhalb des Bildschirms.
+             */
+
             .legal-title {
+                width: 100%;
+                max-width: 100%;
 
                 font-size: 36px;
+
+                line-height: 1;
+
+                letter-spacing: -2px;
+
+                overflow-wrap: anywhere;
+
+                word-break: normal;
+
+                hyphens: auto;
+            }
+
+            .legal-main {
+                padding: 34px 0 55px;
             }
 
             .legal-card {
+                width: calc(100% - 24px);
 
-                padding: 22px 16px;
+                padding: 24px 17px;
+
+                border-radius: 17px;
+            }
+
+            .legal-section {
+                margin-top: 32px;
+
+                padding-top: 25px;
+            }
+
+            .legal-section h2 {
+                margin-bottom: 12px;
+
+                font-size: 20px;
+
+                line-height: 1.25;
+
+                letter-spacing: -0.3px;
+            }
+
+            .legal-section p,
+            .legal-section li {
+                font-size: 15px;
+
+                line-height: 1.7;
+            }
+
+            .legal-section ul {
+                padding-left: 22px;
+            }
+
+            .legal-note {
+                margin-top: 32px;
+
+                padding: 17px 16px;
+
+                font-size: 13px;
+            }
+
+            .footer {
+                padding: 48px 0 22px;
+            }
+
+            .footer-grid {
+                width: calc(100% - 24px);
+
+                grid-template-columns: 1fr;
+
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                width: calc(100% - 24px);
+
+                margin-top: 34px;
+            }
+
+        }
+
+
+        /* =========================================================
+           SEHR KLEINE HANDYS
+        ========================================================= */
+
+        @media (max-width: 380px) {
+
+            .legal-title {
+                font-size: 32px;
+
+                letter-spacing: -1.7px;
+            }
+
+            .legal-card {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .legal-section h2 {
+                font-size: 19px;
+            }
+
+            .legal-section p,
+            .legal-section li {
+                font-size: 14px;
             }
 
         }
@@ -638,15 +819,24 @@
 
 </head>
 
+
 <body>
 
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header class="site-header">
 
     <div class="header-inner">
 
 
-        <a href="index.html" class="brand">
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="Flughafentransferservice Salavati"
+        >
 
             <img
                 class="brand-logo"
@@ -674,14 +864,19 @@
             id="mobileMenu"
             type="button"
             aria-label="Menü öffnen"
+            aria-expanded="false"
         >
             ☰
         </button>
 
 
-        <nav class="main-nav" id="mainNav">
+        <nav
+            class="main-nav"
+            id="mainNav"
+            aria-label="Hauptnavigation"
+        >
 
-            <a href="index.html#ueber-uns">
+            <a href="index.html#ueber">
                 Über uns
             </a>
 
@@ -721,6 +916,10 @@
 </header>
 
 
+<!-- =========================================================
+     HERO
+========================================================= -->
+
 <section class="legal-hero">
 
     <div class="legal-container legal-hero-inner">
@@ -737,6 +936,10 @@
 
 </section>
 
+
+<!-- =========================================================
+     INHALT
+========================================================= -->
 
 <main class="legal-main">
 
@@ -755,28 +958,36 @@
             </p>
 
             <p>
+
                 <strong>
                     VPW GmbH · Flughafentransferservice Salavati
-                </strong><br>
+                </strong>
+                <br>
 
-                Bahnhof Nordseite 10<br>
+                Bahnhof Nordseite 10
+                <br>
 
-                35576 Wetzlar<br>
+                35576 Wetzlar
+                <br>
 
                 Deutschland
+
             </p>
 
             <p>
+
                 Telefon:
                 <a href="tel:+49644136444">
                     06441 36444
                 </a>
+
                 <br>
 
                 E-Mail:
                 <a href="mailto:info@flughafen-transfer-salavati.de">
                     info@flughafen-transfer-salavati.de
                 </a>
+
             </p>
 
         </section>
@@ -1075,6 +1286,10 @@
 </main>
 
 
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer class="footer">
 
     <div class="footer-grid">
@@ -1183,20 +1398,62 @@
 </footer>
 
 
+<!-- =========================================================
+     MOBILE MENÜ
+========================================================= -->
+
 <script>
 
-document
-    .getElementById("mobileMenu")
-    .addEventListener("click", function () {
+    const mobileMenu =
+        document.getElementById("mobileMenu");
 
-        document
-            .getElementById("mainNav")
-            .classList.toggle("open");
+    const mainNav =
+        document.getElementById("mainNav");
 
-    });
+
+    if (mobileMenu && mainNav) {
+
+        mobileMenu.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    mainNav.classList.toggle("open");
+
+                mobileMenu.setAttribute(
+                    "aria-expanded",
+                    isOpen ? "true" : "false"
+                );
+
+            }
+        );
+
+
+        mainNav
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        mainNav.classList.remove("open");
+
+                        mobileMenu.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+                );
+
+            });
+
+    }
 
 </script>
 
 
 </body>
+
 </html>
