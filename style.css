@@ -2163,3 +2163,76 @@ button{
         transition:none !important;
     }
 }
+/* =========================================================
+   BEWERTUNGEN – PERFEKTE TITEL-PROPORTION
+========================================================= */
+
+.reviews-heading .section-title {
+    width: 900px !important;
+    max-width: 900px !important;
+
+    margin: 0 !important;
+
+    font-size: 72px !important;
+    line-height: 0.98 !important;
+
+    letter-spacing: -1.5px !important;
+    font-weight: 900 !important;
+
+    transform: none !important;
+}
+
+.reviews-heading .section-title span {
+    display: block !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+}
+
+
+/* Untertitel wieder nah genug am Titel */
+
+.reviews-subtitle {
+    margin-top: 18px !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .reviews-heading .section-title {
+        width: 680px !important;
+        max-width: 680px !important;
+
+        font-size: 58px !important;
+        line-height: 0.99 !important;
+
+        letter-spacing: -1px !important;
+    }
+
+}
+
+
+/* =========================================================
+   HANDY
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .reviews-heading .section-title {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: 42px !important;
+        line-height: 1 !important;
+
+        letter-spacing: -.5px !important;
+    }
+
+    .reviews-heading .section-title span {
+        white-space: normal !important;
+    }
+
+}
