@@ -2328,3 +2328,232 @@ button{
     }
 
 }
+/* =========================================================
+   MOBILE – BEWERTUNGEN KOMPAKTER
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Bewertungsbereich insgesamt */
+    .reviews-section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+
+    /* Überschrift */
+    .reviews-heading {
+        display: block;
+    }
+
+    .reviews-heading .section-title {
+        font-size: 42px;
+        line-height: 0.98;
+        letter-spacing: -2px;
+        margin-bottom: 18px;
+    }
+
+    .reviews-subtitle {
+        font-size: 18px;
+        line-height: 1.45;
+        margin-bottom: 28px;
+    }
+
+
+    /* 4,1 / 5 Bewertung */
+    .rating-box {
+        width: 100%;
+        min-height: 150px;
+        height: auto;
+
+        padding: 28px 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        border-radius: 22px;
+    }
+
+    .rating-box strong {
+        font-size: 58px;
+        line-height: 1;
+    }
+
+    .rating-box strong span {
+        font-size: 42px;
+    }
+
+    .rating-box > div {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+    .rating-box small {
+        font-size: 17px;
+        margin-left: 4px;
+    }
+
+
+    /* Bewertungs-Slider */
+    .review-slider {
+        margin-top: 28px;
+    }
+
+    .review-window {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .review-track {
+        gap: 14px;
+    }
+
+
+    /* Einzelne Bewertung */
+    .review-card {
+        min-width: 100%;
+        width: 100%;
+
+        padding: 28px 24px;
+
+        border-radius: 22px;
+    }
+
+
+    /* Person */
+    .review-user {
+        gap: 14px;
+    }
+
+    .review-avatar {
+        width: 58px;
+        height: 58px;
+
+        min-width: 58px;
+
+        font-size: 24px;
+    }
+
+    .review-user strong {
+        font-size: 20px;
+    }
+
+    .review-user small {
+        font-size: 14px;
+    }
+
+
+    /* Sterne */
+    .stars {
+        margin-top: 22px;
+        margin-bottom: 18px;
+
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+
+    /* Bewertungstext */
+    .review-card p {
+        font-size: 18px;
+        line-height: 1.65;
+
+        margin-bottom: 28px;
+    }
+
+
+    /* Antworten */
+    .review-answer {
+        font-size: 17px;
+    }
+
+
+    /* Pfeile */
+    .review-arrow {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+
+    /* Punkte */
+    .review-dots {
+        margin-top: 20px;
+    }
+
+
+    /* Google CTA */
+    .google-review-cta {
+        margin-top: 32px;
+
+        padding: 26px 24px;
+
+        border-radius: 22px;
+    }
+
+    .google-review-cta h3 {
+        font-size: 22px;
+    }
+
+    .google-review-cta p {
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .google-button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   SEHR KLEINE HANDYS
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .reviews-heading .section-title {
+        font-size: 37px;
+        letter-spacing: -1.7px;
+    }
+
+    .reviews-subtitle {
+        font-size: 17px;
+    }
+
+    .rating-box {
+        min-height: 135px;
+        padding: 24px 22px;
+    }
+
+    .rating-box strong {
+        font-size: 50px;
+    }
+
+    .rating-box strong span {
+        font-size: 36px;
+    }
+
+    .rating-box > div {
+        font-size: 21px;
+    }
+
+    .rating-box small {
+        font-size: 15px;
+    }
+
+    .review-card {
+        padding: 24px 20px;
+    }
+
+    .review-card p {
+        font-size: 17px;
+    }
+
+}
