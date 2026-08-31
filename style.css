@@ -2438,3 +2438,266 @@ button{
     }
 
 }
+/* =========================================================
+   ABSTÄNDE AN DIE ANDEREN SEITEN ANGLEICHEN
+========================================================= */
+
+
+/* =========================
+   WARUM SALAVATI
+========================= */
+
+.why-section {
+    padding-top: 145px !important;
+    padding-bottom: 145px !important;
+}
+
+.why-section .section-tag {
+    margin-bottom: 24px !important;
+}
+
+.why-section .section-title {
+    margin: 0 !important;
+    max-width: 780px !important;
+}
+
+.why-grid {
+    margin-top: 72px !important;
+
+    gap: 26px !important;
+}
+
+.why-card {
+    min-height: 285px !important;
+
+    padding: 38px 36px !important;
+
+    border-radius: 22px !important;
+}
+
+.why-card h3 {
+    margin-top: 29px !important;
+    margin-bottom: 14px !important;
+
+    font-size: 21px !important;
+}
+
+.why-card p {
+    max-width: 440px !important;
+
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+}
+
+
+/* =========================
+   BEWERTUNGEN
+========================= */
+
+.reviews-section {
+    padding-top: 145px !important;
+    padding-bottom: 140px !important;
+}
+
+.reviews-heading {
+    margin-bottom: 70px !important;
+
+    align-items: flex-end !important;
+}
+
+.reviews-heading .section-title {
+    max-width: 850px !important;
+}
+
+.reviews-subtitle {
+    margin-top: 23px !important;
+    font-size: 16px !important;
+}
+
+.rating-box {
+    min-width: 220px !important;
+
+    padding: 22px 25px !important;
+
+    border-radius: 18px !important;
+}
+
+
+/* Bewertungskarten */
+
+.review-slider {
+    grid-template-columns:
+        52px
+        minmax(0, 1fr)
+        52px !important;
+
+    gap: 24px !important;
+}
+
+.review-track {
+    gap: 24px !important;
+}
+
+.review-card {
+    min-height: 325px !important;
+
+    padding: 31px 29px !important;
+
+    border-radius: 21px !important;
+}
+
+.review-user {
+    gap: 13px !important;
+}
+
+.review-avatar {
+    width: 45px !important;
+    height: 45px !important;
+    flex-basis: 45px !important;
+}
+
+.stars {
+    margin-top: 24px !important;
+    margin-bottom: 17px !important;
+}
+
+.review-card p {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+}
+
+.review-answer {
+    padding-top: 25px !important;
+}
+
+.review-arrow {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+
+/* Punkte weiter nach unten */
+
+.review-dots {
+    margin-top: 28px !important;
+}
+
+
+/* Google-Bewertung deutlich weiter weg */
+
+.google-review-cta {
+    margin-top: 62px !important;
+
+    min-height: 150px !important;
+
+    padding: 31px 33px !important;
+
+    border-radius: 20px !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .why-section {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .why-grid {
+        margin-top: 48px !important;
+    }
+
+    .why-card {
+        min-height: 250px !important;
+        padding: 30px 26px !important;
+    }
+
+    .reviews-section {
+        padding-top: 100px !important;
+        padding-bottom: 95px !important;
+    }
+
+    .reviews-heading {
+        margin-bottom: 42px !important;
+    }
+
+    .review-slider {
+        gap: 10px !important;
+    }
+
+}
+
+
+/* =========================================================
+   HANDY
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .why-section {
+        padding-top: 78px !important;
+        padding-bottom: 78px !important;
+    }
+
+    .why-section .section-tag {
+        margin-bottom: 17px !important;
+    }
+
+    .why-grid {
+        margin-top: 40px !important;
+        gap: 15px !important;
+    }
+
+    .why-card {
+        min-height: 215px !important;
+        padding: 27px 24px !important;
+        border-radius: 18px !important;
+    }
+
+    .why-card h3 {
+        margin-top: 22px !important;
+        margin-bottom: 11px !important;
+    }
+
+
+    .reviews-section {
+        padding-top: 78px !important;
+        padding-bottom: 75px !important;
+    }
+
+    .reviews-heading {
+        margin-bottom: 35px !important;
+    }
+
+    .review-slider {
+        grid-template-columns:
+            34px
+            minmax(0, 1fr)
+            34px !important;
+
+        gap: 5px !important;
+    }
+
+    .review-track {
+        gap: 13px !important;
+    }
+
+    .review-card {
+        min-height: 315px !important;
+        padding: 24px 21px !important;
+    }
+
+    .review-dots {
+        margin-top: 20px !important;
+    }
+
+    .google-review-cta {
+        margin-top: 42px !important;
+        padding: 24px 21px !important;
+    }
+
+}
