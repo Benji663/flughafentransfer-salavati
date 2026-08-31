@@ -1327,7 +1327,10 @@
         <form
             class="form"
             id="bookingForm"
+            action="https://formspree.io/f/xjyvggdl"
+            method="POST"
         >
+            <input type="hidden" name="_subject" value="Neue Reservierungsanfrage – Flughafentransfer Salavati">
 
 
             <div class="form-eyebrow">
@@ -2150,36 +2153,11 @@ updateReviews();
 
 
 /* =========================================================
-   FORM
+   FORMULAR
+   Der Versand läuft über Formspree.
+   Kein JavaScript nötig – das Formular wird normal per POST
+   an den Formspree-Endpunkt gesendet.
 ========================================================= */
-
-const bookingForm =
-    document.querySelector("#bookingForm");
-
-
-if (bookingForm) {
-
-    bookingForm.addEventListener(
-        "submit",
-        function (event) {
-
-            /*
-             * Bis ein echter Formularversand
-             * (z.B. Formspree / eigener Backend-Endpunkt)
-             * angeschlossen wird, verhindern wir hier
-             * den Seiten-Reload.
-             */
-
-            event.preventDefault();
-
-            alert(
-                "Ihre Anfrage wurde erfasst. Der Versand des Formulars wird noch angeschlossen."
-            );
-
-        }
-    );
-
-}
 
 </script>
 
