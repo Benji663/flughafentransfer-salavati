@@ -2905,3 +2905,143 @@ button {
         font-size: 9px !important;
     }
 }
+/* =========================================================
+   BEWERTUNGEN – DESKTOP + IPAD FINAL
+========================================================= */
+
+@media (min-width: 801px) {
+
+    .reviews-heading {
+        display: grid !important;
+
+        grid-template-columns: minmax(0, 1fr) 220px !important;
+
+        align-items: start !important;
+
+        column-gap: 40px !important;
+
+        margin-bottom: 53px !important;
+    }
+
+    .reviews-heading > div:first-child {
+        min-width: 0 !important;
+    }
+
+    .reviews-heading .section-title {
+        width: 100% !important;
+
+        max-width: 900px !important;
+
+        margin: 0 !important;
+
+        font-size: 72px !important;
+
+        line-height: .98 !important;
+
+        letter-spacing: -1.5px !important;
+
+        white-space: normal !important;
+    }
+
+    .reviews-heading .section-title span {
+        display: block !important;
+
+        white-space: nowrap !important;
+    }
+
+    .reviews-subtitle {
+        margin-top: 18px !important;
+    }
+
+    /* Kleine Google-Box oben rechts */
+    .rating-box {
+        width: 220px !important;
+        min-width: 220px !important;
+        max-width: 220px !important;
+
+        margin: 0 !important;
+
+        padding: 22px 24px !important;
+
+        text-align: center !important;
+    }
+
+    .rating-box strong {
+        font-size: 38px !important;
+        line-height: 1 !important;
+    }
+
+    .rating-box strong span {
+        display: inline-block !important;
+
+        color: var(--gold) !important;
+
+        font-size: 36px !important;
+
+        margin-left: 5px !important;
+    }
+
+    .rating-box > div {
+        display: inline !important;
+
+        margin-left: 4px !important;
+
+        font-size: 13px !important;
+    }
+
+    .rating-box small {
+        display: block !important;
+
+        margin-top: 8px !important;
+
+        font-size: 10px !important;
+    }
+}
+
+
+/* =========================================================
+   IPAD – GLEICHE ANORDNUNG WIE PC
+========================================================= */
+
+@media (min-width: 801px) and (max-width: 1150px) {
+
+    .reviews-heading {
+        grid-template-columns: minmax(0, 1fr) 190px !important;
+
+        column-gap: 25px !important;
+    }
+
+    .reviews-heading .section-title {
+        max-width: 680px !important;
+
+        font-size: 58px !important;
+
+        line-height: .98 !important;
+
+        letter-spacing: -1px !important;
+    }
+
+    .rating-box {
+        width: 190px !important;
+        min-width: 190px !important;
+        max-width: 190px !important;
+
+        padding: 19px 15px !important;
+    }
+
+    .rating-box strong {
+        font-size: 34px !important;
+    }
+
+    .rating-box strong span {
+        font-size: 31px !important;
+    }
+
+    .rating-box > div {
+        font-size: 12px !important;
+    }
+
+    .rating-box small {
+        font-size: 9px !important;
+    }
+}
