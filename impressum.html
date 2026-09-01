@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Impressum – Flughafentransferservice Salavati</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>
+        Impressum – Flughafentransferservice Salavati
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
@@ -26,9 +42,11 @@
             --card: #faf9f6;
         }
 
+
         * {
             box-sizing: border-box;
         }
+
 
         html,
         body {
@@ -36,71 +54,99 @@
             padding: 0;
             width: 100%;
             max-width: 100%;
+
             overflow-x: hidden;
         }
 
+
         body {
             font-family: "DM Sans", Arial, sans-serif;
+
             color: var(--ink);
+
             background: var(--bg);
+
             line-height: 1.7;
         }
+
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
-        /* ================= HEADER ================= */
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
 
         .site-header {
+            position: relative;
+            z-index: 1000;
+
             width: 100%;
-            height: 100px;
 
             background: rgba(245,244,241,.98);
 
             border-bottom: 1px solid var(--line);
         }
 
+
         .header-inner {
             width: min(1400px, calc(100% - 80px));
-            height: 100%;
+
+            min-height: 100px;
 
             margin: 0 auto;
 
             display: flex;
+
             align-items: center;
 
             gap: 28px;
         }
 
+
         .brand {
             display: flex;
+
             align-items: center;
+
             gap: 12px;
 
             min-width: 315px;
+
             flex-shrink: 0;
         }
+
 
         .brand-logo {
             width: 62px;
             height: 62px;
 
-            object-fit: contain;
-
             flex-shrink: 0;
+
+            object-fit: contain;
         }
+
 
         .brand-copy {
             display: flex;
+
             flex-direction: column;
         }
+
 
         .brand-copy strong {
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 19px;
+
             line-height: .94;
 
             font-weight: 900;
@@ -110,12 +156,14 @@
             white-space: nowrap;
         }
 
+
         .brand-copy span {
             margin-top: 6px;
 
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 7px;
+
             line-height: 1;
 
             font-weight: 800;
@@ -127,28 +175,46 @@
             white-space: nowrap;
         }
 
+
         .main-nav {
             flex: 1;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
-            gap: 26px;
+            gap: 24px;
 
             white-space: nowrap;
         }
 
+
         .main-nav a {
             font-size: 14px;
+
             font-weight: 700;
 
             transition: color .2s ease;
         }
 
+
         .main-nav a:hover {
             color: var(--gold);
         }
+
+
+        .header-actions {
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            flex-shrink: 0;
+        }
+
 
         .header-phone {
             min-height: 52px;
@@ -156,34 +222,67 @@
             padding: 0 22px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             border: 1.5px solid var(--ink);
+
             border-radius: 11px;
 
+            background: transparent;
+
             font-size: 14px;
+
             font-weight: 700;
 
             white-space: nowrap;
 
             transition:
                 background .2s ease,
-                color .2s ease,
-                font-weight .2s ease;
+                color .2s ease;
         }
+
 
         .header-phone:hover {
             background: var(--ink);
+
             color: #fff;
-            font-weight: 900;
         }
 
-        .mobile-menu {
+
+        .menu-toggle {
+            display: none;
+
+            width: 46px;
+            height: 46px;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid var(--line);
+
+            border-radius: 11px;
+
+            background: #fff;
+
+            color: var(--ink);
+
+            font-size: 22px;
+
+            cursor: pointer;
+        }
+
+
+        .mobile-nav {
             display: none;
         }
 
-        /* ================= HERO ================= */
+
+        /* =====================================================
+           HERO
+        ===================================================== */
 
         .legal-hero {
             background: #eceae4;
@@ -191,17 +290,22 @@
             border-bottom: 1px solid var(--line);
         }
 
+
         .legal-container {
             width: min(1100px, calc(100% - 80px));
+
             margin: 0 auto;
         }
+
 
         .legal-hero-inner {
             padding: 62px 0 58px;
         }
 
+
         .eyebrow {
             display: flex;
+
             align-items: center;
 
             gap: 12px;
@@ -211,12 +315,14 @@
             font-family: "Montserrat", Arial, sans-serif;
 
             font-size: 10px;
+
             font-weight: 800;
 
             letter-spacing: 3px;
 
             color: var(--muted);
         }
+
 
         .eyebrow::before {
             content: "";
@@ -226,6 +332,7 @@
 
             background: var(--gold);
         }
+
 
         .legal-title {
             margin: 0;
@@ -243,13 +350,17 @@
             color: var(--gold);
         }
 
-        /* ================= CONTENT ================= */
+
+        /* =====================================================
+           CONTENT
+        ===================================================== */
 
         .legal-main {
             background: #fff;
 
             padding: 72px 0 110px;
         }
+
 
         .legal-card {
             width: min(1100px, calc(100% - 80px));
@@ -267,6 +378,7 @@
             box-shadow: 0 18px 55px rgba(0,0,0,.045);
         }
 
+
         .info-grid {
             display: grid;
 
@@ -274,6 +386,7 @@
 
             gap: 18px;
         }
+
 
         .info-box {
             min-width: 0;
@@ -287,6 +400,7 @@
             border-radius: 16px;
         }
 
+
         .info-box h2 {
             margin: 0 0 13px;
 
@@ -296,6 +410,7 @@
 
             line-height: 1.2;
         }
+
 
         .info-box p {
             margin: 6px 0;
@@ -307,11 +422,13 @@
             line-height: 1.7;
         }
 
+
         .info-box a {
             color: var(--gold);
 
             font-weight: 700;
         }
+
 
         .legal-section {
             margin-top: 43px;
@@ -320,6 +437,7 @@
 
             border-top: 1px solid #e6e1d9;
         }
+
 
         .legal-section h2 {
             margin: 0 0 14px;
@@ -331,6 +449,7 @@
             line-height: 1.2;
         }
 
+
         .legal-section p {
             margin: 0 0 16px;
 
@@ -341,23 +460,10 @@
             line-height: 1.8;
         }
 
-        .legal-note {
-            margin-top: 40px;
 
-            padding: 20px 22px;
-
-            border-left: 3px solid var(--gold);
-
-            background: #f4efe5;
-
-            color: #59636d;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-        /* ================= FOOTER ================= */
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
         .footer {
             background: #0b0c0d;
@@ -366,6 +472,7 @@
 
             padding: 65px 0 25px;
         }
+
 
         .footer-grid {
             width: min(1400px, calc(100% - 80px));
@@ -376,8 +483,9 @@
 
             grid-template-columns: 1.2fr 1fr 1fr;
 
-            gap: 70px;
+            gap: 60px;
         }
+
 
         .footer h3 {
             margin: 0 0 17px;
@@ -387,6 +495,7 @@
             font-size: 18px;
         }
 
+
         .footer p {
             margin: 8px 0;
 
@@ -395,13 +504,16 @@
             font-size: 14px;
         }
 
+
         .footer a {
             color: #adb1b6;
         }
 
+
         .footer a:hover {
             color: var(--gold);
         }
+
 
         .footer-bottom {
             width: min(1400px, calc(100% - 80px));
@@ -423,114 +535,219 @@
             font-size: 12px;
         }
 
-        /* ================= MOBILE ================= */
 
-        @media (max-width: 850px) {
+        /* =====================================================
+           IPAD / TABLET
+           GENAU WIE HAUPTSEITE
+        ===================================================== */
 
-            .site-header {
-                height: auto;
-            }
+        @media (max-width: 1150px) {
 
             .header-inner {
-                width: calc(100% - 28px);
+                width: calc(100% - 44px);
 
-                min-height: 70px;
-
-                padding: 9px 0;
-
-                flex-wrap: wrap;
+                min-height: 86px;
             }
+
 
             .brand {
                 min-width: 0;
 
-                flex: 1;
+                flex: 1 1 auto;
             }
+
 
             .brand-logo {
-                width: 46px;
-                height: 46px;
+                width: 58px;
+                height: 58px;
             }
+
 
             .brand-copy strong {
-                font-size: 13px;
+                font-size: 15px;
             }
+
 
             .brand-copy span {
-                font-size: 5px;
-                letter-spacing: 1.2px;
+                font-size: 6px;
             }
 
-            .mobile-menu {
-                display: flex;
 
-                width: 42px;
-                height: 42px;
-
-                align-items: center;
-                justify-content: center;
-
-                border: 1px solid var(--line);
-                border-radius: 10px;
-
-                background: #fff;
-
-                color: var(--ink);
-
-                font-size: 20px;
-
-                cursor: pointer;
-            }
-
+            /* Normale Navigation aus */
             .main-nav {
                 display: none;
-
-                order: 5;
-
-                flex: 0 0 100%;
-
-                width: 100%;
-
-                flex-direction: column;
-
-                align-items: stretch;
-
-                gap: 0;
             }
 
-            .main-nav.open {
+
+            /* Hamburger an */
+            .menu-toggle {
                 display: flex;
             }
 
-            .main-nav a {
-                padding: 12px 4px;
-
-                border-top: 1px solid var(--line);
-
-                font-size: 14px;
-            }
 
             .header-phone {
                 display: none;
             }
+
+
+            /* Mobile-Navigation */
+            .mobile-nav {
+                display: flex;
+
+                flex-direction: column;
+
+                width: 100%;
+
+                max-height: 0;
+
+                overflow: hidden;
+
+                padding: 0 22px;
+
+                opacity: 0;
+
+                pointer-events: none;
+
+                background: #fff;
+
+                border-top: 1px solid transparent;
+
+                box-shadow: 0 16px 35px rgba(0,0,0,.06);
+
+                transition:
+                    max-height .25s ease,
+                    opacity .2s ease,
+                    padding .25s ease;
+            }
+
+
+            body.menu-open .mobile-nav {
+                max-height: 500px;
+
+                padding: 8px 22px 18px;
+
+                opacity: 1;
+
+                pointer-events: auto;
+
+                border-top-color: #e7e2da;
+            }
+
+
+            .mobile-nav a {
+                padding: 13px 2px;
+
+                border-bottom: 1px solid #ece8e1;
+
+                font-size: 14px;
+
+                font-weight: 800;
+            }
+
+
+            .mobile-nav a:last-child {
+                border-bottom: 0;
+            }
+
+
+            /* Footer auf dem iPad in 3 Spalten */
+            .footer-grid {
+                grid-template-columns: 1.2fr 1fr 1fr;
+
+                gap: 35px;
+            }
+
+
+            .footer-bottom {
+                flex-direction: row;
+
+                align-items: center;
+            }
+        }
+
+
+        /* =====================================================
+           HANDY
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .header-inner {
+                width: calc(100% - 28px);
+
+                min-height: 78px;
+                height: 78px;
+
+                padding: 0;
+            }
+
+
+            .brand-logo {
+                width: 52px;
+                height: 52px;
+            }
+
+
+            .brand-copy strong {
+                font-size: 12px;
+            }
+
+
+            .brand-copy span {
+                margin-top: 6px;
+
+                font-size: 5px;
+
+                letter-spacing: 1.2px;
+            }
+
+
+            .menu-toggle {
+                width: 46px;
+                height: 46px;
+            }
+
+
+            .mobile-nav {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+
+            body.menu-open .mobile-nav {
+                padding: 7px 14px 16px;
+            }
+
+
+            .mobile-nav a {
+                padding: 12px 3px;
+
+                font-size: 14px;
+            }
+
 
             .legal-container,
             .legal-card {
                 width: calc(100% - 28px);
             }
 
+
             .legal-hero-inner {
                 padding: 43px 0 40px;
             }
 
+
             .legal-title {
                 font-size: 44px;
+
                 letter-spacing: -2.5px;
             }
+
 
             .legal-main {
                 padding: 43px 0 70px;
             }
+
 
             .legal-card {
                 padding: 27px 20px;
@@ -538,27 +755,35 @@
                 border-radius: 18px;
             }
 
+
             .info-grid {
                 grid-template-columns: 1fr;
             }
+
 
             .info-box {
                 padding: 24px 21px;
             }
 
+
             .legal-section {
                 margin-top: 36px;
+
                 padding-top: 28px;
             }
+
 
             .legal-section h2 {
                 font-size: 21px;
             }
 
+
             .legal-section p {
                 font-size: 15px;
+
                 line-height: 1.75;
             }
+
 
             .footer-grid {
                 width: calc(100% - 28px);
@@ -568,33 +793,45 @@
                 gap: 38px;
             }
 
+
             .footer-bottom {
                 width: calc(100% - 28px);
 
                 flex-direction: column;
 
+                align-items: flex-start;
+
                 gap: 7px;
             }
         }
 
+
+        /* =====================================================
+           KLEINE HANDYS
+        ===================================================== */
+
         @media (max-width: 520px) {
 
             .brand-logo {
-                width: 42px;
-                height: 42px;
+                width: 46px;
+                height: 46px;
             }
+
 
             .brand-copy strong {
-                font-size: 11.5px;
+                font-size: 11px;
             }
 
+
             .brand-copy span {
-                font-size: 4.2px;
+                font-size: 4.5px;
             }
+
 
             .legal-title {
                 font-size: 38px;
             }
+
 
             .legal-card {
                 padding: 22px 16px;
@@ -602,15 +839,27 @@
         }
 
     </style>
+
 </head>
 
-<body>
+
+<body id="top">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="site-header">
 
     <div class="header-inner">
 
-        <a href="index.html" class="brand">
+
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="Flughafentransferservice Salavati"
+        >
 
             <img
                 class="brand-logo"
@@ -619,26 +868,26 @@
             >
 
             <div class="brand-copy">
-                <strong>FLUGHAFENTRANSFERSERVICE</strong>
-                <span>SALAVATI · SEIT ÜBER 30 JAHREN</span>
+
+                <strong>
+                    FLUGHAFENTRANSFERSERVICE
+                </strong>
+
+                <span>
+                    SALAVATI · SEIT ÜBER 30 JAHREN
+                </span>
+
             </div>
 
         </a>
 
 
-        <button
-            class="mobile-menu"
-            id="mobileMenu"
-            type="button"
-            aria-label="Menü öffnen"
+        <nav
+            class="main-nav"
+            aria-label="Hauptnavigation"
         >
-            ☰
-        </button>
 
-
-        <nav class="main-nav" id="mainNav">
-
-            <a href="index.html#ueber-uns">
+            <a href="index.html#ueber">
                 Über uns
             </a>
 
@@ -650,12 +899,12 @@
                 Warum Salavati?
             </a>
 
-            <a href="index.html#vorbestellung">
-                Vorbestellung
-            </a>
-
             <a href="index.html#bewertungen">
                 Bewertungen
+            </a>
+
+            <a href="index.html#vorbestellung">
+                Vorbestellung
             </a>
 
             <a href="impressum.html">
@@ -665,17 +914,69 @@
         </nav>
 
 
-        <a
-            href="tel:+49644136444"
-            class="header-phone"
-        >
-            ☎ 06441 – 36444
-        </a>
+        <div class="header-actions">
+
+            <a
+                href="tel:+49644136444"
+                class="header-phone"
+            >
+                ☎ 06441 – 36444
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Menü öffnen"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
 
     </div>
 
+
+    <nav
+        class="mobile-nav"
+        id="mobileNav"
+        aria-label="Mobile Navigation"
+    >
+
+        <a href="index.html#ueber">
+            Über uns
+        </a>
+
+        <a href="index.html#flughafen">
+            Flughäfen
+        </a>
+
+        <a href="index.html#warum">
+            Warum Salavati?
+        </a>
+
+        <a href="index.html#bewertungen">
+            Bewertungen
+        </a>
+
+        <a href="index.html#vorbestellung">
+            Vorbestellung
+        </a>
+
+        <a href="impressum.html">
+            Impressum
+        </a>
+
+    </nav>
+
 </header>
 
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="legal-hero">
 
@@ -694,18 +995,28 @@
 </section>
 
 
+<!-- =====================================================
+     CONTENT
+===================================================== -->
+
 <main class="legal-main">
 
     <div class="legal-card">
 
+
         <div class="info-grid">
+
 
             <div class="info-box">
 
-                <h2>Anbieter</h2>
+                <h2>
+                    Anbieter
+                </h2>
 
                 <p>
-                    <strong>VPW GmbH</strong>
+                    <strong>
+                        VPW GmbH
+                    </strong>
                 </p>
 
                 <p>
@@ -719,7 +1030,9 @@
 
             <div class="info-box">
 
-                <h2>Vertretungsberechtigter</h2>
+                <h2>
+                    Vertretungsberechtigter
+                </h2>
 
                 <p>
                     Geschäftsführer
@@ -734,7 +1047,9 @@
 
             <div class="info-box">
 
-                <h2>Kontakt</h2>
+                <h2>
+                    Kontakt
+                </h2>
 
                 <p>
                     Telefon:
@@ -755,7 +1070,9 @@
 
             <div class="info-box">
 
-                <h2>Handelsregister</h2>
+                <h2>
+                    Handelsregister
+                </h2>
 
                 <p>
                     Handelsregister: HRB 6427
@@ -771,7 +1088,9 @@
 
             <div class="info-box">
 
-                <h2>Finanzamt</h2>
+                <h2>
+                    Finanzamt
+                </h2>
 
                 <p>
                     Finanzamt Gießen
@@ -779,12 +1098,15 @@
 
             </div>
 
+
         </div>
 
 
         <section class="legal-section">
 
-            <h2>Verantwortlich für den Inhalt</h2>
+            <h2>
+                Verantwortlich für den Inhalt
+            </h2>
 
             <p>
                 Verantwortlich für den Inhalt dieser Website ist die
@@ -797,7 +1119,9 @@
 
         <section class="legal-section">
 
-            <h2>Haftung für Inhalte</h2>
+            <h2>
+                Haftung für Inhalte
+            </h2>
 
             <p>
                 Als Diensteanbieter sind wir gemäß den allgemeinen
@@ -817,7 +1141,9 @@
 
         <section class="legal-section">
 
-            <h2>Haftung für Links</h2>
+            <h2>
+                Haftung für Links
+            </h2>
 
             <p>
                 Diese Website kann Links zu externen Websites Dritter
@@ -831,7 +1157,9 @@
 
         <section class="legal-section">
 
-            <h2>Urheberrecht</h2>
+            <h2>
+                Urheberrecht
+            </h2>
 
             <p>
                 Die durch den Seitenbetreiber erstellten Inhalte und
@@ -850,13 +1178,20 @@
 </main>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="footer">
 
     <div class="footer-grid">
 
+
         <div>
 
-            <h3>Kontakt</h3>
+            <h3>
+                Kontakt
+            </h3>
 
             <p>
                 VPW GmbH · Flughafentransferservice Salavati
@@ -887,7 +1222,9 @@
 
         <div>
 
-            <h3>Unternehmen</h3>
+            <h3>
+                Unternehmen
+            </h3>
 
             <p>
                 Geschäftsführer: S. R. Salavati
@@ -910,7 +1247,9 @@
 
         <div>
 
-            <h3>Rechtliches</h3>
+            <h3>
+                Rechtliches
+            </h3>
 
             <p>
                 <a href="impressum.html">
@@ -932,6 +1271,7 @@
 
         </div>
 
+
     </div>
 
 
@@ -950,107 +1290,64 @@
 </footer>
 
 
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
 <script>
 
-document
-    .getElementById("mobileMenu")
-    .addEventListener("click", function () {
+const menuToggle =
+    document.getElementById("menuToggle");
 
-        document
-            .getElementById("mainNav")
-            .classList.toggle("open");
+const mobileNav =
+    document.getElementById("mobileNav");
 
-    });
+
+if (menuToggle && mobileNav) {
+
+    menuToggle.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+                document.body.classList.toggle("menu-open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+        }
+    );
+
+
+    mobileNav
+        .querySelectorAll("a")
+        .forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    document.body.classList.remove(
+                        "menu-open"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+}
 
 </script>
 
+
 </body>
+
 </html>
-/* =========================================================
-   IPAD – HAMBURGER WIE AUF DER HAUPTSEITE
-========================================================= */
-
-@media (min-width: 801px) and (max-width: 1100px) {
-
-    .header-inner {
-        width: calc(100% - 44px) !important;
-        min-height: 86px !important;
-
-        display: flex !important;
-        align-items: center !important;
-        flex-wrap: wrap !important;
-    }
-
-    .brand {
-        min-width: 0 !important;
-        flex: 1 1 auto !important;
-    }
-
-    .brand-logo {
-        width: 58px !important;
-        height: 58px !important;
-    }
-
-    .brand-copy strong {
-        font-size: 15px !important;
-    }
-
-    .brand-copy span {
-        font-size: 6px !important;
-    }
-
-    /* Normale Navigation ausblenden */
-    .main-nav {
-        display: none !important;
-
-        order: 5 !important;
-        flex: 0 0 100% !important;
-
-        width: 100% !important;
-
-        flex-direction: column !important;
-        align-items: stretch !important;
-
-        gap: 0 !important;
-    }
-
-    /* Hamburger anzeigen */
-    .mobile-menu {
-        display: flex !important;
-
-        width: 46px !important;
-        height: 46px !important;
-
-        align-items: center !important;
-        justify-content: center !important;
-
-        flex-shrink: 0 !important;
-
-        border: 1px solid var(--line) !important;
-        border-radius: 10px !important;
-
-        background: #fff !important;
-
-        font-size: 22px !important;
-        cursor: pointer !important;
-    }
-
-    /* GANZ WICHTIG:
-       Beim Klick muss die Navigation sichtbar werden */
-    .main-nav.open {
-        display: flex !important;
-    }
-
-    .main-nav a {
-        padding: 13px 4px !important;
-
-        border-top: 1px solid var(--line) !important;
-
-        font-size: 14px !important;
-        font-weight: 800 !important;
-    }
-
-    .header-phone {
-        display: none !important;
-    }
-}
