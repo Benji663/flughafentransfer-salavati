@@ -2835,3 +2835,73 @@ button {
         transition: none !important;
     }
 }
+/* =========================================================
+   IPAD – GOOGLE BEWERTUNG OBEN RECHTS
+========================================================= */
+
+@media (min-width: 801px) and (max-width: 1150px) {
+
+    .reviews-heading {
+        display: flex !important;
+
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        justify-content: space-between !important;
+
+        gap: 25px !important;
+    }
+
+    .reviews-heading > div:first-child {
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+    }
+
+    .reviews-heading .section-title {
+        width: 100% !important;
+        max-width: 650px !important;
+
+        font-size: 59px !important;
+        line-height: .98 !important;
+        letter-spacing: -1px !important;
+    }
+
+    /* Kleine Box oben rechts */
+    .rating-box {
+        flex: 0 0 180px !important;
+
+        width: 180px !important;
+        min-width: 180px !important;
+        max-width: 180px !important;
+
+        margin-top: 0 !important;
+
+        padding: 20px 16px !important;
+
+        border-radius: 17px !important;
+
+        text-align: center !important;
+    }
+
+    .rating-box strong {
+        font-size: 34px !important;
+        line-height: 1 !important;
+    }
+
+    .rating-box strong span {
+        color: var(--gold) !important;
+        font-size: 30px !important;
+
+        display: inline-block !important;
+        margin-left: 5px !important;
+    }
+
+    .rating-box > div {
+        font-size: 12px !important;
+        margin-left: 3px !important;
+    }
+
+    .rating-box small {
+        margin-top: 7px !important;
+        font-size: 9px !important;
+    }
+}
