@@ -2666,3 +2666,50 @@ button{
     display: inline-block;
     margin-left: 8px;
 }
+/* =========================================
+   GOOGLE-BEWERTUNG – MOBILE AN PC ANPASSEN
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .rating-box {
+        display: grid !important;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        align-items: center;
+        justify-content: start;
+        column-gap: 14px;
+        row-gap: 2px;
+    }
+
+    .rating-box strong {
+        font-size: 64px !important;
+        line-height: 0.9 !important;
+        font-weight: 900 !important;
+        display: flex !important;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .rating-box strong span {
+        color: #be8f3b !important;
+        font-size: 58px !important;
+        line-height: 1 !important;
+        margin-left: 14px !important;
+        display: inline-block !important;
+    }
+
+    .rating-box > div {
+        font-size: 28px !important;
+        line-height: 1 !important;
+        color: #66707a !important;
+        align-self: center;
+    }
+
+    .rating-box small {
+        grid-column: 1 / 4;
+        font-size: 13px !important;
+        color: #66707a !important;
+        margin-top: 8px;
+    }
+}
