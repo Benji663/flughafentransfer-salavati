@@ -2905,3 +2905,83 @@ button{
         margin-top: 0 !important;
     }
 }
+/* =========================================================
+   IPAD / TABLET – HAUPTSEITE
+========================================================= */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    /* -----------------------------------------------------
+       BEWERTUNGEN
+    ----------------------------------------------------- */
+
+    .reviews-heading {
+        display: block !important;
+    }
+
+    .rating-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin-top: 30px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        gap: 14px !important;
+
+        overflow: hidden !important;
+    }
+
+    .rating-box strong {
+        display: flex !important;
+        align-items: center !important;
+
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    .rating-box strong span {
+        display: inline-block !important;
+        flex-shrink: 0 !important;
+        color: #be8f3b !important;
+    }
+
+    .rating-box > div {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    .rating-box small {
+        white-space: nowrap !important;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER – 3 SPALTEN AUCH AUF DEM IPAD
+    ----------------------------------------------------- */
+
+    .footer-grid {
+        width: min(1400px, calc(100% - 40px)) !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            1.2fr 1fr 1fr !important;
+
+        gap: 35px !important;
+    }
+
+    .footer-bottom {
+        width: min(1400px, calc(100% - 40px)) !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+}
