@@ -2654,3 +2654,15 @@ button{
     }
 
 }
+/* Stuttgart: goldene Hervorhebung komplett entfernen */
+.airport-highlight {
+    border: 1px solid #e0dbd2 !important;
+    box-shadow: none !important;
+}
+/* Goldener Stern bei der Google-Bewertung */
+.rating-box strong span {
+    color: #be8f3b !important;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-left: 8px;
+}
