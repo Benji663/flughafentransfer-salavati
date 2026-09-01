@@ -2713,3 +2713,43 @@ button{
         margin-top: 8px;
     }
 }
+/* GOOGLE-BEWERTUNG – MOBILE */
+
+@media (max-width: 700px) {
+
+    .rating-box {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .rating-box strong {
+        font-size: 42px !important;
+        line-height: 1 !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+    }
+
+    .rating-box strong span {
+        color: #be8f3b !important;
+        font-size: 38px !important;
+        margin-left: 8px !important;
+        display: inline-block !important;
+        font-weight: 400 !important;
+    }
+
+    .rating-box > div {
+        font-size: 20px !important;
+        color: #66707a !important;
+        line-height: 1 !important;
+    }
+
+    .rating-box small {
+        flex-basis: 100% !important;
+        font-size: 13px !important;
+        color: #66707a !important;
+        margin-top: 2px !important;
+    }
+}
