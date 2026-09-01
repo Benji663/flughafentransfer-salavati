@@ -2887,3 +2887,21 @@ button{
         display: none;
     }
 }
+/* =========================================
+   BEWERTUNGEN – IPAD / TABLET
+   ========================================= */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    .reviews-heading {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .rating-box {
+        width: fit-content !important;
+        max-width: 100% !important;
+        justify-self: start !important;
+        margin-top: 0 !important;
+    }
+}
